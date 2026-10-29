@@ -1,0 +1,51 @@
+{
+  "description": "Python package (CPU) vs the probabilities recorded by the training notebook (Colab T4 GPU), on original dataset images. Engineering check, not a model evaluation.",
+  "run": "run_20261029_191001",
+  "environment": {
+    "tensorflow": "2.21.0",
+    "device": "CPU",
+    "platform": "win32"
+  },
+  "n_images": 2175,
+  "argmax_identical": 2175,
+  "max_abs_prob_diff": 5.6637730407871345e-06,
+  "median_max_abs_prob_diff": 1.9209289603416835e-08,
+  "by_set": {
+    "external": {
+      "n": 1201,
+      "argmax_identical": 1201,
+      "max_abs_prob_diff": 5.6637730407871345e-06
+    },
+    "internal": {
+      "n": 974,
+      "argmax_identical": 974,
+      "max_abs_prob_diff": 4.888632202160181e-06
+    }
+  },
+  "decoder_effect": {
+    "description": "Predictions from the accurate-IDCT JPEG decode (browsers) vs the training decode (fast IDCT, Colab). Accuracy and macro-F1 of both on the same images.",
+    "by_set": {
+      "external": {
+        "n": 1201,
+        "argmax_identical_to_colab": 1186,
+        "max_abs_prob_diff": 0.23836368691207888,
+        "median_max_abs_prob_diff": 0.0010479434394836673,
+        "accuracy_training_decode": 0.7951706910907577,
+        "accuracy_accurate_idct": 0.7993338884263114,
+        "macro_f1_training_decode": 0.7944649008416919,
+        "macro_f1_accurate_idct": 0.8000653187154083
+      },
+      "internal": {
+        "n": 974,
+        "argmax_identical_to_colab": 968,
+        "max_abs_prob_diff": 0.24283367809020995,
+        "median_max_abs_prob_diff": 2.6327896118782945e-07,
+        "accuracy_training_decode": 0.9671457905544147,
+        "accuracy_accurate_idct": 0.9671457905544147,
+        "macro_f1_training_decode": 0.9544967098664053,
+        "macro_f1_accurate_idct": 0.951812863779668
+      }
+    }
+  },
+  "argmax_mismatches": []
+}

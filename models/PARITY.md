@@ -21,6 +21,12 @@ probabilities the notebook recorded for these images on a Colab T4 GPU.
 | Same top class as Colab | **18 / 18** |
 | Max absolute probability difference vs Colab | **2.2e-6** (CPU vs GPU arithmetic) |
 | In-graph CAM vs the notebook's gradient Grad-CAM, Pearson r (min) | **0.99999999999997** |
+| **All 2,175 evaluation images** (974 internal + 1,201 PCR, [`python_vs_colab_external_internal.json`](../results/parity/python_vs_colab_external_internal.json)): same top class | **2,175 / 2,175** |
+| All 2,175 evaluation images: max absolute probability difference | **5.7e-6** (median 1.9e-8) |
+
+The full-set check needs the dataset images, fetched from Zenodo and MD5-checked by
+[`scripts/fetch_zenodo_images.py`](../scripts/fetch_zenodo_images.py); the per-image results are in
+[`python_vs_colab_external_internal.csv`](../results/parity/python_vs_colab_external_internal.csv).
 
 The CAM head is exact by construction: for a GlobalAveragePooling -> Dense head, Grad-CAM equals
 ReLU(sum_k w_k A^k) / 49, a 1 x 1 convolution of the last feature map with the Dense kernel
@@ -80,7 +86,20 @@ machine and against Colab:
 
 ## 4. How much does the decoder matter?
 
-FULL_SET_DECODER_EFFECT
+[`scripts/parity_python.py --decoder-effect`](../scripts/parity_python.py) predicts every evaluation image twice,
+from TensorFlow's default (fast IDCT, the training pipeline) and from the accurate IDCT (what a browser sees),
+and scores both against the labels:
+
+| Test set | Images | Top class changes | Max abs. prob. difference (median) | Accuracy, training decode | Accuracy, browser decode | Macro-F1, training decode | Macro-F1, browser decode |
+|---|---|---|---|---|---|---|---|
+| Internal | 974 | 6 (0.6%) | 0.243 (2.6e-7) | 0.967 | 0.967 | 0.954 | 0.952 |
+| PCR-confirmed | 1,201 | 15 (1.2%) | 0.238 (1.0e-3) | 0.795 | 0.799 | 0.794 | 0.800 |
+
+The decoder changes the top class on about 1% of photos. All 21 were close calls under the training decode (top-2
+margin 0.24 at most, median 0.11), so the app and the API already show "uncertain" for every one of them. It does
+not make the model systematically better or worse. Every number in the README and the app is for the training decode, as
+recorded by the notebook. A borderline example: the 1024 px copy of f18 in the web app's samples (Healthy, PCR set) is NCD 0.517 / Healthy 0.457 on
+the training decode (the API) and Healthy 0.575 / NCD 0.405 on the browser decode; both show "uncertain".
 
 ## Reproduce
 
@@ -89,6 +108,8 @@ python scripts/fetch_zenodo_images.py --selection tests/fixtures/selection.json 
 python scripts/build_fixtures.py
 pytest tests/test_parity.py backend/tests/test_api_parity.py                     # needs the weights
 python scripts/parity_python.py --fixtures --decoder-effect
+python scripts/fetch_zenodo_images.py --set internal --set external --workers 6   # ~2.6 GB
+python scripts/parity_python.py --set internal --set external --no-gradcam --decoder-effect
 python scripts/build_web_model.py && bash scripts/convert_to_tfjs.sh
 python scripts/make_web_references.py
 PARITY_MODEL_DIR=../build/tfjs/float16 npm --prefix web run test:parity
