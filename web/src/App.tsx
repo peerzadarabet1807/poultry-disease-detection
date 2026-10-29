@@ -1,5 +1,4 @@
-import { useCallback, useState } from 'react';
-import { AboutModel } from './components/AboutModel';
+import { lazy, Suspense, useCallback, useState } from 'react';
 import { Footer } from './components/Footer';
 import { Header } from './components/Header';
 import { AlertIcon } from './components/icons';
@@ -16,6 +15,9 @@ import { CLASS_INFO, type ClassId } from './lib/classes';
 import { EXTERNAL, formatPercent, INTERNAL } from './lib/metrics';
 import { fetchSampleBlob, type SampleInfo } from './lib/samples';
 import { NOT_A_DIAGNOSIS, verdictCopy } from './lib/verdict';
+
+// Below the fold, with all the evaluation data it renders: kept out of the first bundle.
+const AboutModel = lazy(() => import('./components/AboutModel').then((m) => ({ default: m.AboutModel })));
 
 /** Text for the polite live region, so screen readers hear progress and the outcome. */
 function announcement(job: JobState): string {
@@ -134,7 +136,9 @@ export default function App() {
           />
         </section>
 
-        <AboutModel />
+        <Suspense fallback={<div id="about" className="min-h-screen" aria-busy="true" />}>
+          <AboutModel />
+        </Suspense>
       </main>
 
       <Footer />

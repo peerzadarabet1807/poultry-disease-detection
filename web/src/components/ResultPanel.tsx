@@ -44,7 +44,12 @@ export function ResultPanel({ job, onAnother }: Props) {
 
   const { result } = job;
   return (
-    <section aria-labelledby="result-heading" className="card scroll-mt-20 p-4 sm:p-6" data-testid="result">
+    <section
+      id="result"
+      aria-labelledby="result-heading"
+      className="card scroll-mt-20 p-4 sm:p-6"
+      data-testid="result"
+    >
       <div className="flex flex-wrap items-baseline justify-between gap-3">
         <h2 id="result-heading" ref={heading} tabIndex={-1} className="text-xl font-semibold outline-none">
           Result{result.source.kind === 'sample' ? ` for ${result.source.name}` : ''}

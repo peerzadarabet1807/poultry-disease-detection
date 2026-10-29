@@ -21,7 +21,7 @@ export function Header({ theme, onToggleTheme }: Props) {
         <a href="#top" className="flex items-center gap-2.5 rounded-md">
           <BrandMark className="text-[2rem]" />
           <span className="flex flex-col leading-none">
-            <span className="font-serif text-lg font-semibold tracking-tight">
+            <span className="font-serif text-base font-semibold tracking-tight sm:text-lg">
               Poultry Droppings Classifier
             </span>
             <span className="hidden text-xs text-ink-3 sm:block">
