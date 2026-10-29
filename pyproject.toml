@@ -1,0 +1,72 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "poultry-disease"
+version = "1.0.0"
+description = "Image-based classification of poultry fecal photographs (research prototype, not a veterinary diagnosis)"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Peerzada Mohammad Rabet" }]
+requires-python = ">=3.10,<3.14"
+# Versions of the Colab training run (results/experiment_config.json). Do not loosen TensorFlow/Keras:
+# the .keras file was written by Keras 3.13.2 and the preprocessing is defined by TF 2.21's resize kernel.
+dependencies = [
+  "tensorflow==2.21.0; sys_platform != 'linux'",
+  "tensorflow-cpu==2.21.0; sys_platform == 'linux'",
+  "keras==3.13.2",
+  "numpy==2.1.3",
+  "pillow==11.3.0",
+]
+
+[project.optional-dependencies]
+api = [
+  "fastapi==0.162.0",
+  "uvicorn==0.54.0",
+  "python-multipart==0.0.32",
+  "pillow-heif==1.8.0",
+]
+analysis = [
+  "pandas==2.2.3",
+  "scikit-learn==1.6.1",
+  "matplotlib==3.11.2",
+  "seaborn==0.13.2",
+]
+dev = [
+  "pytest==9.2.0",
+  "httpx==0.28.1",
+  "ruff==0.17.3",
+]
+
+[project.urls]
+Homepage = "https://peerzadarabet1807.github.io/poultry-disease-detection/"
+Repository = "https://github.com/peerzadarabet1807/poultry-disease-detection"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+poultry_disease = ["data/*.json"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+extend-exclude = ["notebooks", "web", ".work", "downloads"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "S"]
+ignore = ["S101", "S311"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S"]
+"scripts/**" = ["S", "I001"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "backend/tests"]
+markers = [
+  "weights: needs the trained weights (POULTRY_DISEASE_WEIGHTS or the release cache)",
+  "fixtures: needs the dataset fixture images in tests/fixtures/images",
+]
+filterwarnings = ["ignore::DeprecationWarning"]

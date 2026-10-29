@@ -6,6 +6,7 @@ so re-running this script on the same files produces a byte-identical archive an
 Usage:
     python scripts/package_release.py --run downloads/extracted/training-output/run_20261029_171740
 """
+
 from __future__ import annotations
 
 import argparse
@@ -56,7 +57,7 @@ def main() -> int:
 
     lines = [f"{sha256(p)}  {p.name}" for p in (keras_out, zip_out)]
     (ROOT / "models" / "checksums.sha256").write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
-    for p, line in zip((keras_out, zip_out), lines):
+    for p, line in zip((keras_out, zip_out), lines, strict=False):
         print(f"{line}  ({p.stat().st_size / 1e6:.1f} MB)")
     return 0
 
