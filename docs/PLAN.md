@@ -5,35 +5,41 @@ and every training artifact. It records what I found, what I am building and wha
 
 ## What I found
 
-**Training run.** The notebook's outputs name `run_20261029_171740`, and that folder matches it exactly
-(TF 2.21.0, Keras 3.13.2, T4, 14.8 min). Every number in the brief checks out against
-`results/metrics.json`:
+**Update, 2026-10-30: a fifth run is now the published one.** After this plan was first written, the
+notebook was changed to write its outputs straight to Drive and run again. The training code is unchanged
+and the dataset manifest, split, class weights and audit files are byte-identical, so
+`run_20261029_191001` is a fifth run of the same experiment. The committed notebook documents it, so it is
+the published run, and `run_20261029_171740` (the run this plan was first written about) moved to
+`results/other_runs/`.
+
+**Training run.** The notebook's outputs name `run_20261029_191001` (TF 2.21.0, Keras 3.13.2, T4,
+13.8 min). From `results/metrics.json`:
 
 | | n | Accuracy | Macro-F1 | Weighted-F1 | Log loss | ROC-AUC |
 |---|---|---|---|---|---|---|
-| Internal test (version 2) | 974 | 0.9733 | 0.9599 | 0.9731 | 0.0779 | 0.9984 |
-| External PCR (version 3) | 1,201 | 0.7652 | 0.7647 | 0.7651 | 0.9129 | 0.9427 |
+| Internal test (version 2) | 974 | 0.9671 | 0.9545 | 0.9669 | 0.1021 | 0.9981 |
+| External PCR (version 3) | 1,201 | 0.7952 | 0.7945 | 0.7932 | 0.7508 | 0.9524 |
 
-External details also match: Coccidiosis recall 0.647, Healthy precision 0.644, NCD to Healthy 44/186
-(23.7%), Healthy to Salmonella 70/312 (22.4%). Audit: 8,067 found, 372 rejected (334 exact duplicates,
-38 label-conflict files in 19 groups), 7,695 kept, NCD weight 4.339.
+External per class: Healthy precision 0.722, Coccidiosis recall 0.773. Main confusions: Healthy to
+Salmonella 65/312 (20.8%), NCD to Healthy 29/186 (15.6%). Audit: 8,067 found, 372 rejected (334 exact
+duplicates, 38 label-conflict files in 19 groups), 7,695 kept, NCD weight 4.339. The brief's figures
+(~97% vs ~77%, Healthy precision 0.644) describe `run_20261029_171740`; the README uses the published
+run's numbers and the five-run spread.
 
-**Three more runs in the Drive export.** The zip holds four runs (`run_20260927_131854`,
-`run_20260927_151041`, `run_20261029_141903`, `run_20261029_171740`). They have the same configuration,
-the same seed and a byte-identical dataset manifest (so the same split); the first two used TF 2.20.0.
-They differ only through GPU non-determinism:
+**Five runs with the same configuration.** Same seed, byte-identical dataset manifest (same split); the
+first two used TF 2.20.0. They differ only through GPU non-determinism:
 
 | Run | TF | Val macro-F1 | Internal macro-F1 | External acc. | External macro-F1 |
 |---|---|---|---|---|---|
 | 20260927_131854 | 2.20 | 0.9840 | 0.9690 | 0.7544 | 0.7485 |
 | 20260927_151041 | 2.20 | 0.9815 | 0.9597 | 0.7427 | 0.7290 |
 | 20261029_141903 | 2.21 | 0.9790 | 0.9572 | 0.7577 | 0.7560 |
-| **20261029_171740** (published) | 2.21 | 0.9800 | 0.9599 | **0.7652** | **0.7647** |
+| 20261029_171740 | 2.21 | 0.9800 | 0.9599 | 0.7652 | 0.7647 |
+| **20261029_191001** (published) | 2.21 | 0.9763 | 0.9545 | **0.7952** | **0.7945** |
 
-The published run has the highest external score of the four. If it was chosen after looking at the
-external numbers, the external set was used for model selection and 0.765 is slightly optimistic. I will
-publish this run (it is the executed notebook) and report all four runs as a post-hoc run-to-run
-variability analysis, so the reader sees the spread (external macro-F1 0.729 to 0.765).
+The published run has the highest external score of the five and the lowest internal one. Its external
+macro-F1 is 1.5 standard deviations above the five-run mean (0.7585, sd 0.0240), so the README reports
+the published run together with the spread and does not present 0.795 as typical.
 
 **Dataset licence.** Both Zenodo records are **CC BY 4.0** (version 2: DOI 10.5281/zenodo.4628934;
 version 3 PCR: DOI 10.5281/zenodo.5801834; concept DOI 10.5281/zenodo.4495535). Redistribution is
@@ -73,14 +79,13 @@ shards are committed under `web/public/model/` (as in saffron), because GitHub P
 4. **Docker** needs Docker Desktop running for the image build.
 5. **Thresholds** for the "uncertain" state can only be a usability heuristic.
 
-## What I need from you
+## What I needed from you (resolved)
 
-1. **The sample zip** (STOP after Phase 2 selection): the dataset is on your Drive, not here.
-2. **Release confirmation** (STOP before `v1.0.0`).
-3. **Was `run_20261029_171740` chosen after seeing external results?** It changes one sentence in the
-   README, so I can finish without an answer and fix that sentence later.
-4. **Contact email.** The saffron README and `CITATION.cff` include your personal email, but this brief
-   forbids personal email addresses in the repo. I am leaving it out and linking your GitHub profile;
-   commits use your GitHub noreply address.
-5. **gh account.** The active `gh` account is `wiser-ai-admin`. I will switch to `peerzadarabet1807`
-   before creating the repo.
+1. **The sample images.** No longer needed from Colab: `scripts/fetch_zenodo_images.py` reads single
+   images out of the Zenodo zips with HTTP range requests and checks each against the manifest MD5.
+2. **Release confirmation** (STOP before `v1.0.0`): still to come.
+3. **Run choice.** Publish the run the committed notebook documents (now `run_20261029_191001`) and report
+   the others alongside it.
+4. **Contact email.** `peerzada.rabet2@gmail.com` goes in the README contact section and `CITATION.cff`;
+   commits use the GitHub noreply address.
+5. **gh account.** Switch to `peerzadarabet1807` before creating the repo.

@@ -1,7 +1,7 @@
-"""Run-to-run variability: four Colab runs with the same configuration, seed and split.
+"""Run-to-run variability: five Colab runs with the same configuration, seed and split.
 
-The Drive export holds four runs of the notebook in external-test mode. Their experiment configs differ only
-in timestamps and environment (two used TF 2.20.0, two TF 2.21.0) and their dataset manifests are
+The Drive exports hold five runs of the notebook in external-test mode. Their experiment configs differ only
+in timestamps, output paths and environment (two used TF 2.20.0, three TF 2.21.0) and their dataset manifests are
 byte-identical, so they differ only through non-deterministic GPU kernels (DETERMINISTIC_OPS = False).
 That makes them a small, informal estimate of training noise, not a multi-seed study.
 
@@ -17,7 +17,7 @@ import numpy as np
 import pandas as pd
 from posthoc_common import CLASS_NAMES, POSTHOC, RESULTS, save_json
 
-PUBLISHED = "run_20261029_171740"
+PUBLISHED = "run_20261029_191001"
 
 
 def run_dirs() -> dict[str, dict]:
@@ -96,7 +96,7 @@ def main() -> int:
     ext_rank = int((table["external_macro_f1"] > table.loc[table["published"], "external_macro_f1"].iloc[0]).sum()) + 1
     out = {
         "method": (
-            "Four notebook runs with identical configuration, seed 42 and a byte-identical dataset manifest "
+            "Five notebook runs with identical configuration, seed 42 and a byte-identical dataset manifest "
             "(same split); differences come from non-deterministic GPU kernels and, for two runs, TF 2.20 "
             "instead of 2.21. Informal estimate of training noise, not a multi-seed study. Post-hoc analysis "
             "of saved metrics and predictions."
