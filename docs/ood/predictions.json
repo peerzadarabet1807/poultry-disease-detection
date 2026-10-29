@@ -1,0 +1,220 @@
+{
+  "description": "Predictions of the published model on openly licensed photos that are not poultry droppings (docs/ood/credits.json). The model has no 'not droppings' class. Post-hoc analysis.",
+  "summary": {
+    "n": 12,
+    "verdict_shown": 8,
+    "top_probability_ge_0_9": 8,
+    "by_group": {
+      "farm scene": {
+        "n": 5,
+        "verdict_shown": 2
+      },
+      "other droppings": {
+        "n": 5,
+        "verdict_shown": 5
+      },
+      "lookalike food": {
+        "n": 2,
+        "verdict_shown": 1
+      }
+    },
+    "thresholds": {
+      "min_top_probability": 0.5,
+      "min_top2_margin": 0.9
+    }
+  },
+  "photos": [
+    {
+      "file": "hen_free_range.jpg",
+      "group": "farm scene",
+      "description": "A hen outdoors",
+      "probabilities": {
+        "Coccidiosis": 0.00575994560495019,
+        "Healthy": 0.9878582954406738,
+        "Salmonella": 4.2273000872228295e-05,
+        "NCD": 0.006339481100440025
+      },
+      "top_class": "Healthy",
+      "top_probability": 0.9878582954406738,
+      "margin": 0.9815188143402338,
+      "category": "no_disease_pattern",
+      "verdict_shown": true
+    },
+    {
+      "file": "egg_tray.jpg",
+      "group": "farm scene",
+      "description": "A tray of eggs",
+      "probabilities": {
+        "Coccidiosis": 0.9989956021308899,
+        "Healthy": 0.000991476932540536,
+        "Salmonella": 1.2674701793002896e-05,
+        "NCD": 2.6839049382942903e-07
+      },
+      "top_class": "Coccidiosis",
+      "top_probability": 0.9989956021308899,
+      "margin": 0.9980041251983494,
+      "category": "disease_pattern",
+      "verdict_shown": true
+    },
+    {
+      "file": "wood_shavings.jpg",
+      "group": "farm scene",
+      "description": "Wood shavings (litter material)",
+      "probabilities": {
+        "Coccidiosis": 0.100448839366436,
+        "Healthy": 0.09791550785303116,
+        "Salmonella": 0.8014433979988098,
+        "NCD": 0.00019220840476918966
+      },
+      "top_class": "Salmonella",
+      "top_probability": 0.8014433979988098,
+      "margin": 0.7009945586323738,
+      "category": "uncertain",
+      "verdict_shown": false
+    },
+    {
+      "file": "straw_bedding.jpg",
+      "group": "farm scene",
+      "description": "A heap of used straw bedding in a field",
+      "probabilities": {
+        "Coccidiosis": 0.062305524945259094,
+        "Healthy": 0.29639363288879395,
+        "Salmonella": 0.14669783413410187,
+        "NCD": 0.4946029782295227
+      },
+      "top_class": "NCD",
+      "top_probability": 0.4946029782295227,
+      "margin": 0.19820934534072876,
+      "category": "uncertain",
+      "verdict_shown": false
+    },
+    {
+      "file": "concrete_floor.jpg",
+      "group": "farm scene",
+      "description": "A bare concrete floor",
+      "probabilities": {
+        "Coccidiosis": 0.0796491876244545,
+        "Healthy": 0.2373683601617813,
+        "Salmonella": 0.1042044386267662,
+        "NCD": 0.578778088092804
+      },
+      "top_class": "NCD",
+      "top_probability": 0.578778088092804,
+      "margin": 0.34140972793102264,
+      "category": "uncertain",
+      "verdict_shown": false
+    },
+    {
+      "file": "pigeon_droppings.jpg",
+      "group": "other droppings",
+      "description": "Pigeon droppings",
+      "probabilities": {
+        "Coccidiosis": 0.0023658243007957935,
+        "Healthy": 0.988461971282959,
+        "Salmonella": 0.009172115474939346,
+        "NCD": 8.182988864291474e-08
+      },
+      "top_class": "Healthy",
+      "top_probability": 0.988461971282959,
+      "margin": 0.9792898558080196,
+      "category": "no_disease_pattern",
+      "verdict_shown": true
+    },
+    {
+      "file": "wood_pigeon_droppings.jpg",
+      "group": "other droppings",
+      "description": "Wood pigeon droppings",
+      "probabilities": {
+        "Coccidiosis": 0.9999561309814453,
+        "Healthy": 5.1698425522772595e-06,
+        "Salmonella": 2.6557995624898467e-07,
+        "NCD": 3.849652057397179e-05
+      },
+      "top_class": "Coccidiosis",
+      "top_probability": 0.9999561309814453,
+      "margin": 0.9999176344608713,
+      "category": "disease_pattern",
+      "verdict_shown": true
+    },
+    {
+      "file": "cow_dung.jpg",
+      "group": "other droppings",
+      "description": "Cow dung",
+      "probabilities": {
+        "Coccidiosis": 0.0018430320778861642,
+        "Healthy": 0.9943034648895264,
+        "Salmonella": 0.0038370019756257534,
+        "NCD": 1.648993384151254e-05
+      },
+      "top_class": "Healthy",
+      "top_probability": 0.9943034648895264,
+      "margin": 0.9904664629139006,
+      "category": "no_disease_pattern",
+      "verdict_shown": true
+    },
+    {
+      "file": "horse_manure.jpg",
+      "group": "other droppings",
+      "description": "Horse manure on a street",
+      "probabilities": {
+        "Coccidiosis": 2.815100560837891e-05,
+        "Healthy": 0.999948263168335,
+        "Salmonella": 2.2417949367081746e-05,
+        "NCD": 1.1466352134448243e-06
+      },
+      "top_class": "Healthy",
+      "top_probability": 0.999948263168335,
+      "margin": 0.9999201121627266,
+      "category": "no_disease_pattern",
+      "verdict_shown": true
+    },
+    {
+      "file": "dog_feces.jpg",
+      "group": "other droppings",
+      "description": "Dog feces on a path",
+      "probabilities": {
+        "Coccidiosis": 0.027014650404453278,
+        "Healthy": 0.9587951302528381,
+        "Salmonella": 0.014070370234549046,
+        "NCD": 0.00011982732394244522
+      },
+      "top_class": "Healthy",
+      "top_probability": 0.9587951302528381,
+      "margin": 0.9317804798483849,
+      "category": "no_disease_pattern",
+      "verdict_shown": true
+    },
+    {
+      "file": "porridge.jpg",
+      "group": "lookalike food",
+      "description": "A bowl of porridge",
+      "probabilities": {
+        "Coccidiosis": 0.01894303411245346,
+        "Healthy": 0.9735133647918701,
+        "Salmonella": 0.0051672812551259995,
+        "NCD": 0.0023762783966958523
+      },
+      "top_class": "Healthy",
+      "top_probability": 0.9735133647918701,
+      "margin": 0.9545703306794167,
+      "category": "no_disease_pattern",
+      "verdict_shown": true
+    },
+    {
+      "file": "oat_porridge.jpg",
+      "group": "lookalike food",
+      "description": "Oat porridge",
+      "probabilities": {
+        "Coccidiosis": 0.6101697087287903,
+        "Healthy": 0.16208739578723907,
+        "Salmonella": 0.2265118509531021,
+        "NCD": 0.001230984227731824
+      },
+      "top_class": "Coccidiosis",
+      "top_probability": 0.6101697087287903,
+      "margin": 0.38365785777568817,
+      "category": "uncertain",
+      "verdict_shown": false
+    }
+  ]
+}
