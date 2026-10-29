@@ -1,0 +1,224 @@
+{
+  "method": "Five notebook runs with identical configuration, seed 42 and a byte-identical dataset manifest (same split); differences come from non-deterministic GPU kernels and, for two runs, TF 2.20 instead of 2.21. Informal estimate of training noise, not a multi-seed study. Post-hoc analysis of saved metrics and predictions.",
+  "published_run": "run_20261029_191001",
+  "published_run_external_macro_f1_rank": "1 of 5",
+  "runs": [
+    {
+      "run": "run_20260927_131854",
+      "published": false,
+      "tensorflow": "2.20.0",
+      "best_epoch": 27,
+      "val_macro_f1": 0.9840297326765972,
+      "internal_accuracy": 0.9774127310061602,
+      "internal_macro_f1": 0.9689573010644855,
+      "external_accuracy": 0.7543713572023314,
+      "external_macro_f1": 0.7484796347274445,
+      "external_log_loss": 1.0890636748918257,
+      "external_roc_auc": 0.9412537355441879,
+      "external_recall_Coccidiosis": 0.6750700280112045,
+      "external_recall_Healthy": 0.7564102564102564,
+      "external_recall_Salmonella": 0.9132947976878613,
+      "external_recall_NCD": 0.6075268817204301,
+      "external_precision_Coccidiosis": 0.9563492063492064,
+      "external_precision_Healthy": 0.6178010471204188,
+      "external_precision_Salmonella": 0.7231121281464531,
+      "external_precision_NCD": 0.8692307692307693
+    },
+    {
+      "run": "run_20260927_151041",
+      "published": false,
+      "tensorflow": "2.20.0",
+      "best_epoch": 22,
+      "val_macro_f1": 0.9815120860040603,
+      "internal_accuracy": 0.9763860369609856,
+      "internal_macro_f1": 0.9597034395800514,
+      "external_accuracy": 0.742714404662781,
+      "external_macro_f1": 0.7289774840202163,
+      "external_log_loss": 1.1199815697863778,
+      "external_roc_auc": 0.9352742584812066,
+      "external_recall_Coccidiosis": 0.7030812324929971,
+      "external_recall_Healthy": 0.7403846153846154,
+      "external_recall_Salmonella": 0.9132947976878613,
+      "external_recall_NCD": 0.5053763440860215,
+      "external_precision_Coccidiosis": 0.9365671641791045,
+      "external_precision_Healthy": 0.5923076923076923,
+      "external_precision_Salmonella": 0.7181818181818181,
+      "external_precision_NCD": 0.912621359223301
+    },
+    {
+      "run": "run_20261029_141903",
+      "published": false,
+      "tensorflow": "2.21.0",
+      "best_epoch": 27,
+      "val_macro_f1": 0.9789981101518732,
+      "internal_accuracy": 0.9753593429158111,
+      "internal_macro_f1": 0.9571688491705901,
+      "external_accuracy": 0.7577019150707743,
+      "external_macro_f1": 0.7559945019898069,
+      "external_log_loss": 1.0435209039540736,
+      "external_roc_auc": 0.9379112082497026,
+      "external_recall_Coccidiosis": 0.6750700280112045,
+      "external_recall_Healthy": 0.75,
+      "external_recall_Salmonella": 0.9017341040462428,
+      "external_recall_NCD": 0.6612903225806451,
+      "external_precision_Coccidiosis": 0.9341085271317829,
+      "external_precision_Healthy": 0.609375,
+      "external_precision_Salmonella": 0.7482014388489209,
+      "external_precision_NCD": 0.8661971830985915
+    },
+    {
+      "run": "run_20261029_171740",
+      "published": false,
+      "tensorflow": "2.21.0",
+      "best_epoch": 18,
+      "val_macro_f1": 0.9799984615552131,
+      "internal_accuracy": 0.973305954825462,
+      "internal_macro_f1": 0.9598656199521561,
+      "external_accuracy": 0.765195670274771,
+      "external_macro_f1": 0.7646842999996302,
+      "external_log_loss": 0.9129221609368199,
+      "external_roc_auc": 0.9427286759243587,
+      "external_recall_Coccidiosis": 0.6470588235294118,
+      "external_recall_Healthy": 0.7435897435897436,
+      "external_recall_Salmonella": 0.9277456647398844,
+      "external_recall_NCD": 0.7258064516129032,
+      "external_precision_Coccidiosis": 0.9545454545454546,
+      "external_precision_Healthy": 0.6444444444444445,
+      "external_precision_Salmonella": 0.7328767123287672,
+      "external_precision_NCD": 0.8385093167701864
+    },
+    {
+      "run": "run_20261029_191001",
+      "published": true,
+      "tensorflow": "2.21.0",
+      "best_epoch": 17,
+      "val_macro_f1": 0.9763226885398395,
+      "internal_accuracy": 0.9671457905544147,
+      "internal_macro_f1": 0.9544967098664054,
+      "external_accuracy": 0.7951706910907577,
+      "external_macro_f1": 0.7944649008416919,
+      "external_log_loss": 0.7507637718350203,
+      "external_roc_auc": 0.952359801854362,
+      "external_recall_Coccidiosis": 0.773109243697479,
+      "external_recall_Healthy": 0.6666666666666666,
+      "external_recall_Salmonella": 0.9393063583815029,
+      "external_recall_NCD": 0.7849462365591398,
+      "external_precision_Coccidiosis": 0.8625,
+      "external_precision_Healthy": 0.7222222222222222,
+      "external_precision_Salmonella": 0.7629107981220657,
+      "external_precision_NCD": 0.874251497005988
+    }
+  ],
+  "summary": {
+    "best_epoch": {
+      "mean": 22.2,
+      "sd": 4.764451699828638,
+      "min": 17.0,
+      "max": 27.0
+    },
+    "val_macro_f1": {
+      "mean": 0.9801722157855167,
+      "sd": 0.0028680683113475646,
+      "min": 0.9763226885398395,
+      "max": 0.9840297326765972
+    },
+    "internal_accuracy": {
+      "mean": 0.9739219712525667,
+      "sd": 0.004081028113829956,
+      "min": 0.9671457905544147,
+      "max": 0.9774127310061602
+    },
+    "internal_macro_f1": {
+      "mean": 0.9600383839267377,
+      "sd": 0.005445950310184638,
+      "min": 0.9544967098664054,
+      "max": 0.9689573010644855
+    },
+    "external_accuracy": {
+      "mean": 0.7630308076602831,
+      "sd": 0.019709123181189798,
+      "min": 0.742714404662781,
+      "max": 0.7951706910907577
+    },
+    "external_macro_f1": {
+      "mean": 0.758520164315758,
+      "sd": 0.024031135097468365,
+      "min": 0.7289774840202163,
+      "max": 0.7944649008416919
+    },
+    "external_log_loss": {
+      "mean": 0.9832504162808234,
+      "sd": 0.1520859042339315,
+      "min": 0.7507637718350203,
+      "max": 1.1199815697863778
+    },
+    "external_roc_auc": {
+      "mean": 0.9419055360107637,
+      "sd": 0.00652538453715563,
+      "min": 0.9352742584812066,
+      "max": 0.952359801854362
+    },
+    "external_recall_Coccidiosis": {
+      "mean": 0.6946778711484594,
+      "sd": 0.04811082363394304,
+      "min": 0.6470588235294118,
+      "max": 0.773109243697479
+    },
+    "external_recall_Healthy": {
+      "mean": 0.7314102564102564,
+      "sd": 0.036712361700708615,
+      "min": 0.6666666666666666,
+      "max": 0.7564102564102564
+    },
+    "external_recall_Salmonella": {
+      "mean": 0.9190751445086704,
+      "sd": 0.014594660315552142,
+      "min": 0.9017341040462428,
+      "max": 0.9393063583815029
+    },
+    "external_recall_NCD": {
+      "mean": 0.656989247311828,
+      "sd": 0.10788917460521176,
+      "min": 0.5053763440860215,
+      "max": 0.7849462365591398
+    },
+    "external_precision_Coccidiosis": {
+      "mean": 0.9288140704411096,
+      "sd": 0.03842520497678149,
+      "min": 0.8625,
+      "max": 0.9563492063492064
+    },
+    "external_precision_Healthy": {
+      "mean": 0.6372300812189555,
+      "sd": 0.05110558924980698,
+      "min": 0.5923076923076923,
+      "max": 0.7222222222222222
+    },
+    "external_precision_Salmonella": {
+      "mean": 0.737056579125605,
+      "sd": 0.018444674965987607,
+      "min": 0.7181818181818181,
+      "max": 0.7629107981220657
+    },
+    "external_precision_NCD": {
+      "mean": 0.8721620250657672,
+      "sd": 0.026542418830765017,
+      "min": 0.8385093167701864,
+      "max": 0.912621359223301
+    }
+  },
+  "prediction_agreement": {
+    "internal": {
+      "n_images": 974,
+      "all_runs_agree": 0.9691991786447639,
+      "pairwise_agreement_min": 0.9794661190965093,
+      "pairwise_agreement_mean": 0.9850102669404517
+    },
+    "external": {
+      "n_images": 1201,
+      "all_runs_agree": 0.794338051623647,
+      "pairwise_agreement_min": 0.8592839300582847,
+      "pairwise_agreement_mean": 0.8985845129059117
+    }
+  }
+}

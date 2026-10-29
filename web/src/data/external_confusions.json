@@ -1,0 +1,89 @@
+{
+  "source": "results/metrics.json pcr_evaluation.confusion_matrix",
+  "confusions": [
+    {
+      "true": "Healthy",
+      "predicted": "Salmonella",
+      "count": 65,
+      "of_true_class": 312,
+      "share": 0.20833333333333334
+    },
+    {
+      "true": "NCD",
+      "predicted": "Healthy",
+      "count": 29,
+      "of_true_class": 186,
+      "share": 0.15591397849462366
+    },
+    {
+      "true": "Coccidiosis",
+      "predicted": "Healthy",
+      "count": 39,
+      "of_true_class": 357,
+      "share": 0.1092436974789916
+    },
+    {
+      "true": "Healthy",
+      "predicted": "Coccidiosis",
+      "count": 34,
+      "of_true_class": 312,
+      "share": 0.10897435897435898
+    },
+    {
+      "true": "Coccidiosis",
+      "predicted": "Salmonella",
+      "count": 29,
+      "of_true_class": 357,
+      "share": 0.08123249299719888
+    },
+    {
+      "true": "NCD",
+      "predicted": "Salmonella",
+      "count": 7,
+      "of_true_class": 186,
+      "share": 0.03763440860215054
+    },
+    {
+      "true": "Coccidiosis",
+      "predicted": "NCD",
+      "count": 13,
+      "of_true_class": 357,
+      "share": 0.036414565826330535
+    },
+    {
+      "true": "Salmonella",
+      "predicted": "Healthy",
+      "count": 12,
+      "of_true_class": 346,
+      "share": 0.03468208092485549
+    },
+    {
+      "true": "NCD",
+      "predicted": "Coccidiosis",
+      "count": 4,
+      "of_true_class": 186,
+      "share": 0.021505376344086023
+    },
+    {
+      "true": "Salmonella",
+      "predicted": "Coccidiosis",
+      "count": 6,
+      "of_true_class": 346,
+      "share": 0.017341040462427744
+    },
+    {
+      "true": "Healthy",
+      "predicted": "NCD",
+      "count": 5,
+      "of_true_class": 312,
+      "share": 0.016025641025641024
+    },
+    {
+      "true": "Salmonella",
+      "predicted": "NCD",
+      "count": 3,
+      "of_true_class": 346,
+      "share": 0.008670520231213872
+    }
+  ]
+}

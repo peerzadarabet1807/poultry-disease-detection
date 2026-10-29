@@ -1,0 +1,116 @@
+{
+  "credit": "Machuve et al., Machine Learning Dataset for Poultry Diseases Diagnostics, Zenodo, CC BY 4.0. Downscaled to 1024 px; no other changes.",
+  "license": "CC-BY-4.0",
+  "samples": [
+    {
+      "id": "f01",
+      "file": "f01.jpg",
+      "thumb": "thumbs/f01.jpg",
+      "trueClass": "Coccidiosis",
+      "set": "internal",
+      "note": "",
+      "source": "version-2/cocci/cocci.1.jpg",
+      "doi": "10.5281/zenodo.4628934"
+    },
+    {
+      "id": "f03",
+      "file": "f03.jpg",
+      "thumb": "thumbs/f03.jpg",
+      "trueClass": "Healthy",
+      "set": "internal",
+      "note": "",
+      "source": "version-2/healthy/healthy.1021.jpg",
+      "doi": "10.5281/zenodo.4628934"
+    },
+    {
+      "id": "f05",
+      "file": "f05.jpg",
+      "thumb": "thumbs/f05.jpg",
+      "trueClass": "Salmonella",
+      "set": "internal",
+      "note": "",
+      "source": "version-2/salmo/salmo.1033.jpg",
+      "doi": "10.5281/zenodo.4628934"
+    },
+    {
+      "id": "f07",
+      "file": "f07.jpg",
+      "thumb": "thumbs/f07.jpg",
+      "trueClass": "NCD",
+      "set": "internal",
+      "note": "",
+      "source": "version-2/ncd/ncd.289.jpg",
+      "doi": "10.5281/zenodo.4628934"
+    },
+    {
+      "id": "f09",
+      "file": "f09.jpg",
+      "thumb": "thumbs/f09.jpg",
+      "trueClass": "Coccidiosis",
+      "set": "external",
+      "note": "",
+      "source": "version-3/pcrcocci/pcrcocci.106.jpg",
+      "doi": "10.5281/zenodo.5801834"
+    },
+    {
+      "id": "f10",
+      "file": "f10.jpg",
+      "thumb": "thumbs/f10.jpg",
+      "trueClass": "Healthy",
+      "set": "external",
+      "note": "",
+      "source": "version-3/pcrhealthy/pcrhealthy.8.jpg",
+      "doi": "10.5281/zenodo.5801834"
+    },
+    {
+      "id": "f11",
+      "file": "f11.jpg",
+      "thumb": "thumbs/f11.jpg",
+      "trueClass": "Salmonella",
+      "set": "external",
+      "note": "",
+      "source": "version-3/pcrsalmo/pcrsalmo.103.jpg",
+      "doi": "10.5281/zenodo.5801834"
+    },
+    {
+      "id": "f12",
+      "file": "f12.jpg",
+      "thumb": "thumbs/f12.jpg",
+      "trueClass": "NCD",
+      "set": "external",
+      "note": "",
+      "source": "version-3/pcrncd/pcrncd.98.jpg",
+      "doi": "10.5281/zenodo.5801834"
+    },
+    {
+      "id": "f15",
+      "file": "f15.jpg",
+      "thumb": "thumbs/f15.jpg",
+      "trueClass": "NCD",
+      "set": "external",
+      "note": "Picked as the PCR-set Newcastle disease photo the model most confidently calls Healthy.",
+      "source": "version-3/pcrncd/pcrncd.106.jpg",
+      "doi": "10.5281/zenodo.5801834"
+    },
+    {
+      "id": "f16",
+      "file": "f16.jpg",
+      "thumb": "thumbs/f16.jpg",
+      "trueClass": "Healthy",
+      "set": "external",
+      "note": "Picked as the PCR-set Healthy photo the model most confidently calls Salmonella.",
+      "source": "version-3/pcrhealthy/pcrhealthy.173.jpg",
+      "doi": "10.5281/zenodo.5801834"
+    },
+    {
+      "id": "f18",
+      "file": "f18.jpg",
+      "thumb": "thumbs/f18.jpg",
+      "trueClass": "Healthy",
+      "set": "external",
+      "note": "Picked as the PCR-set photo on which the training run's prediction was most split.",
+      "source": "version-3/pcrhealthy/pcrhealthy.70.jpg",
+      "doi": "10.5281/zenodo.5801834"
+    }
+  ]
+}

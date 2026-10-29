@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Poultry Droppings Classifier · research prototype in your browser</title>
+    <meta
+      name="description"
+      content="Classify a photo of chicken droppings as resembling Coccidiosis, Salmonella, Newcastle disease or Healthy. A ResNet50 model with class activation maps runs in your browser. Research prototype, not a veterinary diagnosis."
+    />
+    <meta name="theme-color" content="#f6f4ee" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#111613" media="(prefers-color-scheme: dark)" />
+    <meta property="og:title" content="Poultry Droppings Classifier (research prototype)" />
+    <meta
+      property="og:description"
+      content="An image classifier for poultry droppings that runs in your browser, with an honest account of how well it works on new photos."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
+    <link
+      rel="preload"
+      href="%BASE_URL%fonts/public-sans-latin-wght-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="%BASE_URL%fonts/literata-latin-opsz-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <script>
+      // apply the saved or system theme before first paint (no flash)
+      (function () {
+        try {
+          var saved = localStorage.getItem('theme');
+          var dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (dark) document.documentElement.classList.add('dark');
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      <p style="padding: 2rem; font-family: system-ui">
+        This classifier runs a neural network in your browser and needs JavaScript enabled.
+      </p>
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
