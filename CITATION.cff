@@ -1,0 +1,100 @@
+cff-version: 1.2.0
+message: "If you use this software or model, please cite it as below, and cite the dataset it was trained on."
+type: software
+title: "Poultry disease image classification: a ResNet50 prototype with in-browser CAM and an honest external evaluation"
+abstract: >-
+  A ResNet50 classifier for photos of poultry droppings (Coccidiosis, Healthy, Salmonella, Newcastle disease),
+  trained on version 2 of the Machuve et al. dataset and evaluated on the separately collected, PCR-annotated
+  version 3. It reaches 96.7% accuracy on the internal test set and 79.5% on the PCR-confirmed set. Includes a
+  Python package, a FastAPI backend and a TensorFlow.js web app with class activation maps. Research and
+  decision-support prototype; not a veterinary diagnosis.
+authors:
+  - family-names: Rabet
+    given-names: Peerzada Mohammad
+    email: peerzada.rabet2@gmail.com
+version: 1.0.0
+date-released: 2026-10-30
+license: MIT
+repository-code: "https://github.com/peerzadarabet1807/poultry-disease-detection"
+url: "https://peerzadarabet1807.github.io/poultry-disease-detection/"
+keywords:
+  - poultry
+  - disease classification
+  - deep learning
+  - transfer learning
+  - ResNet50
+  - Grad-CAM
+  - TensorFlow.js
+  - domain shift
+references:
+  - type: data
+    title: "Machine Learning Dataset for Poultry Diseases Diagnostics"
+    version: "2"
+    date-released: 2021-02-03
+    doi: 10.5281/zenodo.4628934
+    license: CC-BY-4.0
+    publisher:
+      name: Zenodo
+    authors:
+      - family-names: Machuve
+        given-names: Dina
+        orcid: "https://orcid.org/0000-0002-8711-5948"
+        affiliation: Nelson Mandela African Institution of Science and Technology
+      - family-names: Nwankwo
+        given-names: Ezinne
+        affiliation: Duke University
+      - family-names: Mduma
+        given-names: Neema
+        orcid: "https://orcid.org/0000-0002-4364-3124"
+        affiliation: Nelson Mandela African Institution of Science and Technology
+      - family-names: Mbelwa
+        given-names: Hope
+        affiliation: Nelson Mandela African Institution of Science and Technology
+      - family-names: Maguo
+        given-names: Evarist
+        affiliation: "Elang'ata Agrovet Services"
+      - family-names: Munisi
+        given-names: Charles
+        affiliation: "Elang'ata Agrovet Services"
+  - type: data
+    title: "Machine Learning Dataset for Poultry Diseases Diagnostics - PCR annotated"
+    version: "3"
+    date-released: 2021-12-23
+    doi: 10.5281/zenodo.5801834
+    license: CC-BY-4.0
+    publisher:
+      name: Zenodo
+    authors:
+      - family-names: Machuve
+        given-names: Dina
+        orcid: "https://orcid.org/0000-0002-8711-5948"
+        affiliation: Nelson Mandela African Institution of Science and Technology
+      - family-names: Nwankwo
+        given-names: Ezinne
+        affiliation: Duke University
+      - family-names: Lyimo
+        given-names: Emmanuel
+        affiliation: Nelson Mandela African Institution of Science and Technology
+      - family-names: Maguo
+        given-names: Evarist
+        affiliation: "Elang'ata Agrovet Services"
+      - family-names: Munisi
+        given-names: Charles
+        affiliation: "Elang'ata Agrovet Services"
+  - type: article
+    title: "Poultry diseases diagnostics models using deep learning"
+    journal: "Frontiers in Artificial Intelligence"
+    volume: 5
+    start: 733345
+    year: 2022
+    month: 8
+    doi: 10.3389/frai.2022.733345
+    authors:
+      - family-names: Machuve
+        given-names: Dina
+      - family-names: Nwankwo
+        given-names: Ezinne
+      - family-names: Mduma
+        given-names: Neema
+      - family-names: Mbelwa
+        given-names: Jimmy
