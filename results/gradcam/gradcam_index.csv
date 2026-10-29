@@ -1,0 +1,17 @@
+filepath,true_class,predicted_class,confidence,kind,output_file
+/content/poultry-data-local/version-2/cocci/cocci.1125.jpg,Coccidiosis,Coccidiosis,1.0,correct,/content/poultry-training-output/gradcam/00_correct_Coccidiosis_as_Coccidiosis.png
+/content/poultry-data-local/version-2/cocci/cocci.1113.jpg,Coccidiosis,Coccidiosis,1.0,correct,/content/poultry-training-output/gradcam/01_correct_Coccidiosis_as_Coccidiosis.png
+/content/poultry-data-local/version-2/salmo/salmo.972.jpg,Salmonella,Salmonella,1.0,correct,/content/poultry-training-output/gradcam/02_correct_Salmonella_as_Salmonella.png
+/content/poultry-data-local/version-2/salmo/salmo.934.jpg,Salmonella,Salmonella,1.0,correct,/content/poultry-training-output/gradcam/03_correct_Salmonella_as_Salmonella.png
+/content/poultry-data-local/version-2/healthy/healthy.1983.jpg,Healthy,Healthy,1.0,correct,/content/poultry-training-output/gradcam/04_correct_Healthy_as_Healthy.png
+/content/poultry-data-local/version-2/healthy/healthy.2004.jpg,Healthy,Healthy,1.0,correct,/content/poultry-training-output/gradcam/05_correct_Healthy_as_Healthy.png
+/content/poultry-data-local/version-2/ncd/ncd.369.jpg,NCD,NCD,1.0,correct,/content/poultry-training-output/gradcam/06_correct_NCD_as_NCD.png
+/content/poultry-data-local/version-2/ncd/ncd.289.jpg,NCD,NCD,1.0,correct,/content/poultry-training-output/gradcam/07_correct_NCD_as_NCD.png
+/content/poultry-data-local/version-2/salmo/salmo.146.jpg,Salmonella,Healthy,0.9995654225349426,error,/content/poultry-training-output/gradcam/08_error_Salmonella_as_Healthy.png
+/content/poultry-data-local/version-2/salmo/salmo.1128.jpg,Salmonella,Healthy,0.9995449185371399,error,/content/poultry-training-output/gradcam/09_error_Salmonella_as_Healthy.png
+/content/poultry-data-local/version-2/salmo/salmo.2016.jpg,Salmonella,Coccidiosis,0.9984136819839478,error,/content/poultry-training-output/gradcam/10_error_Salmonella_as_Coccidiosis.png
+/content/poultry-data-local/version-2/salmo/salmo.2021.jpg,Salmonella,Coccidiosis,0.9707074165344238,error,/content/poultry-training-output/gradcam/11_error_Salmonella_as_Coccidiosis.png
+/content/poultry-data-local/version-2/salmo/salmo.1356.jpg,Salmonella,Healthy,0.9697265625,error,/content/poultry-training-output/gradcam/12_error_Salmonella_as_Healthy.png
+/content/poultry-data-local/version-2/salmo/salmo.1291.jpg,Salmonella,Healthy,0.9236003756523132,error,/content/poultry-training-output/gradcam/13_error_Salmonella_as_Healthy.png
+/content/poultry-data-local/version-2/ncd/ncd.6.jpg,NCD,Healthy,0.9083480834960938,error,/content/poultry-training-output/gradcam/14_error_NCD_as_Healthy.png
+/content/poultry-data-local/version-2/ncd/ncd.344.jpg,NCD,Healthy,0.9060848951339722,error,/content/poultry-training-output/gradcam/15_error_NCD_as_Healthy.png

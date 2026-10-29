@@ -1,0 +1,5 @@
+split,source_version,Coccidiosis,Healthy,Salmonella,NCD,total
+external_pcr_test,version-3-pcr,357,312,346,186,1201
+test,version-2,296,308,314,56,974
+train,version-2,1378,1440,1467,262,4547
+val,version-2,296,306,315,56,973

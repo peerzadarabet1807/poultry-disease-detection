@@ -1,0 +1,168 @@
+{
+  "experiment_mode": "v2_train__v3_pcr_external_test",
+  "best_epoch": 18,
+  "best_epoch_phase": "phase2_finetune",
+  "best_val_macro_f1": 0.9799984615552131,
+  "test": {
+    "n_samples": 974,
+    "accuracy": 0.973305954825462,
+    "macro_precision": 0.9669704764449987,
+    "macro_recall": 0.9534966453756263,
+    "macro_f1": 0.9598656199521561,
+    "weighted_f1": 0.9731166903886047,
+    "log_loss": 0.07794383641181889,
+    "classes_present": [
+      "Coccidiosis",
+      "Healthy",
+      "Salmonella",
+      "NCD"
+    ],
+    "roc_auc_ovr_macro": 0.9983545819491841,
+    "roc_auc_per_class": {
+      "Coccidiosis": 0.9998654628079406,
+      "Healthy": 0.9978062478062478,
+      "Salmonella": 0.9972833429839799,
+      "NCD": 0.9984632741985683
+    },
+    "average_precision_per_class": {
+      "Coccidiosis": 0.9996906934235147,
+      "Healthy": 0.9944756516312526,
+      "Salmonella": 0.9953053621067514,
+      "NCD": 0.9781650686759245
+    },
+    "per_class": {
+      "Coccidiosis": {
+        "precision": 0.9833333333333333,
+        "recall": 0.9966216216216216,
+        "f1": 0.9899328859060402,
+        "support": 296
+      },
+      "Healthy": {
+        "precision": 0.964968152866242,
+        "recall": 0.9837662337662337,
+        "f1": 0.9742765273311897,
+        "support": 308
+      },
+      "Salmonella": {
+        "precision": 0.9772727272727273,
+        "recall": 0.9585987261146497,
+        "f1": 0.9678456591639871,
+        "support": 314
+      },
+      "NCD": {
+        "precision": 0.9423076923076923,
+        "recall": 0.875,
+        "f1": 0.9074074074074074,
+        "support": 56
+      }
+    },
+    "confusion_matrix": [
+      [
+        295,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        303,
+        4,
+        1
+      ],
+      [
+        2,
+        9,
+        301,
+        2
+      ],
+      [
+        3,
+        2,
+        2,
+        49
+      ]
+    ]
+  },
+  "pcr_evaluation": {
+    "n_samples": 1201,
+    "accuracy": 0.765195670274771,
+    "macro_precision": 0.7925939820222131,
+    "macro_recall": 0.7610501708679858,
+    "macro_f1": 0.7646842999996302,
+    "weighted_f1": 0.7650585709605255,
+    "log_loss": 0.9129221609368199,
+    "classes_present": [
+      "Coccidiosis",
+      "Healthy",
+      "Salmonella",
+      "NCD"
+    ],
+    "roc_auc_ovr_macro": 0.9427286759243587,
+    "roc_auc_per_class": {
+      "Coccidiosis": 0.9527294330054297,
+      "Healthy": 0.8873410054512417,
+      "Salmonella": 0.9552682283744042,
+      "NCD": 0.9755760368663594
+    },
+    "average_precision_per_class": {
+      "Coccidiosis": 0.9191136546315863,
+      "Healthy": 0.7551844940753017,
+      "Salmonella": 0.89933898341582,
+      "NCD": 0.8750243619727569
+    },
+    "per_class": {
+      "Coccidiosis": {
+        "precision": 0.9545454545454546,
+        "recall": 0.6470588235294118,
+        "f1": 0.7712854757929883,
+        "support": 357
+      },
+      "Healthy": {
+        "precision": 0.6444444444444445,
+        "recall": 0.7435897435897436,
+        "f1": 0.6904761904761905,
+        "support": 312
+      },
+      "Salmonella": {
+        "precision": 0.7328767123287672,
+        "recall": 0.9277456647398844,
+        "f1": 0.8188775510204082,
+        "support": 346
+      },
+      "NCD": {
+        "precision": 0.8385093167701864,
+        "recall": 0.7258064516129032,
+        "f1": 0.7780979827089337,
+        "support": 186
+      }
+    },
+    "confusion_matrix": [
+      [
+        231,
+        63,
+        42,
+        21
+      ],
+      [
+        6,
+        232,
+        70,
+        4
+      ],
+      [
+        3,
+        21,
+        321,
+        1
+      ],
+      [
+        2,
+        44,
+        5,
+        135
+      ]
+    ],
+    "evaluation_type": "external_held_out",
+    "description": "External PCR evaluation (Version 3, never used for training or model selection)"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "train_class_counts": {
+    "Coccidiosis": 1378,
+    "Healthy": 1440,
+    "Salmonella": 1467,
+    "NCD": 262
+  },
+  "imbalance_ratio_max_over_min": 5.599236641221374,
+  "threshold": 1.5,
+  "class_weights_used": true,
+  "class_weights": {
+    "Coccidiosis": 0.8249274310595065,
+    "Healthy": 0.7894097222222223,
+    "Salmonella": 0.7748807089297887,
+    "NCD": 4.338740458015267
+  }
+}

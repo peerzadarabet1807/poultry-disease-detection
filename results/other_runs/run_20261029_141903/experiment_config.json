@@ -1,0 +1,122 @@
+{
+  "created_utc": "2026-10-29T13:35:42.513773+00:00",
+  "experiment_mode": "v2_train__v3_pcr_external_test",
+  "use_pcr_as_external_test": true,
+  "dataset_root": "/content/drive/MyDrive/poultry-disease-dataset-zenedo",
+  "source_folders": {
+    "version-2": {
+      "source_version": "version-2",
+      "folders": {
+        "cocci": "Coccidiosis",
+        "healthy": "Healthy",
+        "salmo": "Salmonella",
+        "ncd": "NCD"
+      }
+    },
+    "version-3": {
+      "source_version": "version-3-pcr",
+      "folders": {
+        "pcrcocci": "Coccidiosis",
+        "pcrhealthy": "Healthy",
+        "pcrsalmo": "Salmonella",
+        "pcrncd": "NCD"
+      }
+    }
+  },
+  "excluded_folders": [
+    "imgobjdet_yolo",
+    "imgsegmentation"
+  ],
+  "seed": 42,
+  "img_size": [
+    224,
+    224
+  ],
+  "batch_size": 32,
+  "epochs_head": 15,
+  "epochs_fine": 20,
+  "learning_rate": 0.001,
+  "learning_rate_fine": 1e-05,
+  "weight_decay_fine": 0.0001,
+  "dropout_rate": 0.3,
+  "fine_tune_stages": [
+    "conv5_"
+  ],
+  "early_stopping_patience": 5,
+  "reduce_lr_patience": 2,
+  "reduce_lr_factor": 0.3,
+  "min_lr": 1e-07,
+  "split_fractions": {
+    "train": 0.7,
+    "val": 0.15,
+    "test": 0.15
+  },
+  "imbalance_threshold": 1.5,
+  "near_duplicate_grouping": true,
+  "min_image_side": 32,
+  "augmentation": {
+    "flip": "horizontal_and_vertical",
+    "rotation_factor": 0.08,
+    "zoom_factor": 0.1,
+    "contrast_factor": 0.15,
+    "brightness_factor": 0.1
+  },
+  "class_names": [
+    "Coccidiosis",
+    "Healthy",
+    "Salmonella",
+    "NCD"
+  ],
+  "class_to_index": {
+    "Coccidiosis": 0,
+    "Healthy": 1,
+    "Salmonella": 2,
+    "NCD": 3
+  },
+  "deterministic_ops": false,
+  "environment": {
+    "python": "3.13.16",
+    "tensorflow": "2.21.0",
+    "keras": "3.13.2",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "scikit_learn": "1.6.1",
+    "opencv": "5.0.0",
+    "pillow": "11.3.0",
+    "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+    "in_colab": true,
+    "gpus": [
+      "Tesla T4"
+    ]
+  },
+  "completed_utc": "2026-10-29T14:18:50.271118+00:00",
+  "stratification": {
+    "test_split": "cls+source",
+    "val_split": "cls+source"
+  },
+  "summary": {
+    "Dataset": "Zenodo poultry disease dataset (version-2 + version-3 PCR)",
+    "Experiment mode": "v2_train__v3_pcr_external_test",
+    "Images after cleaning": 7695,
+    "Images rejected (all reasons)": 372,
+    "Number of classes": 4,
+    "Classes": "Coccidiosis, Healthy, Salmonella, NCD",
+    "Image size": "224x224",
+    "Model": "ResNet50 (imagenet) + GAP + Dropout(0.3) + Dense(4)",
+    "Train samples": 4547,
+    "Validation samples": 973,
+    "Test samples": 974,
+    "PCR evaluation samples": 1201,
+    "Class weights used": true,
+    "Best epoch": "27 (phase2_finetune)",
+    "Best validation macro-F1": 0.9789981101518732,
+    "Test accuracy": 0.9753593429158111,
+    "Test macro-F1": 0.9571688491705901,
+    "Test weighted-F1": 0.9750680049947249,
+    "PCR evaluation type": "external held-out",
+    "PCR accuracy": 0.7577019150707743,
+    "PCR macro-F1": 0.7559945019898069,
+    "Training time (min)": 18.5,
+    "Model path": "/content/poultry-training-output/models/poultry_resnet50.keras"
+  }
+}

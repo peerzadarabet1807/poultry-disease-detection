@@ -1,0 +1,85 @@
+{
+  "dataset_root": "/content/drive/MyDrive/poultry-disease-dataset-zenedo",
+  "class_folders_used": [
+    "version-2/cocci -> Coccidiosis (version-2)",
+    "version-2/healthy -> Healthy (version-2)",
+    "version-2/ncd -> NCD (version-2)",
+    "version-2/salmo -> Salmonella (version-2)",
+    "version-3/pcrcocci -> Coccidiosis (version-3-pcr)",
+    "version-3/pcrhealthy -> Healthy (version-3-pcr)",
+    "version-3/pcrncd -> NCD (version-3-pcr)",
+    "version-3/pcrsalmo -> Salmonella (version-3-pcr)"
+  ],
+  "excluded_folders": [
+    "imgobjdet_yolo",
+    "imgsegmentation"
+  ],
+  "n_candidate_image_files": 8067,
+  "n_valid_after_audit": 8067,
+  "n_after_deduplication": 7695,
+  "n_rejected_total": 372,
+  "rejection_reasons": {
+    "exact_duplicate_of": 334,
+    "exact_duplicate_label_conflict": 38
+  },
+  "exact_duplicate_groups": 295,
+  "exact_duplicate_kinds": {
+    "within_version": 276,
+    "label_conflict": 19
+  },
+  "suspicious_filename_groups": 0,
+  "near_duplicate_groups": 7,
+  "cross_class_filename_collisions": 0,
+  "cross_class_dhash_collisions": 0,
+  "n_split_groups": 7684,
+  "images_per_class": {
+    "Coccidiosis": 2327,
+    "Healthy": 2366,
+    "Salmonella": 2442,
+    "NCD": 560
+  },
+  "images_per_source": {
+    "version-2": 6494,
+    "version-3-pcr": 1201
+  },
+  "images_per_class_and_source": {
+    "Coccidiosis|version-2": 1970,
+    "Coccidiosis|version-3-pcr": 357,
+    "Healthy|version-2": 2054,
+    "Healthy|version-3-pcr": 312,
+    "NCD|version-2": 374,
+    "NCD|version-3-pcr": 186,
+    "Salmonella|version-2": 2096,
+    "Salmonella|version-3-pcr": 346
+  },
+  "width_stats": {
+    "count": 7695.0,
+    "mean": 2151.156855100715,
+    "std": 719.079832689396,
+    "min": 750.0,
+    "25%": 1440.0,
+    "50%": 2048.0,
+    "75%": 3120.0,
+    "max": 4160.0
+  },
+  "height_stats": {
+    "count": 7695.0,
+    "mean": 2286.1712800519817,
+    "std": 1100.46332576598,
+    "min": 750.0,
+    "25%": 1152.0,
+    "50%": 2048.0,
+    "75%": 3200.0,
+    "max": 4160.0
+  },
+  "channels_distribution": {
+    "3": 7695
+  },
+  "mode_distribution": {
+    "RGB": 7695
+  },
+  "format_distribution": {
+    "JPEG": 7695
+  },
+  "n_converted_to_rgb": 0
+}

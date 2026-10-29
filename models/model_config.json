@@ -1,0 +1,109 @@
+{
+  "model_file": "poultry_resnet50.keras",
+  "savedmodel_dir": "poultry_resnet50_savedmodel",
+  "task": "4-class image classification of poultry fecal photographs (research prototype)",
+  "class_names": [
+    "Coccidiosis",
+    "Healthy",
+    "Salmonella",
+    "NCD"
+  ],
+  "class_display_names": {
+    "Coccidiosis": "Coccidiosis",
+    "Healthy": "Healthy",
+    "Salmonella": "Salmonella",
+    "NCD": "Newcastle Disease (NCD)"
+  },
+  "class_to_index": {
+    "Coccidiosis": 0,
+    "Healthy": 1,
+    "Salmonella": 2,
+    "NCD": 3
+  },
+  "image_size": [
+    224,
+    224
+  ],
+  "input_channels": "RGB",
+  "preprocessing": {
+    "steps": [
+      "decode image with 3 channels (RGB)",
+      "resize to 224x224 bilinear with antialias (aspect ratio not preserved)",
+      "round and clip to uint8 [0, 255]",
+      "cast to float32",
+      "tf.keras.applications.resnet50.preprocess_input (caffe mode: RGB->BGR, subtract ImageNet means)"
+    ],
+    "function": "tf.keras.applications.resnet50.preprocess_input",
+    "applied_inside_model": false
+  },
+  "output": "softmax probabilities over class_names (same order)",
+  "architecture": {
+    "backbone": "ResNet50",
+    "backbone_weights": "imagenet",
+    "include_top": false,
+    "backbone_layer_name": "resnet50_backbone",
+    "last_conv_layer": "conv5_block3_out",
+    "head": [
+      "GlobalAveragePooling2D (global_average_pooling)",
+      "Dropout(0.3) (dropout)",
+      "Dense(4, softmax) (classifier)"
+    ],
+    "fine_tuned_stages": [
+      "conv5_"
+    ],
+    "batchnorm_frozen": true,
+    "total_params": 23595908
+  },
+  "training": {
+    "seed": 42,
+    "experiment_mode": "v2_train__v3_pcr_external_test",
+    "dataset": "Zenodo poultry disease dataset",
+    "dataset_versions_used_for_training": [
+      "version-2"
+    ],
+    "n_train": 4547,
+    "n_val": 973,
+    "n_test": 974,
+    "n_pcr_eval": 1201,
+    "batch_size": 32,
+    "epochs_head": 15,
+    "epochs_fine": 20,
+    "learning_rate": 0.001,
+    "learning_rate_fine": 1e-05,
+    "optimizer_phase1": "Adam",
+    "optimizer_phase2": "AdamW(weight_decay=0.0001)",
+    "class_weights": {
+      "0": 0.8249274310595065,
+      "1": 0.7894097222222223,
+      "2": 0.7748807089297887,
+      "3": 4.338740458015267
+    },
+    "augmentation": {
+      "flip": "horizontal_and_vertical",
+      "rotation_factor": 0.08,
+      "zoom_factor": 0.1,
+      "contrast_factor": 0.15,
+      "brightness_factor": 0.1
+    },
+    "selection_metric": "val_macro_f1",
+    "best_epoch": 18,
+    "best_epoch_phase": "phase2_finetune",
+    "best_val_macro_f1": 0.9799984615552131
+  },
+  "environment": {
+    "python": "3.13.16",
+    "tensorflow": "2.21.0",
+    "keras": "3.13.2",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "scikit_learn": "1.6.1",
+    "opencv": "5.0.0",
+    "pillow": "11.3.0",
+    "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+    "in_colab": true,
+    "gpus": [
+      "Tesla T4"
+    ]
+  },
+  "disclaimer": "Research / decision-support prototype. Not a veterinary diagnosis."
+}

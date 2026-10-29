@@ -1,0 +1,303 @@
+type,key,kind,n_files,classes,versions,files
+exact_md5,020e7e04b6f2c4e1fda6cfb3b11b521c,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.2086.jpg | version-2/cocci/cocci.387.jpg
+exact_md5,03fdfa90ce80cb66213638c242e76498,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1648.jpg | version-2/cocci/cocci.2021.jpg
+exact_md5,0438c7c54bca80952e52d44899175be2,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1881.jpg | version-2/cocci/cocci.327.jpg
+exact_md5,046d08bcce3ce151424957e8434a55bb,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1930.jpg | version-2/cocci/cocci.310.jpg
+exact_md5,065c08fbf4de189ffdd96f744506d44d,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.474.jpg | version-2/cocci/cocci.720.jpg
+exact_md5,06dc64bb4842d6f44c0e2fe2c664a137,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1642.jpg | version-2/cocci/cocci.1892.jpg
+exact_md5,07493d3df9cbe2abac34e1295d0a7ae1,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.127.jpg | version-2/cocci/cocci.692.jpg
+exact_md5,08f168daca1fe477413657bbb4ac0fe8,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1124.jpg | version-2/cocci/cocci.640.jpg
+exact_md5,0a326b163c68bb348bf059d4673c443e,within_version,3,Salmonella,version-2,version-2/salmo/salmo.2083.jpg | version-2/salmo/salmo.285.jpg | version-2/salmo/salmo.716.jpg
+exact_md5,0b145788ce2ac9736e6322e159de1a16,within_version,2,Healthy,version-2,version-2/healthy/healthy.1093.jpg | version-2/healthy/healthy.958.jpg
+exact_md5,0b1adcc0fe2faaa6aa7aa889372cfcf6,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1536.jpg | version-2/salmo/salmo.1673.jpg
+exact_md5,0b356389f5b473371c86e039d52b810b,within_version,3,Salmonella,version-2,version-2/salmo/salmo.172.jpg | version-2/salmo/salmo.1922.jpg | version-2/salmo/salmo.974.jpg
+exact_md5,0cca2498e0c09c87b9235fdca7d8a4ea,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1742.jpg | version-2/cocci/cocci.415.jpg
+exact_md5,0d7f8800b0f5d7b767170b0a08701cc5,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1522.jpg | version-2/salmo/salmo.1693.jpg
+exact_md5,0ddbcce09683cf2100719771d4b83778,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1055.jpg | version-2/cocci/cocci.597.jpg
+exact_md5,0ee507115fd47a1c6e3886a1ab8496c0,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1576.jpg | version-2/cocci/cocci.1696.jpg
+exact_md5,0f452ff1812cf45aa9ed5a6827a8f125,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1064.jpg | version-2/salmo/salmo.678.jpg
+exact_md5,1201970936ba36668358242a9e25b581,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1084.jpg | version-2/cocci/cocci.45.jpg
+exact_md5,12c562e4800f7dcd3114e386f5600005,within_version,3,Salmonella,version-2,version-2/salmo/salmo.185.jpg | version-2/salmo/salmo.515.jpg | version-2/salmo/salmo.986.jpg
+exact_md5,132237b7b18677f91106b2cf8ddcd4ce,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.117.jpg | version-2/cocci/cocci.2032.jpg
+exact_md5,13ba5341b2740f580f609174727738c3,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1175.jpg | version-2/salmo/salmo.1460.jpg | version-2/salmo/salmo.1898.jpg
+exact_md5,146014aecdc425243ba8da75fdf98539,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.2047.jpg | version-2/cocci/cocci.2085.jpg
+exact_md5,15381561ed1153434cbb6019bb35dce0,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1567.jpg | version-2/salmo/salmo.62.jpg
+exact_md5,160b4e24ff4ca5a6adfcf5cb187c254f,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1190.jpg | version-2/cocci/cocci.1645.jpg
+exact_md5,163ed224a7babd2d90f9233f011c7cc0,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1222.jpg | version-2/salmo/salmo.371.jpg | version-2/salmo/salmo.398.jpg
+exact_md5,170df0e0082056cc40d8486b437ee1fd,label_conflict,2,Coccidiosis|Healthy,version-3-pcr,version-3/pcrcocci/pcrcocci.350.jpg | version-3/pcrhealthy/pcrhealthy.324.jpg
+exact_md5,196cabd7310a1c6d32ad31f052e46959,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.738.jpg | version-2/cocci/cocci.863.jpg
+exact_md5,19a0f76f4204ee5649b09e9cf6aec098,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1669.jpg | version-2/salmo/salmo.2118.jpg
+exact_md5,1a1db6ceaf293abbc620affc9b4d4556,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1129.jpg | version-2/cocci/cocci.576.jpg
+exact_md5,1a359eb680a46b6c871e0fec5c50d0f9,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.669.jpg | version-2/cocci/cocci.75.jpg
+exact_md5,1b36dc3240ca33751811d98d1c5033d6,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1078.jpg | version-2/salmo/salmo.917.jpg
+exact_md5,1bfb3145320aa77f2afe423bc330e155,within_version,2,Salmonella,version-2,version-2/salmo/salmo.627.jpg | version-2/salmo/salmo.674.jpg
+exact_md5,1c2034d9e2b67b9cdc4d73bf422f0b09,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1865.jpg | version-2/salmo/salmo.927.jpg
+exact_md5,1c53086551e8af777f55679566c3a13c,label_conflict,2,Coccidiosis|Healthy,version-3-pcr,version-3/pcrcocci/pcrcocci.220.jpg | version-3/pcrhealthy/pcrhealthy.188.jpg
+exact_md5,1d7e9a5ebdb796ef716f5bae36b4c630,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1540.jpg | version-2/salmo/salmo.176.jpg | version-2/salmo/salmo.385.jpg
+exact_md5,1e3905e928d02619c9a990db2ded0369,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1191.jpg | version-2/salmo/salmo.2102.jpg
+exact_md5,1f66415bba36c27eb332bfd386d55ae6,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1172.jpg | version-2/salmo/salmo.1710.jpg
+exact_md5,1f6767edf38ccb61f67e2c292e503049,within_version,2,Salmonella,version-2,version-2/salmo/salmo.186.jpg | version-2/salmo/salmo.77.jpg
+exact_md5,1fca13848c78b23c75a0111642a76878,within_version,2,Healthy,version-3-pcr,version-3/pcrhealthy/pcrhealthy.211.jpg | version-3/pcrhealthy/pcrhealthy.99.jpg
+exact_md5,1ff9fb5d5372a1e4c3983b2b9f58dd31,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1112.jpg | version-2/cocci/cocci.1541.jpg
+exact_md5,21015a2d4f298f35a4e50cc8e622dc4a,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1119.jpg | version-2/salmo/salmo.700.jpg
+exact_md5,210effb2b5afb804d585a32ce8956a55,within_version,2,Salmonella,version-2,version-2/salmo/salmo.556.jpg | version-2/salmo/salmo.975.jpg
+exact_md5,213266302a9c4e9f47c8cca4c9d67980,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1906.jpg | version-2/salmo/salmo.294.jpg
+exact_md5,22b66183ba56b165f98a1dbd9edfc621,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1556.jpg | version-2/salmo/salmo.432.jpg | version-2/salmo/salmo.493.jpg
+exact_md5,2338a4ebc3e9e0aeca5899e887a6b063,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1945.jpg | version-2/cocci/cocci.287.jpg
+exact_md5,236e7751f9ad895aabb0c089136c80cf,within_version,2,Healthy,version-2,version-2/healthy/healthy.1573.jpg | version-2/healthy/healthy.1784.jpg
+exact_md5,239a38ffb44b6f24a155967077faced8,within_version,4,Salmonella,version-2,version-2/salmo/salmo.1193.jpg | version-2/salmo/salmo.472.jpg | version-2/salmo/salmo.688.jpg | version-2/salmo/salmo.713.jpg
+exact_md5,253f12ce86973b33b562210c58a265a9,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1570.jpg | version-2/cocci/cocci.573.jpg
+exact_md5,25701929de3350f2d70511375fa435be,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1004.jpg | version-2/salmo/salmo.690.jpg
+exact_md5,26668b50e862bb0704ca3b0237137fe2,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.256.jpg | version-2/cocci/cocci.460.jpg
+exact_md5,27cb859e7d45bc7bdcc9263a9e7d4d78,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1212.jpg | version-2/cocci/cocci.84.jpg
+exact_md5,28c7f6b1bad4666e21a6ed19c29b8d30,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1314.jpg | version-2/cocci/cocci.218.jpg
+exact_md5,29140c3b5f711ef87a00292a9fd0255d,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1.jpg | version-2/cocci/cocci.581.jpg
+exact_md5,2968da13c33dcabcdc69e0d6898578c3,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1576.jpg | version-2/salmo/salmo.2197.jpg | version-2/salmo/salmo.58.jpg
+exact_md5,2b6c333b46487af70b95c1ab1a6cec66,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1509.jpg | version-2/cocci/cocci.1720.jpg
+exact_md5,2d4e5c0c44f6a93b8f596231605dc01f,within_version,2,Healthy,version-3-pcr,version-3/pcrhealthy/pcrhealthy.208.jpg | version-3/pcrhealthy/pcrhealthy.290.jpg
+exact_md5,2e1169d30022b94b16918cf957ae73f4,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1488.jpg | version-2/salmo/salmo.1594.jpg
+exact_md5,2e98d6e1d0db4c556451cbf8e6797ff6,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1886.jpg | version-2/cocci/cocci.871.jpg
+exact_md5,2f531d5f27204855a262856fdd404bac,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1476.jpg | version-2/salmo/salmo.453.jpg
+exact_md5,2fad543fb96796ebe8cb3edecce8375d,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1147.jpg | version-2/cocci/cocci.245.jpg
+exact_md5,32365c338b9882e98a6cdb0cff2049c6,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1566.jpg | version-2/salmo/salmo.804.jpg
+exact_md5,32863a1b112aaa09e7c93d1261f7b876,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1918.jpg | version-2/cocci/cocci.1946.jpg
+exact_md5,33e5dba7c9306fb001f663aea78f93ef,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1702.jpg | version-2/salmo/salmo.546.jpg | version-2/salmo/salmo.93.jpg
+exact_md5,33f9f0c666f60e5d0994de212d3270f7,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1374.jpg | version-2/cocci/cocci.513.jpg
+exact_md5,34585e38230aca3d788f0768579e9b8c,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1648.jpg | version-2/salmo/salmo.1890.jpg
+exact_md5,347ec6324998cb97b9627d59a2bb7e85,within_version,2,Salmonella,version-2,version-2/salmo/salmo.465.jpg | version-2/salmo/salmo.631.jpg
+exact_md5,349249e1ebda15d5eb82c562b87e848a,label_conflict,2,Coccidiosis|Healthy,version-3-pcr,version-3/pcrcocci/pcrcocci.352.jpg | version-3/pcrhealthy/pcrhealthy.328.jpg
+exact_md5,35e1ea676ffa6b488c875bebab6fc76f,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1912.jpg | version-2/salmo/salmo.2126.jpg | version-2/salmo/salmo.69.jpg
+exact_md5,36082ed25f2aaee735968db32d09341b,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1813.jpg | version-2/cocci/cocci.574.jpg
+exact_md5,37437c5ec01819081fe64366fa3c3938,within_version,3,Salmonella,version-2,version-2/salmo/salmo.108.jpg | version-2/salmo/salmo.1697.jpg | version-2/salmo/salmo.313.jpg
+exact_md5,379fd6de4dca3f3fd99bdf9747fb7d49,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1110.jpg | version-2/cocci/cocci.693.jpg
+exact_md5,3956c3363d82810ec381cd241e39fdd7,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1449.jpg | version-2/salmo/salmo.696.jpg
+exact_md5,398be1e2daaeba112ec61d8148bf5bc4,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1206.jpg | version-2/cocci/cocci.51.jpg
+exact_md5,39c38d402347939532a6671d9d8cea68,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1213.jpg | version-2/salmo/salmo.1237.jpg | version-2/salmo/salmo.43.jpg
+exact_md5,3ab316fb64a79fc45eab7044ad00feab,within_version,3,Salmonella,version-2,version-2/salmo/salmo.664.jpg | version-2/salmo/salmo.777.jpg | version-2/salmo/salmo.997.jpg
+exact_md5,3ac73121958abf78936172d13955d6bf,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1370.jpg | version-2/cocci/cocci.963.jpg
+exact_md5,3ae0e6901060e1cd2e60b3844f4f7347,within_version,3,Salmonella,version-2,version-2/salmo/salmo.444.jpg | version-2/salmo/salmo.49.jpg | version-2/salmo/salmo.909.jpg
+exact_md5,3bc3463cb82a4901c02cc2c460e4037e,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1019.jpg | version-2/salmo/salmo.832.jpg
+exact_md5,3ca6a6675e0b785acbcf319dfd05c8a4,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1117.jpg | version-2/salmo/salmo.1244.jpg | version-2/salmo/salmo.1374.jpg
+exact_md5,3e93b41583595f6a2173921082c4c3a4,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1362.jpg | version-2/salmo/salmo.871.jpg
+exact_md5,3f4c799c9281e93748533802d70ff2af,within_version,2,Healthy,version-3-pcr,version-3/pcrhealthy/pcrhealthy.279.jpg | version-3/pcrhealthy/pcrhealthy.97.jpg
+exact_md5,3fa46f4361624e5370eaf75e960531a6,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1501.jpg | version-2/cocci/cocci.433.jpg
+exact_md5,3fad4350e2ac748ad84cbe9c7dd914ba,within_version,2,Salmonella,version-2,version-2/salmo/salmo.2245.jpg | version-2/salmo/salmo.928.jpg
+exact_md5,4016b7ac2e753b0e12cafbc26f5e400e,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1012.jpg | version-2/salmo/salmo.2196.jpg
+exact_md5,41508e97710d624d76b988af47b691de,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1065.jpg | version-2/cocci/cocci.1950.jpg
+exact_md5,41cf110b829f9c8d47263058afb4393b,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1180.jpg | version-2/salmo/salmo.272.jpg
+exact_md5,41fee6ddb9cb721e429eccca6a7a8e2c,within_version,2,Healthy,version-3-pcr,version-3/pcrhealthy/pcrhealthy.195.jpg | version-3/pcrhealthy/pcrhealthy.239.jpg
+exact_md5,42204218aa087534cc421b7561b88e06,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1600.jpg | version-2/cocci/cocci.61.jpg
+exact_md5,424e150d10c1530fedff677a3a8af8da,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1730.jpg | version-2/salmo/salmo.684.jpg | version-2/salmo/salmo.757.jpg
+exact_md5,431ee4868636939cc236723c7f649041,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1234.jpg | version-2/cocci/cocci.1659.jpg
+exact_md5,433dbb5627e3dd7094494904f7e5658f,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1781.jpg | version-2/salmo/salmo.205.jpg | version-2/salmo/salmo.2238.jpg
+exact_md5,437445141629f1425f843cbb11a80027,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1894.jpg | version-2/cocci/cocci.781.jpg
+exact_md5,445d431e6847be38d2371cb874b2f935,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1831.jpg | version-2/cocci/cocci.596.jpg
+exact_md5,44a8e179a9ba9ee4763b7e202ff726f1,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1008.jpg | version-2/cocci/cocci.394.jpg
+exact_md5,44e3862286ec156c204a5dcdb158d14d,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1075.jpg | version-2/salmo/salmo.1268.jpg | version-2/salmo/salmo.1963.jpg
+exact_md5,45543d5170576fbada91f2b2dc388e77,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1508.jpg | version-2/cocci/cocci.1609.jpg
+exact_md5,45d1ad5ce482607ea40cc9fa31e6131a,within_version,2,Salmonella,version-2,version-2/salmo/salmo.152.jpg | version-2/salmo/salmo.2186.jpg
+exact_md5,46561f8ff4c0955f7215122c1ca859f3,within_version,2,Healthy,version-3-pcr,version-3/pcrhealthy/pcrhealthy.150.jpg | version-3/pcrhealthy/pcrhealthy.230.jpg
+exact_md5,4885bdd1458915d61a69c0ee1fbb9e5a,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1422.jpg | version-2/cocci/cocci.446.jpg
+exact_md5,489f74615033d50de7ce6e39f0545123,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1554.jpg | version-2/cocci/cocci.1676.jpg
+exact_md5,492ab4812cb528def1efb6b5cfad3ff1,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1240.jpg | version-2/cocci/cocci.247.jpg
+exact_md5,4ade82e5711d4573c6e6353ebd5d80bd,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1097.jpg | version-2/cocci/cocci.1180.jpg
+exact_md5,4b29113f15ae77adbe528471373a44b0,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1368.jpg | version-2/cocci/cocci.633.jpg
+exact_md5,4b344adb4d9da51333613f9de9c9f1c2,within_version,3,Salmonella,version-2,version-2/salmo/salmo.231.jpg | version-2/salmo/salmo.361.jpg | version-2/salmo/salmo.796.jpg
+exact_md5,4c846c4d8a536cf5cb866c30b323bb9a,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1117.jpg | version-2/cocci/cocci.1543.jpg
+exact_md5,4e9ce0b74585409fdcc151f15efd3004,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1205.jpg | version-2/cocci/cocci.2078.jpg
+exact_md5,4ec075d32b6b0b3fb58f2fb6d98af8d9,label_conflict,2,Coccidiosis|Healthy,version-3-pcr,version-3/pcrcocci/pcrcocci.215.jpg | version-3/pcrhealthy/pcrhealthy.183.jpg
+exact_md5,4f11fd0d1e7ce9fb03ad35df08219204,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1524.jpg | version-2/salmo/salmo.1599.jpg | version-2/salmo/salmo.2017.jpg
+exact_md5,4ffc59dd7f54e553a779025971054102,within_version,2,Salmonella,version-2,version-2/salmo/salmo.511.jpg | version-2/salmo/salmo.749.jpg
+exact_md5,523b6b1877fce170065d94d583a99dc3,label_conflict,2,Healthy|Salmonella,version-3-pcr,version-3/pcrhealthy/pcrhealthy.306.jpg | version-3/pcrsalmo/pcrsalmo.202.jpg
+exact_md5,545a4cce03e6cb8a3953ea8b73235ed8,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1115.jpg | version-2/salmo/salmo.603.jpg
+exact_md5,57f8d551b81d856ad33f20fa16879305,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1150.jpg | version-2/salmo/salmo.1784.jpg
+exact_md5,582a3d3fe3d7154f59f624f98018b5d5,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1601.jpg | version-2/cocci/cocci.591.jpg
+exact_md5,59326d3522ee6bc9788918a5773bb2d1,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1562.jpg | version-2/cocci/cocci.1563.jpg
+exact_md5,597444f301c4ad5964d5a2c2ca630256,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1181.jpg | version-2/cocci/cocci.183.jpg
+exact_md5,5bff8b3e7f9329eaf0bc12a8c604840a,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1872.jpg | version-2/cocci/cocci.636.jpg
+exact_md5,5d00f061f9e850e1a33267eeeddbfde4,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1848.jpg | version-2/cocci/cocci.1897.jpg
+exact_md5,5d0f0038503f902672cd11c75bf7ae02,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1328.jpg | version-2/salmo/salmo.1565.jpg | version-2/salmo/salmo.1714.jpg
+exact_md5,5df3231063614860a48e93ab192c09f9,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1366.jpg | version-2/salmo/salmo.1926.jpg | version-2/salmo/salmo.646.jpg
+exact_md5,5e054639bd37f3103a22ed080e2e8645,label_conflict,2,Coccidiosis|Healthy,version-3-pcr,version-3/pcrcocci/pcrcocci.58.jpg | version-3/pcrhealthy/pcrhealthy.47.jpg
+exact_md5,5e407bebf699b7f14c4f4830648af351,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1308.jpg | version-2/cocci/cocci.240.jpg
+exact_md5,5e7fbd0e010f235f174bb476a32d28b2,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1138.jpg | version-2/salmo/salmo.563.jpg
+exact_md5,5e80c333fe4a75f5cbb2db8e84b30d74,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1607.jpg | version-2/cocci/cocci.1738.jpg
+exact_md5,5f59479299c6c5973cbb88e3f452bc72,within_version,2,Healthy,version-3-pcr,version-3/pcrhealthy/pcrhealthy.236.jpg | version-3/pcrhealthy/pcrhealthy.259.jpg
+exact_md5,60046fa25ab9d1fd284ef9cfa5aa7a70,label_conflict,2,Coccidiosis|Healthy,version-3-pcr,version-3/pcrcocci/pcrcocci.118.jpg | version-3/pcrhealthy/pcrhealthy.108.jpg
+exact_md5,6014892050f69105e6e10ac5cfcf7c3f,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1733.jpg | version-2/cocci/cocci.1904.jpg
+exact_md5,60928c15169d5d01192dd9337fb9d3e5,within_version,2,Salmonella,version-2,version-2/salmo/salmo.158.jpg | version-2/salmo/salmo.870.jpg
+exact_md5,6150c9c0ffdfd4591b6b92abd2b097ae,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.133.jpg | version-2/cocci/cocci.688.jpg
+exact_md5,6233efb31ff62221f317fb560659a107,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1908.jpg | version-2/cocci/cocci.365.jpg
+exact_md5,631815f3a35887deb89bbe2c68ac5024,label_conflict,2,Coccidiosis|Healthy,version-3-pcr,version-3/pcrcocci/pcrcocci.332.jpg | version-3/pcrhealthy/pcrhealthy.308.jpg
+exact_md5,66a6adbd801182d2ca59402a19d54838,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1388.jpg | version-2/cocci/cocci.994.jpg
+exact_md5,66e9027a5c4bb514dd2ddbf853249b45,label_conflict,2,Coccidiosis|Healthy,version-3-pcr,version-3/pcrcocci/pcrcocci.368.jpg | version-3/pcrhealthy/pcrhealthy.344.jpg
+exact_md5,66fb668f4f4ac561c7b07457852883c1,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1433.jpg | version-2/cocci/cocci.696.jpg
+exact_md5,67efbb4a579129c8a1817984c2abbf9d,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1418.jpg | version-2/cocci/cocci.872.jpg
+exact_md5,6b563e5dbfeccbfee3d6438622dfb0af,label_conflict,2,Healthy|Salmonella,version-3-pcr,version-3/pcrhealthy/pcrhealthy.152.jpg | version-3/pcrsalmo/pcrsalmo.150.jpg
+exact_md5,6c45f230ce9619bc134a791b347f60a4,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.103.jpg | version-2/cocci/cocci.1772.jpg
+exact_md5,6c9755c7d85552322a0b4023092c70af,within_version,3,Salmonella,version-2,version-2/salmo/salmo.129.jpg | version-2/salmo/salmo.552.jpg | version-2/salmo/salmo.765.jpg
+exact_md5,6e2f0367430a832da0d276908c590308,within_version,2,Healthy,version-3-pcr,version-3/pcrhealthy/pcrhealthy.177.jpg | version-3/pcrhealthy/pcrhealthy.229.jpg
+exact_md5,6e89c4fff159cb839873c097fe5f9241,label_conflict,2,Coccidiosis|Healthy,version-3-pcr,version-3/pcrcocci/pcrcocci.264.jpg | version-3/pcrhealthy/pcrhealthy.234.jpg
+exact_md5,6f6ae74c78db09916ffc16542270cd95,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1930.jpg | version-2/salmo/salmo.230.jpg
+exact_md5,6faa5726d3e4617d3f466d10b03f277c,within_version,2,Salmonella,version-2,version-2/salmo/salmo.150.jpg | version-2/salmo/salmo.1694.jpg
+exact_md5,708346c5e9756b8c069fa24b820433bf,within_version,3,Salmonella,version-2,version-2/salmo/salmo.317.jpg | version-2/salmo/salmo.742.jpg | version-2/salmo/salmo.748.jpg
+exact_md5,725c15bbc1416805cf0f80e410b221b6,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1274.jpg | version-2/cocci/cocci.697.jpg
+exact_md5,729f61c7e1bef41632cac43b9ab6745f,within_version,2,Healthy,version-3-pcr,version-3/pcrhealthy/pcrhealthy.104.jpg | version-3/pcrhealthy/pcrhealthy.202.jpg
+exact_md5,73a882888505a5f7679f5714fdd40ee4,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1678.jpg | version-2/cocci/cocci.278.jpg
+exact_md5,74b0b5b9b927ce0a558b05cda5f4dcaa,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1723.jpg | version-2/cocci/cocci.1807.jpg
+exact_md5,766c10ba3d2077a3f66fc8abe6dd7693,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.125.jpg | version-2/cocci/cocci.770.jpg
+exact_md5,76f9d7f355879875e6af4c00265e5df5,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1460.jpg | version-2/cocci/cocci.226.jpg
+exact_md5,779ccf8f23c37ddf7110278e88390211,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1283.jpg | version-2/cocci/cocci.1725.jpg
+exact_md5,77a7c8407d966201eab1a1a2e3ced0fd,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1443.jpg | version-2/cocci/cocci.223.jpg
+exact_md5,77d8965b48bcc5182371f0fa084b63e9,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1426.jpg | version-2/cocci/cocci.796.jpg
+exact_md5,79b70999adf04c8222f0b6db88cb413d,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1776.jpg | version-2/salmo/salmo.261.jpg | version-2/salmo/salmo.420.jpg
+exact_md5,7b7fa34a08146c6f52392e640c76cb86,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1686.jpg | version-2/salmo/salmo.522.jpg | version-2/salmo/salmo.56.jpg
+exact_md5,7b80de641fc66b738fd8cc106f9f87f3,within_version,2,Healthy,version-3-pcr,version-3/pcrhealthy/pcrhealthy.250.jpg | version-3/pcrhealthy/pcrhealthy.28.jpg
+exact_md5,7c08f478887d48cfb1f2c7ddb4d7f1c9,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1170.jpg | version-2/salmo/salmo.1614.jpg
+exact_md5,7c96060fdf3032bc1a09c457f76af2b0,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1079.jpg | version-2/cocci/cocci.160.jpg
+exact_md5,7d8bdd003dff50fdf53267bf4f18295b,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1091.jpg | version-2/salmo/salmo.1780.jpg | version-2/salmo/salmo.597.jpg
+exact_md5,7e2ee7f2c4b3bb6a8d664c827008b702,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1762.jpg | version-2/cocci/cocci.196.jpg
+exact_md5,7e4e5291f9d8e8e97d69d62990edb0d5,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1216.jpg | version-2/cocci/cocci.579.jpg
+exact_md5,7e970ea9a54b27bc1f14408ad6b1fe03,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1976.jpg | version-2/cocci/cocci.7.jpg
+exact_md5,7fbb81ff4abc452fbe0f03de3c0a8b20,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1401.jpg | version-2/salmo/salmo.1684.jpg
+exact_md5,80bb78a1966a1613ec9895a7be732684,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1768.jpg | version-2/cocci/cocci.229.jpg
+exact_md5,81025aac7f08c03b61b825d68cced1a8,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.170.jpg | version-2/cocci/cocci.420.jpg
+exact_md5,82194da673fc621952e41c4c5f93347f,within_version,3,Salmonella,version-2,version-2/salmo/salmo.222.jpg | version-2/salmo/salmo.482.jpg | version-2/salmo/salmo.498.jpg
+exact_md5,82c1c1415a4780a1d5e4e6b392203ee2,label_conflict,2,Coccidiosis|Healthy,version-3-pcr,version-3/pcrcocci/pcrcocci.254.jpg | version-3/pcrhealthy/pcrhealthy.220.jpg
+exact_md5,86f44bb6b4dce4a43755940484012622,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1400.jpg | version-2/salmo/salmo.697.jpg
+exact_md5,87d2b28cfcb3e6550225804d74956f23,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1243.jpg | version-2/cocci/cocci.1895.jpg
+exact_md5,8879da1c15f2fb34fb94744805f8c48d,within_version,2,Healthy,version-3-pcr,version-3/pcrhealthy/pcrhealthy.249.jpg | version-3/pcrhealthy/pcrhealthy.68.jpg
+exact_md5,88ee1fa831d78e019cc19bb6a4ec44d7,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1385.jpg | version-2/salmo/salmo.2095.jpg
+exact_md5,89d0567e47841982a49f0cd59740f34f,within_version,2,Salmonella,version-2,version-2/salmo/salmo.2003.jpg | version-2/salmo/salmo.617.jpg
+exact_md5,8a01c50c627fbc672fd7fd7d666a90ba,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1106.jpg | version-2/cocci/cocci.1544.jpg
+exact_md5,8a2a4d77f10e49e94627b0efd9dd64b9,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1197.jpg | version-2/salmo/salmo.2050.jpg | version-2/salmo/salmo.2233.jpg
+exact_md5,8ad9fa916b68dd95bfd016e3b84f928f,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.188.jpg | version-2/cocci/cocci.882.jpg
+exact_md5,8ba9a494b64d3ebd439accc7893a4df6,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1382.jpg | version-2/salmo/salmo.1409.jpg
+exact_md5,8c092e157ae2bb3b1cd8edc9364cd6e8,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.525.jpg | version-2/cocci/cocci.703.jpg
+exact_md5,8d4d2d6743a9b1e923e52a0eeeb4f6e0,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.29.jpg | version-2/cocci/cocci.37.jpg
+exact_md5,910b1f84635faea76dd1e99da9be3b20,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1766.jpg | version-2/cocci/cocci.2055.jpg
+exact_md5,917ab5e5788b3fca95f7af0faaff5235,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1226.jpg | version-2/salmo/salmo.1695.jpg
+exact_md5,91a464726766a2252c5da1fe0aa0c4f7,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1701.jpg | version-2/cocci/cocci.309.jpg
+exact_md5,91f81fa9de14add96da1d537a78d2555,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1989.jpg | version-2/cocci/cocci.36.jpg
+exact_md5,943573302df6cc3b4899202115b7a791,within_version,2,Salmonella,version-2,version-2/salmo/salmo.2018.jpg | version-2/salmo/salmo.999.jpg
+exact_md5,94ecc4ecef32d03378d82a668063121e,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1414.jpg | version-2/cocci/cocci.1545.jpg
+exact_md5,95a5ac7d8a708a6a8c4801f820a01e8f,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1093.jpg | version-2/cocci/cocci.1131.jpg
+exact_md5,97e69734a805896495119277d6af7165,within_version,2,Salmonella,version-2,version-2/salmo/salmo.153.jpg | version-2/salmo/salmo.737.jpg
+exact_md5,9806e296c98346f50be9df08c5eab37a,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.353.jpg | version-2/cocci/cocci.907.jpg
+exact_md5,98835306e856b4bb9c6c0848548bf0bb,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1210.jpg | version-2/cocci/cocci.1784.jpg
+exact_md5,98d3057ee1ada0c3f6f2d01956ea1ef4,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1683.jpg | version-2/salmo/salmo.2043.jpg
+exact_md5,9d7e8f0f0f9129a7c3d5dd316c01e257,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.155.jpg | version-2/cocci/cocci.1672.jpg
+exact_md5,9dc03ca2e6b088dbd1cda0e10b44e716,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1394.jpg | version-2/cocci/cocci.1526.jpg
+exact_md5,9df87d6a1eadc44f6b3ed94d4ce8e9b1,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.441.jpg | version-2/cocci/cocci.893.jpg
+exact_md5,9e919295cd983588e835f3e4262d2471,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1700.jpg | version-2/salmo/salmo.2120.jpg | version-2/salmo/salmo.732.jpg
+exact_md5,9f4cf84d6ce73b21e9cd9cf37e3be98d,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.132.jpg | version-2/cocci/cocci.1497.jpg
+exact_md5,9fbef7251ef0be1c9aca80566794f6f9,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1122.jpg | version-2/cocci/cocci.1310.jpg
+exact_md5,9fc33f7dd54a0aab657364249176003e,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1845.jpg | version-2/salmo/salmo.613.jpg | version-2/salmo/salmo.826.jpg
+exact_md5,a104a06158af14bdc0b2fbffec313498,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1465.jpg | version-2/salmo/salmo.2075.jpg | version-2/salmo/salmo.557.jpg
+exact_md5,a19c2e0ab75b5e6c1b12b16dde069cbc,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1499.jpg | version-2/cocci/cocci.713.jpg
+exact_md5,a3012af683490a8e18f1262dae5e839c,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1163.jpg | version-2/salmo/salmo.580.jpg
+exact_md5,a3c12303bd89443ab00c3fe0dc2c0996,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1584.jpg | version-2/cocci/cocci.1933.jpg
+exact_md5,a40e75ffd306692eecd2dde73cc83a47,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1551.jpg | version-2/salmo/salmo.1735.jpg
+exact_md5,a46b96f792fa362e3296fc465a131614,within_version,3,Salmonella,version-2,version-2/salmo/salmo.419.jpg | version-2/salmo/salmo.782.jpg | version-2/salmo/salmo.813.jpg
+exact_md5,a71454e5ee9434d496332763212ba30f,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1683.jpg | version-2/cocci/cocci.767.jpg
+exact_md5,a814130c5f32a7851767134401eb78ba,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1859.jpg | version-2/cocci/cocci.1934.jpg
+exact_md5,a87566295649590bbbe19743e7c733bd,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1714.jpg | version-2/cocci/cocci.681.jpg
+exact_md5,a8a978c0426a4fd21746d99c530a6abe,label_conflict,2,Healthy|Salmonella,version-3-pcr,version-3/pcrhealthy/pcrhealthy.153.jpg | version-3/pcrsalmo/pcrsalmo.332.jpg
+exact_md5,a9fe2bd38a31f1377a4ba07bcfe3ed3c,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1064.jpg | version-2/cocci/cocci.1975.jpg
+exact_md5,aa293e06b55b2ed63d69608d9a671df1,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1121.jpg | version-2/cocci/cocci.1572.jpg
+exact_md5,aabdbf43bc7c373477db684453eedc70,within_version,2,NCD,version-2,version-2/ncd/ncd.211.jpg | version-2/ncd/ncd.78.jpg
+exact_md5,abce5d229db9a4da790e1574e0d3a671,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1642.jpg | version-2/salmo/salmo.207.jpg | version-2/salmo/salmo.906.jpg
+exact_md5,ac0ff94743aae61743875d4f9c2e7453,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1923.jpg | version-2/cocci/cocci.2093.jpg
+exact_md5,af86e2863f4aaa0ef0310795cdfe0fd6,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1751.jpg | version-2/salmo/salmo.1939.jpg | version-2/salmo/salmo.40.jpg
+exact_md5,b04ec7cc664dd97e1e69b265bf85ead3,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.2028.jpg | version-2/cocci/cocci.418.jpg
+exact_md5,b151df55db57b51e68ae282dc9354fa1,within_version,2,Salmonella,version-2,version-2/salmo/salmo.330.jpg | version-2/salmo/salmo.714.jpg
+exact_md5,b2015f9f913ab3fb8728952d9c9c91fa,within_version,2,NCD,version-2,version-2/ncd/ncd.231.jpg | version-2/ncd/ncd.243.jpg
+exact_md5,b242869565b311d595d9d4179ad6434b,within_version,2,Healthy,version-3-pcr,version-3/pcrhealthy/pcrhealthy.186.jpg | version-3/pcrhealthy/pcrhealthy.210.jpg
+exact_md5,b3b04653cc11176fd2a104fade17be78,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.718.jpg | version-2/cocci/cocci.793.jpg
+exact_md5,b5b94f887a9dd1952c1543460d65101c,within_version,2,Salmonella,version-2,version-2/salmo/salmo.233.jpg | version-2/salmo/salmo.510.jpg
+exact_md5,b5d62db79cc7bf57b2ea8b72d13fdfa6,within_version,2,Salmonella,version-2,version-2/salmo/salmo.113.jpg | version-2/salmo/salmo.1210.jpg
+exact_md5,b6abc06e8177a0d151292278b5ac10f1,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1463.jpg | version-2/salmo/salmo.166.jpg | version-2/salmo/salmo.1910.jpg
+exact_md5,b94b584be560ba00d097fae6a20c8e43,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1246.jpg | version-2/cocci/cocci.1446.jpg
+exact_md5,b9d941fb8559267ce2dbe330c37a62be,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1191.jpg | version-2/cocci/cocci.960.jpg
+exact_md5,ba999a15617cdf1122ac4b24d5ce058d,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.68.jpg | version-2/cocci/cocci.832.jpg
+exact_md5,baf72417b9fbf23c3d485801d01eee55,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1104.jpg | version-2/cocci/cocci.1610.jpg
+exact_md5,bbedc981d0a80b9aa423083083a89a7d,within_version,2,Salmonella,version-2,version-2/salmo/salmo.2039.jpg | version-2/salmo/salmo.2168.jpg
+exact_md5,bbff88388bd2ec92c2bd7fc5eb0cb26e,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1074.jpg | version-2/salmo/salmo.1209.jpg | version-2/salmo/salmo.1788.jpg
+exact_md5,bc9d74f71188c7d609d520d6ec5b9e09,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1617.jpg | version-2/cocci/cocci.341.jpg
+exact_md5,bd716f8c8df46944660bcf12e9fcb80f,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.511.jpg | version-2/cocci/cocci.823.jpg
+exact_md5,be09d1b73dda6321487ce0c9e0e6e8a2,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.763.jpg | version-2/cocci/cocci.988.jpg
+exact_md5,bf30896534803ec5faa589e548855ca2,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1301.jpg | version-2/salmo/salmo.1414.jpg | version-2/salmo/salmo.383.jpg
+exact_md5,c08dfdb76929ea13704dd253d9d04922,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1619.jpg | version-2/cocci/cocci.464.jpg
+exact_md5,c0afabc97967dfcebce943e0933bc2a5,within_version,3,Salmonella,version-2,version-2/salmo/salmo.116.jpg | version-2/salmo/salmo.1734.jpg | version-2/salmo/salmo.596.jpg
+exact_md5,c274fac788833808c6a5f946f4344663,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1380.jpg | version-2/salmo/salmo.2068.jpg | version-2/salmo/salmo.410.jpg
+exact_md5,c3b3516cd21db74024d8a2be941fea61,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1030.jpg | version-2/cocci/cocci.503.jpg
+exact_md5,c55203fc482d0086916849e291910dbd,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1874.jpg | version-2/cocci/cocci.2045.jpg
+exact_md5,c565a31eaefaa86e1121428812ddb8f9,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.180.jpg | version-2/cocci/cocci.1866.jpg
+exact_md5,c662e3240657c5029a75c32cd7149d33,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1356.jpg | version-2/cocci/cocci.1658.jpg
+exact_md5,c7e4883a94141ca5cbec501091af271e,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1289.jpg | version-2/cocci/cocci.57.jpg
+exact_md5,c90fdfd51759bfe0db5830f147e10852,label_conflict,2,Coccidiosis|Healthy,version-3-pcr,version-3/pcrcocci/pcrcocci.349.jpg | version-3/pcrhealthy/pcrhealthy.317.jpg
+exact_md5,cb26eb9f3b8dfc1085832b7ee038f12c,label_conflict,2,Coccidiosis|Healthy,version-3-pcr,version-3/pcrcocci/pcrcocci.251.jpg | version-3/pcrhealthy/pcrhealthy.213.jpg
+exact_md5,ccbb251b467f12bc2b94ea8e8a947a9b,within_version,2,Salmonella,version-2,version-2/salmo/salmo.421.jpg | version-2/salmo/salmo.711.jpg
+exact_md5,cd01fd94c61e7f1b2185a03a9fad7523,within_version,2,Salmonella,version-2,version-2/salmo/salmo.468.jpg | version-2/salmo/salmo.918.jpg
+exact_md5,cdf4a3f97f78c9f9298d757e27190503,within_version,2,Salmonella,version-2,version-2/salmo/salmo.2244.jpg | version-2/salmo/salmo.866.jpg
+exact_md5,ce4d4c605f75aca50436649840b6902b,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1887.jpg | version-2/cocci/cocci.1913.jpg
+exact_md5,ceae1b13f2276cc53804e78563fd93d9,within_version,2,Healthy,version-3-pcr,version-3/pcrhealthy/pcrhealthy.265.jpg | version-3/pcrhealthy/pcrhealthy.71.jpg
+exact_md5,cec35ae3ff15a23625aad6e4c144c2ce,within_version,2,Salmonella,version-2,version-2/salmo/salmo.10.jpg | version-2/salmo/salmo.2041.jpg
+exact_md5,d1c43628177769890ce419b2197e8f03,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1839.jpg | version-2/salmo/salmo.402.jpg | version-2/salmo/salmo.761.jpg
+exact_md5,d301bd4711338bbd1b01741c4b7e4f32,within_version,2,Healthy,version-2,version-2/healthy/healthy.596.jpg | version-2/healthy/healthy.686.jpg
+exact_md5,d33dec8e70771eace7927b89af55a6f3,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1355.jpg | version-2/salmo/salmo.1518.jpg | version-2/salmo/salmo.722.jpg
+exact_md5,d4496b782b001d5a5e968d0908ee220b,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1803.jpg | version-2/cocci/cocci.234.jpg
+exact_md5,d4b404a86f50c517f27da91078f17a68,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1417.jpg | version-2/salmo/salmo.2239.jpg
+exact_md5,d52f4af9cc73f25419f09df0c6073bb6,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1008.jpg | version-2/salmo/salmo.1318.jpg
+exact_md5,d776d8ee15e534f20d84795cb93aeef1,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.547.jpg | version-2/cocci/cocci.891.jpg
+exact_md5,d79a4b7e8620353f27a0403c78ba3101,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1066.jpg | version-2/salmo/salmo.342.jpg | version-2/salmo/salmo.892.jpg
+exact_md5,d8b0bf9441637ec317d43f58b3a7685c,within_version,3,Coccidiosis,version-2,version-2/cocci/cocci.1352.jpg | version-2/cocci/cocci.152.jpg | version-2/cocci/cocci.33.jpg
+exact_md5,d8b2e70eb57ee56fc2666912b74435cd,within_version,2,Salmonella,version-2,version-2/salmo/salmo.2262.jpg | version-2/salmo/salmo.537.jpg
+exact_md5,d8d88cc8d4238ea108f27e03efbeaaf0,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1225.jpg | version-2/salmo/salmo.1736.jpg | version-2/salmo/salmo.816.jpg
+exact_md5,da7d1706a3dbb3431eb4f76ff9bbb13e,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1862.jpg | version-2/salmo/salmo.545.jpg
+exact_md5,daabc5b579d35ae26e07ad79757e00cc,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1461.jpg | version-2/cocci/cocci.714.jpg
+exact_md5,db26297f51149a201bad1228bf001903,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1456.jpg | version-2/salmo/salmo.1755.jpg | version-2/salmo/salmo.373.jpg
+exact_md5,db4b8153489ba7bdcabe2d806448518d,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1837.jpg | version-2/salmo/salmo.539.jpg | version-2/salmo/salmo.878.jpg
+exact_md5,dc0c66c0d6f3764213f752eb51b57de0,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1065.jpg | version-2/salmo/salmo.670.jpg
+exact_md5,dc88fe9ba1c7f92806a56ad14b609ff8,label_conflict,2,Coccidiosis|Healthy,version-3-pcr,version-3/pcrcocci/pcrcocci.361.jpg | version-3/pcrhealthy/pcrhealthy.182.jpg
+exact_md5,dd3a59fa1fe0e02dff0c7275be0a558c,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1544.jpg | version-2/salmo/salmo.3.jpg
+exact_md5,dd76daacc6c7979d4aefcbc4a60d2803,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1519.jpg | version-2/cocci/cocci.975.jpg
+exact_md5,de4bbc4288d11df20d80816d283fbb4b,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1214.jpg | version-2/salmo/salmo.318.jpg | version-2/salmo/salmo.82.jpg
+exact_md5,deeafb2157df49405ba5859507a6d680,label_conflict,2,Coccidiosis|Healthy,version-3-pcr,version-3/pcrcocci/pcrcocci.271.jpg | version-3/pcrhealthy/pcrhealthy.238.jpg
+exact_md5,df8e65882209d02b037358ea659fb82f,within_version,2,Healthy,version-3-pcr,version-3/pcrhealthy/pcrhealthy.118.jpg | version-3/pcrhealthy/pcrhealthy.136.jpg
+exact_md5,e0cddee3d275548bc92b3c923716d7af,within_version,3,Salmonella,version-2,version-2/salmo/salmo.2101.jpg | version-2/salmo/salmo.315.jpg | version-2/salmo/salmo.858.jpg
+exact_md5,e0f8459df1e927d4ca21b9ced784b58e,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1398.jpg | version-2/salmo/salmo.500.jpg
+exact_md5,e206be25a570c4c3f2f67fa2282223cb,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1313.jpg | version-2/salmo/salmo.1980.jpg | version-2/salmo/salmo.812.jpg
+exact_md5,e30dbede5d46932f41afad478a0a58f8,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.566.jpg | version-2/cocci/cocci.9.jpg
+exact_md5,e337c0870850881b5f02fcf75f6856a8,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1968.jpg | version-2/cocci/cocci.250.jpg
+exact_md5,e34816e4780b41a48128457d0dc7e581,within_version,2,Healthy,version-3-pcr,version-3/pcrhealthy/pcrhealthy.141.jpg | version-3/pcrhealthy/pcrhealthy.93.jpg
+exact_md5,e59033f08796af626aab089b445603a6,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1139.jpg | version-2/salmo/salmo.1159.jpg | version-2/salmo/salmo.463.jpg
+exact_md5,e5971d7a711ec323c60d3edca503b69b,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1294.jpg | version-2/cocci/cocci.803.jpg
+exact_md5,e67b9fd7e49217fb90ccc13c04cac941,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.122.jpg | version-2/cocci/cocci.2033.jpg
+exact_md5,ea4e2cef507cffaad0b91b72679b4d62,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1111.jpg | version-2/cocci/cocci.416.jpg
+exact_md5,ea8e0d62b44b60004f56574a9c02ea91,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.163.jpg | version-2/cocci/cocci.603.jpg
+exact_md5,ea927246ea36526d3b00d7c64559319d,label_conflict,2,Coccidiosis|Healthy,version-3-pcr,version-3/pcrcocci/pcrcocci.205.jpg | version-3/pcrhealthy/pcrhealthy.171.jpg
+exact_md5,ec75c3b9486ffd949b53ff173193d32e,within_version,2,Healthy,version-3-pcr,version-3/pcrhealthy/pcrhealthy.175.jpg | version-3/pcrhealthy/pcrhealthy.77.jpg
+exact_md5,ed5d468a9a4c6e79a3b15111d7b717e3,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1914.jpg | version-2/cocci/cocci.780.jpg
+exact_md5,eda3c20b2afd59b3dfeb6c46ed4b4f3f,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1102.jpg | version-2/salmo/salmo.1147.jpg | version-2/salmo/salmo.1800.jpg
+exact_md5,f33864496252fd5d288dbc4652ebdb0b,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1535.jpg | version-2/salmo/salmo.1579.jpg
+exact_md5,f421072875a348898fbfe645c07cb225,label_conflict,2,Coccidiosis|Healthy,version-3-pcr,version-3/pcrcocci/pcrcocci.228.jpg | version-3/pcrhealthy/pcrhealthy.83.jpg
+exact_md5,f670f1e3ad37441a559a5f619e251629,within_version,2,Healthy,version-3-pcr,version-3/pcrhealthy/pcrhealthy.189.jpg | version-3/pcrhealthy/pcrhealthy.34.jpg
+exact_md5,f6941c0c9019d8a17ba5fcd506f0125f,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1261.jpg | version-2/cocci/cocci.1569.jpg
+exact_md5,f7344dbb3ad6313e60cb2e53c9915591,within_version,2,Salmonella,version-2,version-2/salmo/salmo.289.jpg | version-2/salmo/salmo.84.jpg
+exact_md5,f788572108a2b42c7a620ca11b99d297,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1281.jpg | version-2/salmo/salmo.1493.jpg | version-2/salmo/salmo.1976.jpg
+exact_md5,f84463633ec21746c142ed5ae3dbd5b8,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1262.jpg | version-2/salmo/salmo.1359.jpg
+exact_md5,f859ea8e71a6bbbdbb2ca5e742adc03a,within_version,2,Salmonella,version-2,version-2/salmo/salmo.1185.jpg | version-2/salmo/salmo.2218.jpg
+exact_md5,f9cf9d321cd7bfecb7b97d0a33b65af9,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1204.jpg | version-2/salmo/salmo.1704.jpg | version-2/salmo/salmo.377.jpg
+exact_md5,fa6dcc982f34b8c11f07cdf645bcf299,within_version,2,Salmonella,version-2,version-2/salmo/salmo.121.jpg | version-2/salmo/salmo.702.jpg
+exact_md5,fb4690057a68b718bb1942ffb361d16e,within_version,2,Coccidiosis,version-2,version-2/cocci/cocci.1649.jpg | version-2/cocci/cocci.481.jpg
+exact_md5,fe99791467a4ebfa06683d79f40a16e1,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1243.jpg | version-2/salmo/salmo.1624.jpg | version-2/salmo/salmo.353.jpg
+exact_md5,feb4d4641ff967de5dad57fd30f45e13,within_version,2,Salmonella,version-2,version-2/salmo/salmo.449.jpg | version-2/salmo/salmo.760.jpg
+exact_md5,ffdf5df1d84718c182ceb71e95502c4b,within_version,3,Salmonella,version-2,version-2/salmo/salmo.1261.jpg | version-2/salmo/salmo.1861.jpg | version-2/salmo/salmo.637.jpg
+near_duplicate_dhash,0000000000000000,grouped,3,Healthy,version-2,version-2/healthy/healthy.1435.jpg | version-2/healthy/healthy.498.jpg | version-2/healthy/healthy.707.jpg
+near_duplicate_dhash,0000000400000000,grouped,2,Healthy,version-2,version-2/healthy/healthy.1955.jpg | version-2/healthy/healthy.1994.jpg
+near_duplicate_dhash,0000000404000000,grouped,2,Healthy,version-2,version-2/healthy/healthy.1005.jpg | version-2/healthy/healthy.1147.jpg
+near_duplicate_dhash,0000000800000000,grouped,2,Healthy,version-2,version-2/healthy/healthy.1074.jpg | version-2/healthy/healthy.1690.jpg
+near_duplicate_dhash,0000000808080000,grouped,2,Healthy,version-2,version-2/healthy/healthy.172.jpg | version-2/healthy/healthy.688.jpg
+near_duplicate_dhash,ffffffefffffffff,grouped,2,Healthy,version-2,version-2/healthy/healthy.1665.jpg | version-2/healthy/healthy.572.jpg
+near_duplicate_dhash,ffffffffffffffff,grouped,5,Healthy,version-2,version-2/healthy/healthy.1025.jpg | version-2/healthy/healthy.1409.jpg | version-2/healthy/healthy.1459.jpg | version-2/healthy/healthy.301.jpg | version-2/healthy/healthy.567.jpg
