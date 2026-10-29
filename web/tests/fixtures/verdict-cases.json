@@ -1,0 +1,4578 @@
+{
+ "thresholds": {
+  "minTop": 0.5,
+  "minMargin": 0.9
+ },
+ "cases": [
+  {
+   "probabilities": [
+    0.214161466715899,
+    0.6046118655336687,
+    1.5242033360832106e-10,
+    0.18122666759801187
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    9.462534907187605e-08,
+    0.0039032660129486372,
+    0.9727539981742112,
+    0.023342641187491138
+   ],
+   "category": "disease_pattern",
+   "top": "Salmonella",
+   "runnerUp": "NCD",
+   "reasons": [],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.0018741425292712172,
+    0.10268133130429703,
+    0.04268918139064818,
+    0.8527553447757835
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.6064099329772017,
+    0.0036425336091268578,
+    5.677976661285992e-08,
+    0.3899474766339047
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "NCD",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.025210690042756088,
+    0.9741102605835208,
+    2.5618067095823447e-06,
+    0.0006764875670135534
+   ],
+   "category": "no_disease_pattern",
+   "top": "Healthy",
+   "runnerUp": "Coccidiosis",
+   "reasons": [],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.0013548221279968428,
+    0.15072428318421138,
+    0.847515355214128,
+    0.00040553947366368017
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.15292406159994956,
+    7.108599026830597e-07,
+    0.635049924107413,
+    0.21202530343273474
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "NCD",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.019233114615579527,
+    1.3234215652454963e-07,
+    0.826234651664227,
+    0.154532101378037
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "NCD",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.7801505492203995,
+    0.21983423286764964,
+    5.680535489788179e-14,
+    1.5217911894104166e-05
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.9861351556540017,
+    2.184158726928801e-12,
+    2.2901429550218044e-05,
+    0.013841942914263855
+   ],
+   "category": "disease_pattern",
+   "top": "Coccidiosis",
+   "runnerUp": "NCD",
+   "reasons": [],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.09138496640897323,
+    0.6974234044487585,
+    1.9939372698819598e-16,
+    0.21119162914226813
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "NCD",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    3.7337386909249185e-05,
+    2.1081634982710567e-05,
+    0.9804607512184091,
+    0.019480829759698955
+   ],
+   "category": "disease_pattern",
+   "top": "Salmonella",
+   "runnerUp": "NCD",
+   "reasons": [],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    9.983658357011572e-05,
+    1.3598468755282974e-09,
+    0.9998955791031869,
+    4.582953395997236e-06
+   ],
+   "category": "disease_pattern",
+   "top": "Salmonella",
+   "runnerUp": "Coccidiosis",
+   "reasons": [],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.9912690064186109,
+    0.004056621761282904,
+    8.366986010011498e-10,
+    0.004674370983407718
+   ],
+   "category": "disease_pattern",
+   "top": "Coccidiosis",
+   "runnerUp": "NCD",
+   "reasons": [],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.0001135851225175135,
+    4.708437802863523e-07,
+    0.9963008912537139,
+    0.00358505277998838
+   ],
+   "category": "disease_pattern",
+   "top": "Salmonella",
+   "runnerUp": "NCD",
+   "reasons": [],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.9967112909695723,
+    3.9757301959778545e-09,
+    3.3583440843143154e-12,
+    0.003288705051339225
+   ],
+   "category": "disease_pattern",
+   "top": "Coccidiosis",
+   "runnerUp": "NCD",
+   "reasons": [],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    1.458913544893302e-08,
+    2.1792687315031585e-06,
+    0.45805522139074384,
+    0.5419425847513891
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.5695683773808482,
+    0.05542779525789749,
+    0.0004784322294668266,
+    0.3745253951317876
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "NCD",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.0037957104626987147,
+    0.00010762907755796158,
+    0.0017781142632615635,
+    0.9943185461964819
+   ],
+   "category": "disease_pattern",
+   "top": "NCD",
+   "runnerUp": "Coccidiosis",
+   "reasons": [],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    7.139304854451257e-08,
+    5.520564177910312e-09,
+    7.504648203062761e-05,
+    0.9999248766043567
+   ],
+   "category": "disease_pattern",
+   "top": "NCD",
+   "runnerUp": "Salmonella",
+   "reasons": [],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    1.3379327293881996e-09,
+    2.6542606680666846e-06,
+    0.017555033684321493,
+    0.9824423107170778
+   ],
+   "category": "disease_pattern",
+   "top": "NCD",
+   "runnerUp": "Salmonella",
+   "reasons": [],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.6490885186564699,
+    0.27384977373258673,
+    0.07614059349045323,
+    0.0009211141204901589
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.0006211076438792651,
+    0.8036572386349196,
+    0.003612381222468387,
+    0.19210927249873297
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "NCD",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    8.456053901326805e-05,
+    0.08598262957306557,
+    0.9139328086493421,
+    1.238578952142413e-09
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    8.268138052549364e-08,
+    0.06909922868032639,
+    9.876699042225928e-07,
+    0.9308997009683889
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.9999976744168104,
+    2.788283236276753e-16,
+    1.598644845479356e-06,
+    7.269383437758587e-07
+   ],
+   "category": "disease_pattern",
+   "top": "Coccidiosis",
+   "runnerUp": "Salmonella",
+   "reasons": [],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.42555247935094453,
+    1.6563114694441804e-06,
+    0.5744458398839426,
+    2.4453643587265942e-08
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.9680048401715823,
+    1.1898795608753214e-05,
+    0.03197599981495547,
+    7.261217853474334e-06
+   ],
+   "category": "disease_pattern",
+   "top": "Coccidiosis",
+   "runnerUp": "Salmonella",
+   "reasons": [],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    8.198208791701133e-17,
+    0.0095393475998588,
+    2.6952486557097636e-09,
+    0.9904606497048923
+   ],
+   "category": "disease_pattern",
+   "top": "NCD",
+   "runnerUp": "Healthy",
+   "reasons": [],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.7771409654425917,
+    0.0007170618316674542,
+    4.699006086964647e-18,
+    0.22214197272574085
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "NCD",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    3.544109999882898e-05,
+    0.5099047649179778,
+    0.48595300785512424,
+    0.004106786126899259
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.09495858322797641,
+    0.0025414977169961896,
+    3.7740677664480505e-06,
+    0.9024961449872609
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    3.780224789557977e-12,
+    9.865927831883596e-09,
+    1.8355325865356728e-05,
+    0.9999816348044266
+   ],
+   "category": "disease_pattern",
+   "top": "NCD",
+   "runnerUp": "Salmonella",
+   "reasons": [],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.0006713636060289123,
+    8.095114511296046e-08,
+    5.218125670850217e-11,
+    0.9993285553906448
+   ],
+   "category": "disease_pattern",
+   "top": "NCD",
+   "runnerUp": "Coccidiosis",
+   "reasons": [],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.07706001387832999,
+    0.9221035617096422,
+    3.3471130324852505e-05,
+    0.0008029532817028211
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.7466682721227512,
+    0.2533311629496722,
+    5.642416099845705e-07,
+    6.85966671614087e-10
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    1.9004431547321156e-10,
+    0.7463178766440417,
+    0.22878433682360083,
+    0.024897786342313037
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    1.4740859845544834e-07,
+    0.09797796057649658,
+    0.034161903682561126,
+    0.8678599883323438
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    1.3068156612880592e-05,
+    0.7283368007346674,
+    0.20646053698042005,
+    0.06518959412829953
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.03103363406101955,
+    0.9654594904072141,
+    0.0008930146068883508,
+    0.0026138609248778427
+   ],
+   "category": "no_disease_pattern",
+   "top": "Healthy",
+   "runnerUp": "Coccidiosis",
+   "reasons": [],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.8836278874613189,
+    0.11611585939001048,
+    0.000248973899209964,
+    7.279249460615869e-06
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.005083075726817419,
+    0.02687957977745669,
+    0.37491862795899994,
+    0.5931187165367259
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.05110392104391201,
+    0.9488858290440951,
+    1.0249346535306557e-05,
+    5.654574392180549e-10
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    1.9473514401888497e-07,
+    0.03383131981161216,
+    0.01361599198158995,
+    0.9525524934716538
+   ],
+   "category": "disease_pattern",
+   "top": "NCD",
+   "runnerUp": "Healthy",
+   "reasons": [],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.9732252963565025,
+    9.813064171282546e-08,
+    4.366031205885077e-09,
+    0.026774601146824582
+   ],
+   "category": "disease_pattern",
+   "top": "Coccidiosis",
+   "runnerUp": "NCD",
+   "reasons": [],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.051432833866176184,
+    0.9485351729127661,
+    5.817700590583794e-06,
+    2.6175520466952288e-05
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    8.144364261889166e-09,
+    0.00042500197456098936,
+    0.07013904700224359,
+    0.9294359428788312
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.00017937351465593338,
+    0.7342148925220008,
+    0.21014713350735745,
+    0.05545860045598576
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    1.0892779170768046e-06,
+    0.5622486855734662,
+    0.007582839042215372,
+    0.4301673861064014
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "NCD",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.9700038222022558,
+    6.083761618170375e-10,
+    0.0299947178817606,
+    1.45930760749903e-06
+   ],
+   "category": "disease_pattern",
+   "top": "Coccidiosis",
+   "runnerUp": "Salmonella",
+   "reasons": [],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.16843894937873746,
+    0.8315610506209694,
+    8.056368860162829e-15,
+    2.850352020308535e-13
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.3728608696836455,
+    0.37045825356941886,
+    0.256680495297737,
+    3.8144919857804866e-07
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.09787149222477602,
+    0.9021211837700948,
+    7.431191551022028e-07,
+    6.580885974259918e-06
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.09571699716093891,
+    0.02154085140065873,
+    0.023279489559331828,
+    0.8594626618790705
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    2.1390773406485324e-06,
+    3.83446052564743e-06,
+    0.036351722240035446,
+    0.9636423042220983
+   ],
+   "category": "disease_pattern",
+   "top": "NCD",
+   "runnerUp": "Salmonella",
+   "reasons": [],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    1.414085385550776e-07,
+    0.0002106210821630242,
+    0.9604751921343873,
+    0.03931404537491126
+   ],
+   "category": "disease_pattern",
+   "top": "Salmonella",
+   "runnerUp": "NCD",
+   "reasons": [],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.07336689193767253,
+    2.400403411898211e-07,
+    0.0008809701315219174,
+    0.9257518978904644
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.44506304618264597,
+    0.000756138613249362,
+    0.03255339392141448,
+    0.5216274212826901
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    2.079791757123985e-05,
+    0.20472926800800212,
+    0.7946409874639191,
+    0.0006089466105077058
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.007981907245737252,
+    0.0295849700505179,
+    0.0040198218553299525,
+    0.9584133008484148
+   ],
+   "category": "disease_pattern",
+   "top": "NCD",
+   "runnerUp": "Healthy",
+   "reasons": [],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.003779592097938163,
+    0.38592250172202713,
+    0.6102979046114203,
+    1.568614555570597e-09
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    2.0180462400663752e-05,
+    1.6002912528597117e-07,
+    0.9996389693938789,
+    0.0003406901145950581
+   ],
+   "category": "disease_pattern",
+   "top": "Salmonella",
+   "runnerUp": "NCD",
+   "reasons": [],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.16713143182036128,
+    0.001141394744993127,
+    0.00023042689872610012,
+    0.8314967465359194
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.06529171735720053,
+    8.906215787058543e-07,
+    7.742479609112809e-08,
+    0.9347073145964246
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.5812812196559075,
+    1.9177867309846007e-08,
+    0.4187080563451912,
+    1.0704821034050837e-05
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.0002830588074948495,
+    0.4839304269375133,
+    0.5153408098879299,
+    0.0004457043670619753
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.35271911719497484,
+    0.5808823904896433,
+    1.3944988583083158e-11,
+    0.06639849230143682
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.7030378780884103,
+    0.2743156120051383,
+    0.00409459564400163,
+    0.018551914262449676
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.002075156081039613,
+    0.009990268179295192,
+    0.9859627486626433,
+    0.0019718270770218878
+   ],
+   "category": "disease_pattern",
+   "top": "Salmonella",
+   "runnerUp": "Healthy",
+   "reasons": [],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    1.427045521891267e-14,
+    0.05256075871988881,
+    0.946995974288373,
+    0.0004432669917239366
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.08554780513112428,
+    0.06907414038249059,
+    0.5360534649919896,
+    0.3093245894943955
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "NCD",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.8541021717756426,
+    3.73615581986254e-09,
+    0.002721546439862901,
+    0.1431762780483386
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "NCD",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.980714280388839,
+    0.01927509195415706,
+    1.0627656998206612e-05,
+    5.645615385484095e-15
+   ],
+   "category": "disease_pattern",
+   "top": "Coccidiosis",
+   "runnerUp": "Healthy",
+   "reasons": [],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.5644893259814099,
+    0.3362316526554073,
+    0.09927900764481626,
+    1.371836664221069e-08
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.7634847144398403,
+    0.00035838855368963544,
+    1.6835686702962707e-09,
+    0.2361568953229013
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "NCD",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.890582668983941,
+    0.03268974829907342,
+    1.286670290299567e-23,
+    0.07672758271698542
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "NCD",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.0002540468664056755,
+    0.043733147553896644,
+    0.4764275304635612,
+    0.47958527511613647
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.995282909141314,
+    0.0004760284353288151,
+    1.0453261191955527e-05,
+    0.004230609162165021
+   ],
+   "category": "disease_pattern",
+   "top": "Coccidiosis",
+   "runnerUp": "NCD",
+   "reasons": [],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.21730928595165944,
+    4.241869067039779e-09,
+    0.010297783264201504,
+    0.77239292654227
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    1.8127231101799863e-07,
+    1.7658189120016206e-10,
+    2.8020375004133253e-16,
+    0.9999998185511069
+   ],
+   "category": "disease_pattern",
+   "top": "NCD",
+   "runnerUp": "Coccidiosis",
+   "reasons": [],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.0029726951847071164,
+    0.9969584080558321,
+    6.000096681017599e-05,
+    8.89579265043907e-06
+   ],
+   "category": "no_disease_pattern",
+   "top": "Healthy",
+   "runnerUp": "Coccidiosis",
+   "reasons": [],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.8562928202216218,
+    0.11232691214109539,
+    0.03137878356792206,
+    1.484069360594612e-06
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    8.460068261872504e-08,
+    3.4147149469084316e-05,
+    0.9972725495770915,
+    0.002693218672756807
+   ],
+   "category": "disease_pattern",
+   "top": "Salmonella",
+   "runnerUp": "NCD",
+   "reasons": [],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.541327551438353,
+    0.3861998969947514,
+    0.01325847125655742,
+    0.05921408031033834
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.999999998823461,
+    2.7868181360428638e-12,
+    1.0896918896827075e-11,
+    1.1628552621653219e-09
+   ],
+   "category": "disease_pattern",
+   "top": "Coccidiosis",
+   "runnerUp": "NCD",
+   "reasons": [],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.04632228852834975,
+    4.0821540400091226e-12,
+    0.0024409953949124995,
+    0.9512367160726557
+   ],
+   "category": "disease_pattern",
+   "top": "NCD",
+   "runnerUp": "Coccidiosis",
+   "reasons": [],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.038610373544382494,
+    0.9613877187402021,
+    1.9077154153803666e-06,
+    4.959711744123749e-26
+   ],
+   "category": "no_disease_pattern",
+   "top": "Healthy",
+   "runnerUp": "Coccidiosis",
+   "reasons": [],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.004426204646450068,
+    0.0012489739393582516,
+    0.994256641698266,
+    6.817971592567047e-05
+   ],
+   "category": "disease_pattern",
+   "top": "Salmonella",
+   "runnerUp": "Coccidiosis",
+   "reasons": [],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.5999195984289114,
+    0.0003556963022086354,
+    0.39971919776901665,
+    5.507499863472857e-06
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    3.0219454145802644e-07,
+    5.508646753722497e-19,
+    1.0670690788827128e-13,
+    0.9999996978053518
+   ],
+   "category": "disease_pattern",
+   "top": "NCD",
+   "runnerUp": "Coccidiosis",
+   "reasons": [],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.008534749497242962,
+    0.4895768606826899,
+    3.115200967351287e-08,
+    0.5018883586680574
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.6469889199024272,
+    0.00944907427618083,
+    0.1866022074947338,
+    0.15695979832665816
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.021045234018486805,
+    0.9789547659286051,
+    5.232357355309463e-11,
+    5.845273251105698e-13
+   ],
+   "category": "no_disease_pattern",
+   "top": "Healthy",
+   "runnerUp": "Coccidiosis",
+   "reasons": [],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.10045483931670084,
+    0.1206342142718568,
+    0.778910943887345,
+    2.5240973101608145e-09
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.9577423896006017,
+    0.042257569822767974,
+    4.0009874100347686e-23,
+    4.057663042125481e-08
+   ],
+   "category": "disease_pattern",
+   "top": "Coccidiosis",
+   "runnerUp": "Healthy",
+   "reasons": [],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.970023602726982,
+    0.0299592302967489,
+    3.755661648654906e-13,
+    1.7166975893554455e-05
+   ],
+   "category": "disease_pattern",
+   "top": "Coccidiosis",
+   "runnerUp": "Healthy",
+   "reasons": [],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.1052070784367184,
+    0.13503503297420583,
+    0.0017801066539137012,
+    0.7579777819351621
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.9749200522008945,
+    0.0025990883386589553,
+    1.4076038510567788e-18,
+    0.022480859460446694
+   ],
+   "category": "disease_pattern",
+   "top": "Coccidiosis",
+   "runnerUp": "NCD",
+   "reasons": [],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    5.866399214550806e-07,
+    0.9995858566724007,
+    5.977563512865663e-05,
+    0.0003537810525491907
+   ],
+   "category": "no_disease_pattern",
+   "top": "Healthy",
+   "runnerUp": "NCD",
+   "reasons": [],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.8289099674734964,
+    6.999059220853539e-07,
+    0.17085724163848462,
+    0.0002320909820967339
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.22561027617845572,
+    0.28274416232927746,
+    0.0003248228409516354,
+    0.4913207386513153
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.0010723523490830745,
+    0.7762984079190545,
+    0.10462359511461043,
+    0.11800564461725192
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "NCD",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.9695080427655428,
+    0.002613893356612777,
+    0.02648561288065198,
+    0.0013924509971924102
+   ],
+   "category": "disease_pattern",
+   "top": "Coccidiosis",
+   "runnerUp": "Salmonella",
+   "reasons": [],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.028444250316927624,
+    0.00046662683548145294,
+    0.9660414340554709,
+    0.005047688792120014
+   ],
+   "category": "disease_pattern",
+   "top": "Salmonella",
+   "runnerUp": "Coccidiosis",
+   "reasons": [],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.25816124263998835,
+    0.1972045149815487,
+    0.5431664081828391,
+    0.0014678341956239327
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.010556189473263129,
+    0.5533009090143339,
+    0.0008368346566957226,
+    0.43530606685570705
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "NCD",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.10511685060419623,
+    0.008302927063509753,
+    0.5939595866693889,
+    0.29262063566290525
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "NCD",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.08067767132559489,
+    0.905942441157742,
+    0.011475844925205673,
+    0.0019040425914573268
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.0005920820253637944,
+    0.06634707866063529,
+    0.011625598086291709,
+    0.9214352412277093
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.026600648380021706,
+    0.009405765911865567,
+    0.0022278558780671233,
+    0.9617657298300456
+   ],
+   "category": "disease_pattern",
+   "top": "NCD",
+   "runnerUp": "Coccidiosis",
+   "reasons": [],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.37779347568930916,
+    0.4079994216733707,
+    0.21083576116552613,
+    0.0033713414717940642
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.0018134947080484772,
+    0.004021164278342029,
+    6.39458055684987e-06,
+    0.9941589464330527
+   ],
+   "category": "disease_pattern",
+   "top": "NCD",
+   "runnerUp": "Healthy",
+   "reasons": [],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.5923966836041298,
+    0.1471607169493112,
+    0.011675630664497606,
+    0.24876696878206142
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "NCD",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.6046906860540668,
+    2.047143727901985e-05,
+    0.22177428644776076,
+    0.17351455606089344
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.08159336500616367,
+    0.9170463462278418,
+    2.3376660587130372e-08,
+    0.0013602653893340976
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.0005558233196059213,
+    0.11108916964156147,
+    0.7111271271389566,
+    0.17722787989987596
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "NCD",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.3942975694538327,
+    0.12971602171685076,
+    0.044383591865925866,
+    0.4316028169633907
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    6.669394872876828e-06,
+    0.3062361674157171,
+    0.5838018074751242,
+    0.10995535571428589
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.4370271792934423,
+    0.31433485171278064,
+    0.164793535621444,
+    0.08384443337233304
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.2091782762167302,
+    0.0011231756843286492,
+    0.7896918089551077,
+    6.739143833347747e-06
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.005512206015634219,
+    0.9596272443678696,
+    0.016560651845538284,
+    0.018299897770957994
+   ],
+   "category": "no_disease_pattern",
+   "top": "Healthy",
+   "runnerUp": "NCD",
+   "reasons": [],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.34955923874321615,
+    0.03711886323703054,
+    0.6103126349352755,
+    0.0030092630844777376
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.023684756953241577,
+    0.04944352951793135,
+    3.759200036352867e-06,
+    0.9268679543287908
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.06422854028827324,
+    0.7183265751935847,
+    0.20868524519989337,
+    0.008759639318248658
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.25026228547272933,
+    0.6598890688216503,
+    0.07454585715310975,
+    0.015302788552510485
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.04323885557781238,
+    0.08036519990589369,
+    0.8446999259987102,
+    0.03169601851758366
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.6046499420431329,
+    6.382598616470579e-08,
+    0.39429524782235514,
+    0.0010547463085258666
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.0036475994209794384,
+    0.009453018211702307,
+    0.9803367000999733,
+    0.006562682267344864
+   ],
+   "category": "disease_pattern",
+   "top": "Salmonella",
+   "runnerUp": "Healthy",
+   "reasons": [],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.015827304822134916,
+    0.7906618748426365,
+    0.07041058756488824,
+    0.1231002327703404
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "NCD",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.7598103848574062,
+    0.0012410764882419194,
+    0.23878927902169084,
+    0.0001592596326610825
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.028024040658218452,
+    0.57394114201434,
+    0.048550203364269066,
+    0.3494846139631724
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "NCD",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.4272903422815191,
+    0.0071337198407133455,
+    0.0018565161675054979,
+    0.5637194217102622
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    8.314780011430136e-05,
+    0.09481615011822933,
+    2.0784277691060575e-05,
+    0.9050799178039654
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.0013541586004651785,
+    0.48725595802252303,
+    0.47491086246959224,
+    0.03647902090741945
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.05512566348593817,
+    0.5179818364056913,
+    0.3946498716217285,
+    0.032242628486642166
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.0009604840039761568,
+    0.010330377655786888,
+    0.15943276540596177,
+    0.8292763729342751
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.011797530420718245,
+    0.9219557519365539,
+    0.0010899002818894517,
+    0.06515681736083834
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "NCD",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.6137328523718196,
+    0.23274144998221974,
+    7.541016732935934e-05,
+    0.15345028747863126
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.06642299958642905,
+    0.7446760630575663,
+    0.05039469751887572,
+    0.13850623983712904
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "NCD",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.38270938083734957,
+    0.00030100756869217863,
+    0.014724436146763768,
+    0.6022651754471945
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.7993066616084168,
+    0.06696896603286825,
+    6.530866225789419e-05,
+    0.13365906369645703
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "NCD",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.8252846519426756,
+    0.001349974371481409,
+    0.16961805210574762,
+    0.003747321580095418
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.5682356038294365,
+    0.0016238341090281862,
+    0.301068435221811,
+    0.1290721268397242
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.5349215863093667,
+    0.00020645225565629538,
+    0.2585831835543768,
+    0.20628877788060018
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.017824282660756512,
+    0.7447552744352162,
+    0.20185432495530486,
+    0.035566117948722394
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.17036698332909087,
+    0.0965433448130718,
+    0.0022016873903323918,
+    0.7308879844675049
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.026928979297054616,
+    0.11587766607243837,
+    0.8440878535029835,
+    0.01310550112752332
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.32816358883281754,
+    0.5380713015894788,
+    0.0488461439303426,
+    0.08491896564736107
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.012372713488982985,
+    0.21138967151367413,
+    0.7228984596274945,
+    0.053339155369848346
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.3091622895615958,
+    0.3947976557866073,
+    0.29604005123682375,
+    3.4149731590189587e-09
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.18555623369640697,
+    3.7308833574783117e-06,
+    0.4931274506869184,
+    0.32131258473331714
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "NCD",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.7853974660236679,
+    0.12887725630988997,
+    0.0019447403644668952,
+    0.08378053730197514
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.736145678460552,
+    0.20556984170137482,
+    0.04799077250484926,
+    0.010293707333223842
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.7495931809720688,
+    0.20029216292487928,
+    0.04901593572659419,
+    0.0010987203764577069
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.8736424104078618,
+    0.02480613401629108,
+    5.2263387179225095e-06,
+    0.10154622923712918
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "NCD",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.015312722744707406,
+    0.24797155533593546,
+    0.0001416620522297837,
+    0.7365740598671273
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.0005583025348211492,
+    0.011292618306114818,
+    0.7710474310713934,
+    0.21710164808767085
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "NCD",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.000248585669143482,
+    0.9346402755427726,
+    0.06509445857956306,
+    1.668020852081386e-05
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    3.321283661395123e-05,
+    0.027057726482119855,
+    4.7987054993218577e-05,
+    0.9728610736262729
+   ],
+   "category": "disease_pattern",
+   "top": "NCD",
+   "runnerUp": "Healthy",
+   "reasons": [],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    6.227996196742529e-05,
+    0.001512122000395356,
+    0.9641561179167855,
+    0.03426948012085167
+   ],
+   "category": "disease_pattern",
+   "top": "Salmonella",
+   "runnerUp": "NCD",
+   "reasons": [],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.0027649861499198193,
+    0.5607792209394661,
+    0.4259193809258548,
+    0.010536411984759375
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.11329587738476596,
+    0.6583157403624461,
+    0.18144988994698347,
+    0.04693849230580426
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.5065152451177743,
+    0.24072681416574002,
+    0.25162354462669945,
+    0.0011343960897862325
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.37678238865601554,
+    0.011727916637238489,
+    0.6112485952479552,
+    0.00024109945879091383
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.0003574236771853589,
+    0.5376077784417528,
+    0.44499729137757965,
+    0.01703750650348246
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.08876688695210477,
+    0.8829120978837727,
+    0.00014752874264392432,
+    0.028173486421478575
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.08563331817525881,
+    0.28123796566038817,
+    0.04938949513782203,
+    0.583739221026531
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.06559167355934299,
+    0.0238876605748672,
+    0.034100130542738194,
+    0.8764205353230516
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.5304255493573301,
+    0.43230833811910324,
+    0.0006133033299873061,
+    0.03665280919357931
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    6.386370495702993e-05,
+    0.10519949058211188,
+    0.11018177977595696,
+    0.7845548659369742
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.4023978207513024,
+    0.19284170156183889,
+    0.18600454619214982,
+    0.21875593149470887
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "NCD",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.9122995194682496,
+    0.021479184757110165,
+    0.038335201916992814,
+    0.027886093857647336
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.011199537049553851,
+    0.9455812029382387,
+    0.03219112393890445,
+    0.011028136073303092
+   ],
+   "category": "no_disease_pattern",
+   "top": "Healthy",
+   "runnerUp": "Salmonella",
+   "reasons": [],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.19270460864559946,
+    0.6649702892867865,
+    0.004829724816421209,
+    0.1374953772511927
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.02714517211045572,
+    0.0021217666428886596,
+    0.1785367687966406,
+    0.792196292450015
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.5523288788877843,
+    0.069566442474812,
+    0.02464852849662066,
+    0.353456150140783
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "NCD",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.776816955217863,
+    0.02589052114886776,
+    0.12625936050223655,
+    0.07103316313103256
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.16501716051562854,
+    0.038436438531688356,
+    0.32463270072338213,
+    0.4719137002293008
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.2341559427848948,
+    3.067256571146784e-06,
+    0.29561660773223286,
+    0.47022438222630114
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.47046199305558406,
+    0.004960864848652156,
+    0.5094934233867789,
+    0.015083718708984869
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.007154875133404479,
+    0.991240469233283,
+    0.0015612957330067053,
+    4.335990030588521e-05
+   ],
+   "category": "no_disease_pattern",
+   "top": "Healthy",
+   "runnerUp": "Coccidiosis",
+   "reasons": [],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.7469612279834957,
+    0.046772730505964394,
+    0.18420056312062597,
+    0.022065478389913983
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.5441273974675317,
+    0.013133325572197237,
+    0.01138178124043532,
+    0.4313574957198357
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "NCD",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.19115034708134926,
+    0.028202843504872482,
+    0.7546222893389511,
+    0.026024520074827136
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.8646011539484746,
+    0.07090799857944557,
+    0.057704488708988075,
+    0.006786358763091848
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.11283435813766803,
+    0.2990534830962556,
+    0.06343842295459537,
+    0.524673735811481
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.061870196365799095,
+    0.0028191555485629896,
+    0.012447726788286052,
+    0.9228629212973518
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.0064468045952314834,
+    0.0055782158972182295,
+    0.9843034518381404,
+    0.0036715276694099684
+   ],
+   "category": "disease_pattern",
+   "top": "Salmonella",
+   "runnerUp": "Coccidiosis",
+   "reasons": [],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.02547255600555867,
+    0.001258874022215406,
+    0.25529661016303784,
+    0.717971959809188
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.597138233864287,
+    3.978249061990922e-05,
+    0.01606258483132794,
+    0.38675939881376525
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "NCD",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.21417567063292586,
+    0.5466470564004614,
+    0.2386862537480791,
+    0.0004910192185335275
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.1337298058151043,
+    0.21846072622870955,
+    0.6353526892470919,
+    0.012456778709094275
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.06743623528236409,
+    0.0009465083716704573,
+    0.6047095865354308,
+    0.3269076698105347
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "NCD",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.03084191110929293,
+    0.08308316725067207,
+    0.00037548064336058494,
+    0.8856994409966743
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.622154946767514,
+    0.023625527328188154,
+    0.03425862210493198,
+    0.31996090379936565
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "NCD",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    9.457529461335947e-06,
+    0.7189946416073931,
+    0.2147422654767894,
+    0.06625363538635613
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    4.245690581319332e-06,
+    0.17933002792917302,
+    0.37759248114285665,
+    0.443073245237389
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.2697164864988853,
+    0.020628937302007037,
+    1.3409306533637664e-05,
+    0.709641166892574
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.25630238830273167,
+    0.05697262520263822,
+    0.6663862711732811,
+    0.020338715321349156
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.0012517996244841515,
+    0.9721325210318815,
+    0.021761821073512263,
+    0.0048538582701220835
+   ],
+   "category": "no_disease_pattern",
+   "top": "Healthy",
+   "runnerUp": "Salmonella",
+   "reasons": [],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.1176023193026648,
+    0.02085632673213613,
+    0.8248092721598534,
+    0.03673208180534561
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.013048087930290308,
+    0.478758187195607,
+    0.1907997061752261,
+    0.3173940186988767
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "NCD",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.38562789697088384,
+    0.1521113899494202,
+    0.29915137080599097,
+    0.16310934227370485
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.5778957837169997,
+    0.257540547196503,
+    0.05513950452753721,
+    0.10942416455895983
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.08875148819984363,
+    0.5089107983957682,
+    0.1113766999350332,
+    0.29096101346935505
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "NCD",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.2888693597448962,
+    0.3143503285370036,
+    0.10966385306399748,
+    0.2871164586541027
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.49261852924536087,
+    0.07810164791734303,
+    0.11232159993850978,
+    0.31695822289878645
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "NCD",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.03708312903714463,
+    0.4916188215126838,
+    0.23526824669749916,
+    0.2360298027526724
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "NCD",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.42487041338436,
+    0.12601756871631634,
+    0.20631425381014643,
+    0.24279776408917728
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "NCD",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.24549897777708732,
+    0.44162855826147235,
+    0.11954326543256845,
+    0.1933291985288719
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.44673860187956627,
+    0.36661181168164964,
+    0.04574176173581739,
+    0.14090782470296673
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.11703089108277777,
+    0.19348991708239932,
+    0.18438508302814616,
+    0.5050941088066766
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.3102484381971369,
+    0.07459275518674002,
+    0.3543191444306595,
+    0.26083966218546356
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.16238320859956593,
+    0.2452415562547945,
+    0.20632140493715712,
+    0.38605383020848255
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.2649901452402711,
+    0.2102416826278255,
+    0.2694704399892677,
+    0.2552977321426359
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.23227341030484272,
+    0.01921534526317162,
+    0.39749824303357256,
+    0.35101300139841307
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "NCD",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.6797921013527827,
+    0.09526244997134582,
+    0.10095429963836124,
+    0.1239911490375102
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "NCD",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.5654580755483818,
+    0.08397409127494772,
+    0.3107641807305479,
+    0.0398036524461226
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.00025784143343942967,
+    0.13572564957794445,
+    0.7442044102955284,
+    0.11981209869308769
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.038416006862124145,
+    0.18062431928360448,
+    0.10611571207124282,
+    0.6748439617830285
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.1274200606334763,
+    0.34546950456601805,
+    0.18394165420374245,
+    0.3431687805967631
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "NCD",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.24240742938769935,
+    0.5566303028031213,
+    0.09318085939179584,
+    0.10778140841738354
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.2671823552097345,
+    0.3061056586621187,
+    0.09547017284872868,
+    0.33124181327941815
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.23945894197480777,
+    0.053955136941942816,
+    0.3861872546478441,
+    0.3203986664354054
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "NCD",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.3459027991254023,
+    0.2918891076905449,
+    0.22324338477805283,
+    0.1389647084060001
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.29150647736060536,
+    0.5090381154263109,
+    0.15102821707866815,
+    0.048427190134415606
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.4700424800836261,
+    0.3880871418645497,
+    0.0671267332832359,
+    0.07474364476858827
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.4423136909404652,
+    0.16511206250560734,
+    0.17028283347481368,
+    0.22229141307911385
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "NCD",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.1513504310527057,
+    0.4634652472921571,
+    0.13621157845990564,
+    0.24897274319523163
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "NCD",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.11790352956015371,
+    0.027713248969038526,
+    0.7176176240981155,
+    0.1367655973726923
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "NCD",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.04655877557792536,
+    0.8325501549866331,
+    0.11405086272529136,
+    0.006840206710150036
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.3062184052414348,
+    0.22632236247745496,
+    0.3540773738532489,
+    0.11338185842786136
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.11877972578800092,
+    0.060014651575233176,
+    0.8028274231150032,
+    0.018378199521762707
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.346999449165178,
+    0.03938977552332069,
+    0.32523507847270405,
+    0.2883756968387974
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.4177103221667021,
+    0.01477733713813311,
+    0.16522301932705108,
+    0.40228932136811363
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "NCD",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.007060329997362966,
+    0.12581968960777054,
+    0.1709986000170966,
+    0.6961213803777698
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.06137391906122688,
+    0.05058156729048523,
+    0.7833396390841039,
+    0.10470487456418405
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "NCD",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.12376947811109097,
+    0.38850829145877563,
+    0.33111533321879555,
+    0.1566068972113379
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.3550178396213765,
+    0.14980472280798834,
+    0.43958733615291673,
+    0.055590101417718356
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.17370687462344014,
+    0.5055571777467041,
+    0.02056179651251044,
+    0.3001741511173453
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "NCD",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.09831095627271688,
+    0.056497915547818446,
+    0.01952523563125833,
+    0.8256658925482062
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.29370189543042446,
+    0.04497229182267811,
+    0.2756188893290557,
+    0.3857069234178418
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.4607070512204294,
+    0.018723084160008063,
+    0.27646322484300545,
+    0.24410663977655708
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.1792346091918282,
+    0.02794511233449476,
+    0.2937439186949197,
+    0.49907635977875736
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.04016134818438072,
+    0.1470631241677332,
+    0.00542257640947041,
+    0.8073529512384157
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.6242327240040908,
+    0.002611822742019129,
+    0.29672886603640686,
+    0.07642658721748319
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.34407211939459376,
+    0.44714674357275386,
+    0.19278572237541314,
+    0.015995414657239193
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.12549832323445115,
+    0.02971120728384964,
+    0.744004563956699,
+    0.10078590552500018
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.06185091312413341,
+    0.08706803688097899,
+    0.8229654139960684,
+    0.028115635998819336
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.25558526894910505,
+    0.43057506402229334,
+    0.10114570125418977,
+    0.21269396577441177
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.4051456108500423,
+    0.3045408891598003,
+    0.2553986197574308,
+    0.03491488023272656
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.13390528923124256,
+    0.07641492301912858,
+    0.2382002341045443,
+    0.5514795536450846
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.10647229655958919,
+    0.12901569014184003,
+    0.1532343097628777,
+    0.6112777035356932
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.3313350091477405,
+    0.024858519502396377,
+    0.38852035069208396,
+    0.25528612065777917
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.03373642663024974,
+    0.38929922649784554,
+    0.31519794702635584,
+    0.26176639984554884
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.036605578869642066,
+    0.4708842840810972,
+    0.35091315278226015,
+    0.1415969842670006
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.223741231927005,
+    0.5527312648534912,
+    0.01771014241294655,
+    0.20581736080655724
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.405317712906297,
+    0.12358946583972827,
+    0.4316179148265377,
+    0.03947490642743688
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.23916366618417598,
+    0.45019934093221364,
+    0.024759399290067798,
+    0.28587759359354264
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "NCD",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.2890300253783487,
+    0.11681581813631062,
+    0.09861932460685388,
+    0.49553483187848674
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.010384981585700613,
+    0.2004139317313144,
+    0.371765167964588,
+    0.41743591871839714
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.2116221583937535,
+    0.34942135307117694,
+    0.18438111500889184,
+    0.2545753735261777
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "NCD",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.3549217995242725,
+    0.1584725066132088,
+    0.4046548395944439,
+    0.08195085426807475
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.012638245362809376,
+    0.35770345748663473,
+    0.5833002250486494,
+    0.04635807210190642
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.46596290789361855,
+    0.050487489249512546,
+    0.14779528501335645,
+    0.3357543178435124
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "NCD",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.03484652185505027,
+    0.3352075809950767,
+    0.26149533792305857,
+    0.36845055922681447
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.03926430410765865,
+    0.1425672708279265,
+    0.8065211709186713,
+    0.011647254145743568
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.5259920397010934,
+    0.3941093772653604,
+    0.029308520231718056,
+    0.050590062801828095
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.497152036430332,
+    0.21844285141978897,
+    0.1814576276540943,
+    0.1029474844957846
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.1722774068570494,
+    0.13360349653872705,
+    0.15917833676377144,
+    0.5349407598404523
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.012027452504357265,
+    0.7562812977080994,
+    0.11691553075300638,
+    0.114775719034537
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.2701998284648635,
+    0.4686615978797079,
+    0.1951248812397122,
+    0.06601369241571635
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.04150693847330285,
+    0.2052362182679135,
+    0.02934605314053538,
+    0.7239107901182482
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.08392685974131729,
+    0.3126314722186804,
+    0.39585860384771,
+    0.20758306419229228
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.34437332355832434,
+    0.21716991571634553,
+    0.11062294078667494,
+    0.32783381993865524
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "NCD",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.36622760664151216,
+    0.047930868043817916,
+    0.4447999392498675,
+    0.14104158606480255
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.43334654099797937,
+    0.29870726142878623,
+    0.11669209128728196,
+    0.15125410628595248
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.07613258565450001,
+    0.3623828039480883,
+    0.31418421672061864,
+    0.24730039367679313
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.12277399605001264,
+    0.8291093543003246,
+    0.03009852299398807,
+    0.01801812665567464
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.25890575653430065,
+    0.17281530144776505,
+    0.44719037556907704,
+    0.12108856644885727
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.4940010414402196,
+    0.41869967351756643,
+    0.052950902982648484,
+    0.03434838205956552
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.32526043717012054,
+    0.009701513810625183,
+    0.08798377788937171,
+    0.5770542711298826
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.02764791228874506,
+    0.1741214306296736,
+    0.12599743216481227,
+    0.6722332249167691
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.09759701216908984,
+    0.36275311736530513,
+    0.5046958231064069,
+    0.034954047359198
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.1717782080630726,
+    0.1969104062027442,
+    0.16973964009600584,
+    0.46157174563817754
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.08222948052436635,
+    0.43482032373231516,
+    0.3410782889043202,
+    0.14187190683899836
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.24384467629303716,
+    0.358080005468483,
+    0.3687527452251076,
+    0.02932257301337221
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.34944892627114577,
+    0.08304646855665414,
+    0.25391685979484063,
+    0.3135877453773594
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "NCD",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.6113691806268385,
+    0.3223453627062783,
+    0.05827269648672984,
+    0.00801276018015324
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.07231691054614221,
+    0.2299863698476299,
+    0.5074090547808114,
+    0.19028766482541637
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.06356444548052839,
+    0.3838779699623165,
+    0.3440511506514066,
+    0.20850643390574847
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.402091971429756,
+    0.22399315769551081,
+    0.12140149019704283,
+    0.2525133806776904
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "NCD",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.2699819501291349,
+    0.6225695449741293,
+    0.06671958449921198,
+    0.040728920397523634
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.24487807216146273,
+    0.04849306399374102,
+    0.25070326581286484,
+    0.4559255980319315
+   ],
+   "category": "uncertain",
+   "top": "NCD",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.3041612894346094,
+    0.558430390109021,
+    0.060502125361717285,
+    0.07690619509465234
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.5728352388107628,
+    0.06110382095607224,
+    0.2267966999413074,
+    0.13926424029185758
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.19508558188413755,
+    0.13273144679114468,
+    0.6654676714255449,
+    0.0067152998991727424
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.15954885426284235,
+    0.2530350270690128,
+    0.456055583825855,
+    0.1313605348422899
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.18221787854844612,
+    0.12967403619984455,
+    0.5600345631455002,
+    0.12807352210620918
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.3435553301349184,
+    0.3452231055720078,
+    0.210218871315886,
+    0.10100269297718782
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Coccidiosis",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.25,
+    0.25,
+    0.25,
+    0.25
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "low_top_probability",
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.5,
+    0.5,
+    0.0,
+    0.0
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.0,
+    0.0,
+    0.5,
+    0.5
+   ],
+   "category": "uncertain",
+   "top": "Salmonella",
+   "runnerUp": "NCD",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "category": "disease_pattern",
+   "top": "Coccidiosis",
+   "runnerUp": "Healthy",
+   "reasons": [],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "category": "disease_pattern",
+   "top": "NCD",
+   "runnerUp": "Coccidiosis",
+   "reasons": [],
+   "notifiable": true
+  },
+  {
+   "probabilities": [
+    0.5,
+    0.5,
+    0.0,
+    0.0
+   ],
+   "category": "uncertain",
+   "top": "Coccidiosis",
+   "runnerUp": "Healthy",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  },
+  {
+   "probabilities": [
+    0.0,
+    0.95,
+    0.04999999999999999,
+    0.0
+   ],
+   "category": "uncertain",
+   "top": "Healthy",
+   "runnerUp": "Salmonella",
+   "reasons": [
+    "small_margin"
+   ],
+   "notifiable": false
+  }
+ ]
+}

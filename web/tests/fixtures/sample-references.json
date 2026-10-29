@@ -1,0 +1,143 @@
+{
+  "classNames": [
+    "Coccidiosis",
+    "Healthy",
+    "Salmonella",
+    "NCD"
+  ],
+  "decode": "accurate integer IDCT",
+  "samples": [
+    {
+      "id": "f01",
+      "file": "f01.jpg",
+      "kerasPredicted": "Coccidiosis",
+      "kerasProbabilities": [
+        1.0,
+        2.3719926843105202e-17,
+        2.77511795642635e-18,
+        7.24543711275203e-18
+      ],
+      "category": "disease_pattern"
+    },
+    {
+      "id": "f03",
+      "file": "f03.jpg",
+      "kerasPredicted": "Healthy",
+      "kerasProbabilities": [
+        6.183416279004206e-11,
+        1.0,
+        1.9397912609520063e-08,
+        1.9982873133983503e-09
+      ],
+      "category": "no_disease_pattern"
+    },
+    {
+      "id": "f05",
+      "file": "f05.jpg",
+      "kerasPredicted": "Salmonella",
+      "kerasProbabilities": [
+        3.602715459294359e-09,
+        6.867075796890276e-08,
+        0.9999998807907104,
+        4.60265514590219e-09
+      ],
+      "category": "disease_pattern"
+    },
+    {
+      "id": "f07",
+      "file": "f07.jpg",
+      "kerasPredicted": "NCD",
+      "kerasProbabilities": [
+        2.2844993452508788e-08,
+        9.519894594856027e-11,
+        1.9502257586623273e-09,
+        1.0
+      ],
+      "category": "disease_pattern"
+    },
+    {
+      "id": "f09",
+      "file": "f09.jpg",
+      "kerasPredicted": "Coccidiosis",
+      "kerasProbabilities": [
+        1.0,
+        2.5165533516107765e-14,
+        2.5551585298961383e-15,
+        3.6001034781334845e-14
+      ],
+      "category": "disease_pattern"
+    },
+    {
+      "id": "f10",
+      "file": "f10.jpg",
+      "kerasPredicted": "Healthy",
+      "kerasProbabilities": [
+        2.2464767546193087e-10,
+        1.0,
+        5.291426319331549e-08,
+        1.5261552022138858e-09
+      ],
+      "category": "no_disease_pattern"
+    },
+    {
+      "id": "f11",
+      "file": "f11.jpg",
+      "kerasPredicted": "Salmonella",
+      "kerasProbabilities": [
+        9.169846956411098e-13,
+        7.685378375366092e-12,
+        1.0,
+        7.160961819178968e-13
+      ],
+      "category": "disease_pattern"
+    },
+    {
+      "id": "f12",
+      "file": "f12.jpg",
+      "kerasPredicted": "NCD",
+      "kerasProbabilities": [
+        1.4243377310929617e-10,
+        1.381303604830464e-07,
+        2.280541622212695e-08,
+        0.9999998807907104
+      ],
+      "category": "disease_pattern"
+    },
+    {
+      "id": "f15",
+      "file": "f15.jpg",
+      "kerasPredicted": "Healthy",
+      "kerasProbabilities": [
+        0.00011225433263462037,
+        0.9984355568885803,
+        0.0001751002564560622,
+        0.001277059898711741
+      ],
+      "category": "no_disease_pattern"
+    },
+    {
+      "id": "f16",
+      "file": "f16.jpg",
+      "kerasPredicted": "Salmonella",
+      "kerasProbabilities": [
+        1.7492801873686403e-08,
+        3.2177838420466287e-06,
+        0.9999967813491821,
+        1.9418099128643007e-08
+      ],
+      "category": "disease_pattern"
+    },
+    {
+      "id": "f18",
+      "file": "f18.jpg",
+      "kerasPredicted": "Healthy",
+      "kerasProbabilities": [
+        0.019389277324080467,
+        0.5751366019248962,
+        0.0017206765478476882,
+        0.4037533402442932
+      ],
+      "category": "uncertain"
+    }
+  ]
+}
