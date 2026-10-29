@@ -59,12 +59,17 @@ extend-exclude = ["notebooks", "web", ".work", "downloads"]
 select = ["E", "F", "I", "B", "UP", "S"]
 ignore = ["S101", "S311"]
 
+[tool.ruff.lint.isort]
+known-first-party = ["poultry_disease", "poultry_api"]
+
 [tool.ruff.lint.per-file-ignores]
 "tests/**" = ["S"]
+"backend/tests/**" = ["S"]
 "scripts/**" = ["S", "I001"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests", "backend/tests"]
+pythonpath = [".", "backend"]
 markers = [
   "weights: needs the trained weights (POULTRY_DISEASE_WEIGHTS or the release cache)",
   "fixtures: needs the dataset fixture images in tests/fixtures/images",
