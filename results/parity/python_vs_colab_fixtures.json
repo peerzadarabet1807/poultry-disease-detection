@@ -1,0 +1,27 @@
+{
+  "description": "Python package (CPU) vs the probabilities recorded by the training notebook (Colab T4 GPU), on original dataset images. Engineering check, not a model evaluation.",
+  "run": "run_20261029_191001",
+  "environment": {
+    "tensorflow": "2.21.0",
+    "device": "CPU",
+    "platform": "win32"
+  },
+  "n_images": 18,
+  "argmax_identical": 18,
+  "max_abs_prob_diff": 2.174991149905825e-06,
+  "median_max_abs_prob_diff": 2.116681531073868e-09,
+  "by_set": {
+    "external": {
+      "n": 7,
+      "argmax_identical": 7,
+      "max_abs_prob_diff": 1.5737052917463856e-06
+    },
+    "internal": {
+      "n": 11,
+      "argmax_identical": 11,
+      "max_abs_prob_diff": 2.174991149905825e-06
+    }
+  },
+  "cam_vs_gradcam_min_r": 0.9999999999999698,
+  "argmax_mismatches": []
+}

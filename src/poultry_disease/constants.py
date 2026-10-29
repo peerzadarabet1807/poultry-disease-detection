@@ -1,4 +1,4 @@
-"""Fixed facts about the trained model (from models/model_config.json of run_20261029_171740)."""
+"""Fixed facts about the trained model (from models/model_config.json of run_20261029_191001)."""
 
 from __future__ import annotations
 
@@ -37,4 +37,4 @@ CAFFE_MEANS_BGR = (103.939, 116.779, 123.68)
 RELEASE_TAG = "v1.0.0"
 RELEASE_BASE_URL = f"https://github.com/peerzadarabet1807/poultry-disease-detection/releases/download/{RELEASE_TAG}"
 WEIGHTS_FILE = "poultry_resnet50.keras"
-WEIGHTS_SHA256 = "23f29b9e1aaa675a287a61060e88f863f5a939899771ab6f97f800f50bdfcd3b"
+WEIGHTS_SHA256 = "7f05c52fdc7426de07d5d0ffb98a12b3157e87695fa86c68f32e611f0c9d665a"

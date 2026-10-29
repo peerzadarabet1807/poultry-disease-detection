@@ -86,9 +86,9 @@
       "brightness_factor": 0.1
     },
     "selection_metric": "val_macro_f1",
-    "best_epoch": 18,
+    "best_epoch": 17,
     "best_epoch_phase": "phase2_finetune",
-    "best_val_macro_f1": 0.9799984615552131
+    "best_val_macro_f1": 0.9763226885398395
   },
   "environment": {
     "python": "3.13.16",

@@ -1,8 +1,10 @@
 {
-  "created_utc": "2026-10-29T16:52:25.651131+00:00",
+  "created_utc": "2026-10-29T19:10:02.930783+00:00",
   "experiment_mode": "v2_train__v3_pcr_external_test",
   "use_pcr_as_external_test": true,
   "dataset_root": "/content/drive/MyDrive/poultry-disease-dataset-zenedo",
+  "run_id": "run_20261029_191001",
+  "output_dir": "/content/drive/MyDrive/poultry-output/run_20261029_191001",
   "source_folders": {
     "version-2": {
       "source_version": "version-2",
@@ -89,7 +91,7 @@
       "Tesla T4"
     ]
   },
-  "completed_utc": "2026-10-29T17:17:24.764549+00:00",
+  "completed_utc": "2026-10-29T19:33:32.513443+00:00",
   "stratification": {
     "test_split": "cls+source",
     "val_split": "cls+source"
@@ -108,15 +110,15 @@
     "Test samples": 974,
     "PCR evaluation samples": 1201,
     "Class weights used": true,
-    "Best epoch": "18 (phase2_finetune)",
-    "Best validation macro-F1": 0.9799984615552131,
-    "Test accuracy": 0.973305954825462,
-    "Test macro-F1": 0.9598656199521561,
-    "Test weighted-F1": 0.9731166903886047,
+    "Best epoch": "17 (phase2_finetune)",
+    "Best validation macro-F1": 0.9763226885398395,
+    "Test accuracy": 0.9671457905544147,
+    "Test macro-F1": 0.9544967098664054,
+    "Test weighted-F1": 0.9668587585247219,
     "PCR evaluation type": "external held-out",
-    "PCR accuracy": 0.765195670274771,
-    "PCR macro-F1": 0.7646842999996302,
-    "Training time (min)": 14.8,
-    "Model path": "/content/poultry-training-output/models/poultry_resnet50.keras"
+    "PCR accuracy": 0.7951706910907577,
+    "PCR macro-F1": 0.7944649008416919,
+    "Training time (min)": 13.8,
+    "Model path": "/content/drive/MyDrive/poultry-output/run_20261029_191001/models/poultry_resnet50.keras"
   }
 }

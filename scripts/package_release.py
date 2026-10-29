@@ -4,7 +4,7 @@ The SavedModel directory is zipped deterministically (sorted entries, fixed time
 so re-running this script on the same files produces a byte-identical archive and the same checksum.
 
 Usage:
-    python scripts/package_release.py --run downloads/extracted/training-output/run_20261029_171740
+    python scripts/package_release.py --run downloads/extracted_191001/poultry-output/run_20261029_191001
 """
 
 from __future__ import annotations
@@ -18,7 +18,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 KERAS_NAME = "poultry_resnet50.keras"
 SAVEDMODEL_NAME = "poultry_resnet50_savedmodel"
-FIXED_TIME = (2026, 10, 29, 17, 17, 40)
+FIXED_TIME = (2026, 10, 29, 19, 10, 2)
 
 
 def sha256(path: Path) -> str:
