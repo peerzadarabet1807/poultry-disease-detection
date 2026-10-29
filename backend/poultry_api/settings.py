@@ -26,8 +26,8 @@ def _origins() -> tuple[str, ...]:
 class Settings:
     #: Exact origins allowed by CORS (comma-separated in POULTRY_API_CORS_ORIGINS). No wildcard.
     cors_origins: tuple[str, ...] = field(default_factory=_origins)
-    #: Largest accepted upload, in bytes (the web app uses the same 25 MB limit).
-    max_upload_bytes: int = int(float(os.environ.get("POULTRY_API_MAX_UPLOAD_MB", "25")) * 1024 * 1024)
+    #: Largest accepted upload, in bytes (decimal MB; the web app uses the same 25 MB limit).
+    max_upload_bytes: int = int(float(os.environ.get("POULTRY_API_MAX_UPLOAD_MB", "25")) * 1_000_000)
     #: Largest accepted image, in pixels, checked from the header before decoding (decompression bombs).
     max_pixels: int = int(os.environ.get("POULTRY_API_MAX_PIXELS", str(40_000_000)))
     #: Folder that holds results/ and models/ (the repository root, or /srv in the Docker image).

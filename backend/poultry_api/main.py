@@ -63,7 +63,7 @@ class BodySizeLimit:
             await error_response(exc.status, exc.code, exc.message)(scope, receive, send)
 
     def _message(self) -> str:
-        return f"The upload is larger than {(self.limit - MULTIPART_OVERHEAD) / 1024 / 1024:.0f} MB."
+        return f"The upload is larger than {(self.limit - MULTIPART_OVERHEAD) / 1e6:.0f} MB."
 
     async def _reject(self, scope: Scope, receive: Receive, send: Send) -> None:
         await error_response(413, "file_too_large", self._message())(scope, receive, send)
@@ -85,7 +85,7 @@ def create_app(settings: Settings | None = None, engine_factory: Callable[[Setti
         description=(
             "Classifies a photo of poultry droppings into Coccidiosis, Healthy, Salmonella or Newcastle disease "
             "(NCD) with a fine-tuned ResNet50. Research prototype: **not a veterinary diagnosis**. About 97% "
-            "accuracy on the internal test set but about 80% on PCR-confirmed images from other farms; see "
+            "accuracy on the internal test set but about 80% on the separately collected, PCR-confirmed set; see "
             "`GET /api/v1/model`."
         ),
         lifespan=lifespan,
@@ -120,7 +120,9 @@ def create_app(settings: Settings | None = None, engine_factory: Callable[[Setti
     ):
         data = await file.read(settings.max_upload_bytes + 1)
         if len(data) > settings.max_upload_bytes:
-            raise ApiError(413, "file_too_large", f"The upload is larger than {settings.max_upload_bytes >> 20} MB.")
+            raise ApiError(
+                413, "file_too_large", f"The upload is larger than {settings.max_upload_bytes / 1e6:.0f} MB."
+            )
         return await run_in_threadpool(_predict, request.app.state.engine, data, cam, settings.max_pixels)
 
     return app
