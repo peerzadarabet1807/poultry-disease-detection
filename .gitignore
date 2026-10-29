@@ -13,6 +13,7 @@ saved_model/
 # --- Build / intermediate artefacts ---
 dist/
 *.npy
+!web/tests/fixtures/**/*.npy
 *.npz
 
 # --- Python ---

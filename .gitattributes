@@ -26,3 +26,4 @@ results/**/*.png binary
 
 # Committed TF.js model weights and topology are generated
 web/public/model/** linguist-generated=true
+*.npy binary
