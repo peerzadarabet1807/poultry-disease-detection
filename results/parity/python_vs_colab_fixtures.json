@@ -23,5 +23,30 @@
     }
   },
   "cam_vs_gradcam_min_r": 0.9999999999999698,
+  "decoder_effect": {
+    "description": "Predictions from the accurate-IDCT JPEG decode (browsers) vs the training decode (fast IDCT, Colab). Accuracy and macro-F1 of both on the same images.",
+    "by_set": {
+      "external": {
+        "n": 7,
+        "argmax_identical_to_colab": 7,
+        "max_abs_prob_diff": 0.10542887856567384,
+        "median_max_abs_prob_diff": 9.999999994736442e-08,
+        "accuracy_training_decode": 0.7142857142857143,
+        "accuracy_accurate_idct": 0.7142857142857143,
+        "macro_f1_training_decode": 0.7499999999999999,
+        "macro_f1_accurate_idct": 0.7499999999999999
+      },
+      "internal": {
+        "n": 11,
+        "argmax_identical_to_colab": 11,
+        "max_abs_prob_diff": 0.009097606522064206,
+        "median_max_abs_prob_diff": 9.823054398802215e-09,
+        "accuracy_training_decode": 0.7272727272727273,
+        "accuracy_accurate_idct": 0.7272727272727273,
+        "macro_f1_training_decode": 0.7595238095238095,
+        "macro_f1_accurate_idct": 0.7595238095238095
+      }
+    }
+  },
   "argmax_mismatches": []
 }

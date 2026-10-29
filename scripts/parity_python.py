@@ -9,6 +9,10 @@ Usage:
     python scripts/parity_python.py --set internal --set external   # all 2,175 evaluation images
                                                               # (fetch them first with fetch_zenodo_images.py)
 
+With --decoder-effect, every JPEG is also decoded with libjpeg's accurate integer IDCT, the decoder that
+browsers (and Pillow, sharp) use, instead of TensorFlow's default fast IDCT that training used. The browser
+cannot reproduce the training decode, so this measures how much that changes the predictions.
+
 Writes results/parity/python_vs_colab_<scope>.json (summary) and, for full sets, a per-image CSV.
 """
 
@@ -35,13 +39,14 @@ def main() -> int:
     ap.add_argument("--set", action="append", choices=sorted(SETS), default=[])
     ap.add_argument("--images", type=Path, default=ROOT / "data" / "zenodo", help="root of fetched images")
     ap.add_argument("--no-gradcam", action="store_true", help="skip the (slower) gradient Grad-CAM comparison")
+    ap.add_argument("--decoder-effect", action="store_true", help="also predict from the accurate-IDCT decode")
     args = ap.parse_args()
 
     import tensorflow as tf
 
     from poultry_disease import CLASS_NAMES, Predictor
     from poultry_disease.cam import gradient_grad_cam, normalize_cam, pearson
-    from poultry_disease.preprocess import to_model_input
+    from poultry_disease.preprocess import resize_uint8, to_model_input
     from poultry_disease.weights import get_weights
 
     prob_cols = [f"prob_{c}" for c in CLASS_NAMES]
@@ -54,6 +59,7 @@ def main() -> int:
                 im["set"],
                 ROOT / "tests" / "fixtures" / "images" / im["file"],
                 np.array([im["colab_probabilities"][c] for c in CLASS_NAMES]),
+                im["true_class"],
             )
             for im in fx
         ]
@@ -63,7 +69,7 @@ def main() -> int:
         for s in sorted(args.set):
             df = pd.read_csv(RESULTS / SETS[s])
             items += [
-                (r.relpath, s, args.images / r.relpath, np.array([getattr(r, c) for c in prob_cols]))
+                (r.relpath, s, args.images / r.relpath, np.array([getattr(r, c) for c in prob_cols]), r.true_class)
                 for r in df.itertuples()
             ]
     else:
@@ -71,16 +77,23 @@ def main() -> int:
 
     predictor = Predictor(get_weights(allow_download=False))
     rows, start = [], time.time()
-    for i, (relpath, set_name, path, colab) in enumerate(items):
-        pred = predictor.predict_bytes(path.read_bytes())
+    for i, (relpath, set_name, path, colab, true_class) in enumerate(items):
+        data = path.read_bytes()
+        pred = predictor.predict_bytes(data)
         row = {
             "relpath": relpath,
             "set": set_name,
+            "true_class": true_class,
             "colab_predicted": CLASS_NAMES[int(np.argmax(colab))],
             "python_predicted": pred.predicted_class,
             "max_abs_diff": float(np.abs(pred.probs.astype(np.float64) - colab).max()),
             **{f"python_{c}": float(p) for c, p in zip(prob_cols, pred.probs, strict=True)},
         }
+        if args.decoder_effect and data[:3] == b"\xff\xd8\xff":
+            rgb = tf.io.decode_jpeg(data, channels=3, dct_method="INTEGER_ACCURATE").numpy()
+            accurate = predictor.predict_seen(resize_uint8(rgb))
+            row["accurate_idct_predicted"] = accurate.predicted_class
+            row["accurate_idct_max_abs_diff"] = float(np.abs(accurate.probs.astype(np.float64) - colab).max())
         if not args.no_gradcam:
             grad = gradient_grad_cam(predictor.trained, to_model_input(pred.seen), pred.top_index)
             row["cam_vs_gradcam_r"] = float(pearson(normalize_cam(grad), pred.cam_for()))
@@ -112,6 +125,30 @@ def main() -> int:
     }
     if "cam_vs_gradcam_r" in df:
         summary["cam_vs_gradcam_min_r"] = float(df["cam_vs_gradcam_r"].min())
+    if "accurate_idct_predicted" in df:
+        from sklearn.metrics import accuracy_score, f1_score
+
+        summary["decoder_effect"] = {
+            "description": (
+                "Predictions from the accurate-IDCT JPEG decode (browsers) vs the training decode (fast IDCT, "
+                "Colab). Accuracy and macro-F1 of both on the same images."
+            ),
+            "by_set": {
+                s: {
+                    "n": int(len(g)),
+                    "argmax_identical_to_colab": int((g["accurate_idct_predicted"] == g["colab_predicted"]).sum()),
+                    "max_abs_prob_diff": float(g["accurate_idct_max_abs_diff"].max()),
+                    "median_max_abs_prob_diff": float(g["accurate_idct_max_abs_diff"].median()),
+                    "accuracy_training_decode": float(accuracy_score(g["true_class"], g["colab_predicted"])),
+                    "accuracy_accurate_idct": float(accuracy_score(g["true_class"], g["accurate_idct_predicted"])),
+                    "macro_f1_training_decode": float(f1_score(g["true_class"], g["colab_predicted"], average="macro")),
+                    "macro_f1_accurate_idct": float(
+                        f1_score(g["true_class"], g["accurate_idct_predicted"], average="macro")
+                    ),
+                }
+                for s, g in df.groupby("set")
+            },
+        }
     mismatches = df.loc[~df["argmax_match"], ["relpath", "colab_predicted", "python_predicted", "max_abs_diff"]]
     summary["argmax_mismatches"] = mismatches.to_dict("records")
 

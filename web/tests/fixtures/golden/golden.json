@@ -1,0 +1,31 @@
+{
+  "description": "tf.image.resize(bilinear, antialias=True) -> round -> clip -> uint8 of synthetic images",
+  "formula": "(x * 7 + y * 13 + c * 101 + (x * y) % 251) % 256",
+  "images": [
+    {
+      "height": 224,
+      "width": 224,
+      "file": "224x224.npy"
+    },
+    {
+      "height": 100,
+      "width": 130,
+      "file": "100x130.npy"
+    },
+    {
+      "height": 517,
+      "width": 333,
+      "file": "517x333.npy"
+    },
+    {
+      "height": 1000,
+      "width": 750,
+      "file": "1000x750.npy"
+    },
+    {
+      "height": 1152,
+      "width": 2048,
+      "file": "1152x2048.npy"
+    }
+  ]
+}
