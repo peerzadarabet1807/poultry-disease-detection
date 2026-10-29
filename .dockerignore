@@ -1,0 +1,14 @@
+# Allow-list: the API image needs the package, the backend app and a few JSON files.
+*
+!pyproject.toml
+!README.md
+!LICENSE
+!src/
+!backend/poultry_api/
+!models/model_config.json
+!models/checksums.sha256
+!results/experiment_config.json
+!results/posthoc/bootstrap_ci.json
+!results/posthoc/calibration.json
+**/__pycache__
+**/*.egg-info
