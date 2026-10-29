@@ -1,0 +1,203 @@
+{
+  "method": "Four notebook runs with identical configuration, seed 42 and a byte-identical dataset manifest (same split); differences come from non-deterministic GPU kernels and, for two runs, TF 2.20 instead of 2.21. Informal estimate of training noise, not a multi-seed study. Post-hoc analysis of saved metrics and predictions.",
+  "published_run": "run_20261029_171740",
+  "published_run_external_macro_f1_rank": "1 of 4",
+  "runs": [
+    {
+      "run": "run_20260927_131854",
+      "published": false,
+      "tensorflow": "2.20.0",
+      "best_epoch": 27,
+      "val_macro_f1": 0.9840297326765972,
+      "internal_accuracy": 0.9774127310061602,
+      "internal_macro_f1": 0.9689573010644855,
+      "external_accuracy": 0.7543713572023314,
+      "external_macro_f1": 0.7484796347274445,
+      "external_log_loss": 1.0890636748918257,
+      "external_roc_auc": 0.9412537355441879,
+      "external_recall_Coccidiosis": 0.6750700280112045,
+      "external_recall_Healthy": 0.7564102564102564,
+      "external_recall_Salmonella": 0.9132947976878613,
+      "external_recall_NCD": 0.6075268817204301,
+      "external_precision_Coccidiosis": 0.9563492063492064,
+      "external_precision_Healthy": 0.6178010471204188,
+      "external_precision_Salmonella": 0.7231121281464531,
+      "external_precision_NCD": 0.8692307692307693
+    },
+    {
+      "run": "run_20260927_151041",
+      "published": false,
+      "tensorflow": "2.20.0",
+      "best_epoch": 22,
+      "val_macro_f1": 0.9815120860040603,
+      "internal_accuracy": 0.9763860369609856,
+      "internal_macro_f1": 0.9597034395800514,
+      "external_accuracy": 0.742714404662781,
+      "external_macro_f1": 0.7289774840202163,
+      "external_log_loss": 1.1199815697863778,
+      "external_roc_auc": 0.9352742584812066,
+      "external_recall_Coccidiosis": 0.7030812324929971,
+      "external_recall_Healthy": 0.7403846153846154,
+      "external_recall_Salmonella": 0.9132947976878613,
+      "external_recall_NCD": 0.5053763440860215,
+      "external_precision_Coccidiosis": 0.9365671641791045,
+      "external_precision_Healthy": 0.5923076923076923,
+      "external_precision_Salmonella": 0.7181818181818181,
+      "external_precision_NCD": 0.912621359223301
+    },
+    {
+      "run": "run_20261029_141903",
+      "published": false,
+      "tensorflow": "2.21.0",
+      "best_epoch": 27,
+      "val_macro_f1": 0.9789981101518732,
+      "internal_accuracy": 0.9753593429158111,
+      "internal_macro_f1": 0.9571688491705901,
+      "external_accuracy": 0.7577019150707743,
+      "external_macro_f1": 0.7559945019898069,
+      "external_log_loss": 1.0435209039540736,
+      "external_roc_auc": 0.9379112082497026,
+      "external_recall_Coccidiosis": 0.6750700280112045,
+      "external_recall_Healthy": 0.75,
+      "external_recall_Salmonella": 0.9017341040462428,
+      "external_recall_NCD": 0.6612903225806451,
+      "external_precision_Coccidiosis": 0.9341085271317829,
+      "external_precision_Healthy": 0.609375,
+      "external_precision_Salmonella": 0.7482014388489209,
+      "external_precision_NCD": 0.8661971830985915
+    },
+    {
+      "run": "run_20261029_171740",
+      "published": true,
+      "tensorflow": "2.21.0",
+      "best_epoch": 18,
+      "val_macro_f1": 0.9799984615552131,
+      "internal_accuracy": 0.973305954825462,
+      "internal_macro_f1": 0.9598656199521561,
+      "external_accuracy": 0.765195670274771,
+      "external_macro_f1": 0.7646842999996302,
+      "external_log_loss": 0.9129221609368199,
+      "external_roc_auc": 0.9427286759243587,
+      "external_recall_Coccidiosis": 0.6470588235294118,
+      "external_recall_Healthy": 0.7435897435897436,
+      "external_recall_Salmonella": 0.9277456647398844,
+      "external_recall_NCD": 0.7258064516129032,
+      "external_precision_Coccidiosis": 0.9545454545454546,
+      "external_precision_Healthy": 0.6444444444444445,
+      "external_precision_Salmonella": 0.7328767123287672,
+      "external_precision_NCD": 0.8385093167701864
+    }
+  ],
+  "summary": {
+    "best_epoch": {
+      "mean": 23.5,
+      "sd": 4.358898943540674,
+      "min": 18.0,
+      "max": 27.0
+    },
+    "val_macro_f1": {
+      "mean": 0.9811345975969359,
+      "sd": 0.002189344524068857,
+      "min": 0.9789981101518732,
+      "max": 0.9840297326765972
+    },
+    "internal_accuracy": {
+      "mean": 0.9756160164271047,
+      "sd": 0.0017534138887679148,
+      "min": 0.973305954825462,
+      "max": 0.9774127310061602
+    },
+    "internal_macro_f1": {
+      "mean": 0.9614238024418208,
+      "sd": 0.0051719051900726435,
+      "min": 0.9571688491705901,
+      "max": 0.9689573010644855
+    },
+    "external_accuracy": {
+      "mean": 0.7549958368026645,
+      "sd": 0.009355622420584577,
+      "min": 0.742714404662781,
+      "max": 0.765195670274771
+    },
+    "external_macro_f1": {
+      "mean": 0.7495339801842744,
+      "sd": 0.015220071302861824,
+      "min": 0.7289774840202163,
+      "max": 0.7646842999996302
+    },
+    "external_log_loss": {
+      "mean": 1.0413720773922743,
+      "sd": 0.09121026853654095,
+      "min": 0.9129221609368199,
+      "max": 1.1199815697863778
+    },
+    "external_roc_auc": {
+      "mean": 0.939291969549864,
+      "sd": 0.003352013351217132,
+      "min": 0.9352742584812066,
+      "max": 0.9427286759243587
+    },
+    "external_recall_Coccidiosis": {
+      "mean": 0.6750700280112044,
+      "sd": 0.022871052687051113,
+      "min": 0.6470588235294118,
+      "max": 0.7030812324929971
+    },
+    "external_recall_Healthy": {
+      "mean": 0.7475961538461539,
+      "sd": 0.007106909559642106,
+      "min": 0.7403846153846154,
+      "max": 0.7564102564102564
+    },
+    "external_recall_Salmonella": {
+      "mean": 0.9140173410404624,
+      "sd": 0.010651899993976876,
+      "min": 0.9017341040462428,
+      "max": 0.9277456647398844
+    },
+    "external_recall_NCD": {
+      "mean": 0.625,
+      "sd": 0.09326317085972298,
+      "min": 0.5053763440860215,
+      "max": 0.7258064516129032
+    },
+    "external_precision_Coccidiosis": {
+      "mean": 0.945392588051387,
+      "sd": 0.011676765918482821,
+      "min": 0.9341085271317829,
+      "max": 0.9563492063492064
+    },
+    "external_precision_Healthy": {
+      "mean": 0.6159820459681389,
+      "sd": 0.021737409918394904,
+      "min": 0.5923076923076923,
+      "max": 0.6444444444444445
+    },
+    "external_precision_Salmonella": {
+      "mean": 0.7305930243764899,
+      "sd": 0.013232199848696492,
+      "min": 0.7181818181818181,
+      "max": 0.7482014388489209
+    },
+    "external_precision_NCD": {
+      "mean": 0.871639657080712,
+      "sd": 0.030618853795849298,
+      "min": 0.8385093167701864,
+      "max": 0.912621359223301
+    }
+  },
+  "prediction_agreement": {
+    "internal": {
+      "n_images": 974,
+      "all_runs_agree": 0.9794661190965093,
+      "pairwise_agreement_min": 0.9845995893223819,
+      "pairwise_agreement_mean": 0.9881930184804929
+    },
+    "external": {
+      "n_images": 1201,
+      "all_runs_agree": 0.8559533721898418,
+      "pairwise_agreement_min": 0.8967527060782681,
+      "pairwise_agreement_mean": 0.918540105467666
+    }
+  }
+}

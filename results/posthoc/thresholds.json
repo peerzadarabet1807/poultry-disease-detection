@@ -1,0 +1,28 @@
+{
+  "min_top_probability": 0.5,
+  "min_top2_margin": 0.85,
+  "status": "usability heuristic, not a validated operating point",
+  "chosen_on": "internal test set (version 2 held-out) saved predictions",
+  "rule": "Withhold the most internal errors while withholding at most 5% of internal correct predictions; grid T 0.50-0.95 step 0.05 plus 0.99, M 0.00-0.95 step 0.05.",
+  "source": "scripts/choose_thresholds.py",
+  "effect": {
+    "internal": {
+      "label": "Internal test (version 2 held-out)",
+      "coverage": 0.9383983572895277,
+      "accuracy_of_shown_verdicts": 0.9934354485776805,
+      "errors_withheld": 20,
+      "errors_total": 26,
+      "share_of_errors_withheld": 0.7692307692307693,
+      "share_of_correct_withheld": 0.04219409282700422
+    },
+    "external": {
+      "label": "External PCR-confirmed (version 3)",
+      "coverage": 0.6777685262281432,
+      "accuracy_of_shown_verdicts": 0.8771498771498771,
+      "errors_withheld": 182,
+      "errors_total": 282,
+      "share_of_errors_withheld": 0.6453900709219859,
+      "share_of_correct_withheld": 0.22306855277475518
+    }
+  }
+}
