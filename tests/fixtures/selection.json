@@ -1,0 +1,310 @@
+{
+  "images": [
+    {
+      "id": "f01",
+      "relpath": "version-2/cocci/cocci.1.jpg",
+      "set": "internal",
+      "role": "internal_correct",
+      "true_class": "Coccidiosis",
+      "colab_predicted_class": "Coccidiosis",
+      "colab_probabilities": {
+        "Coccidiosis": 1.0,
+        "Healthy": 4.3578954e-14,
+        "Salmonella": 1.3112849e-15,
+        "NCD": 3.1173934e-15
+      },
+      "width": 2448,
+      "height": 3264,
+      "md5": "29140c3b5f711ef87a00292a9fd0255d"
+    },
+    {
+      "id": "f02",
+      "relpath": "version-2/cocci/cocci.101.jpg",
+      "set": "internal",
+      "role": "internal_correct",
+      "true_class": "Coccidiosis",
+      "colab_predicted_class": "Coccidiosis",
+      "colab_probabilities": {
+        "Coccidiosis": 1.0,
+        "Healthy": 3.5981036e-15,
+        "Salmonella": 1.03226915e-11,
+        "NCD": 7.8975515e-12
+      },
+      "width": 3200,
+      "height": 1440,
+      "md5": "67cae5e825797ced10e64d4090c3beb1"
+    },
+    {
+      "id": "f03",
+      "relpath": "version-2/healthy/healthy.1092.jpg",
+      "set": "internal",
+      "role": "internal_correct",
+      "true_class": "Healthy",
+      "colab_predicted_class": "Healthy",
+      "colab_probabilities": {
+        "Coccidiosis": 1.1888838e-09,
+        "Healthy": 1.0,
+        "Salmonella": 2.3798478e-08,
+        "NCD": 4.854056e-08
+      },
+      "width": 2048,
+      "height": 1152,
+      "md5": "5e2181137be8338c9039270b7e077f77"
+    },
+    {
+      "id": "f04",
+      "relpath": "version-2/healthy/healthy.378.jpg",
+      "set": "internal",
+      "role": "internal_correct",
+      "true_class": "Healthy",
+      "colab_predicted_class": "Healthy",
+      "colab_probabilities": {
+        "Coccidiosis": 2.7820173e-11,
+        "Healthy": 1.0,
+        "Salmonella": 4.088505e-09,
+        "NCD": 2.0789563e-09
+      },
+      "width": 4160,
+      "height": 3120,
+      "md5": "67985d5bfb811c9457177c4238f1e53e"
+    },
+    {
+      "id": "f05",
+      "relpath": "version-2/salmo/salmo.1060.jpg",
+      "set": "internal",
+      "role": "internal_correct",
+      "true_class": "Salmonella",
+      "colab_predicted_class": "Salmonella",
+      "colab_probabilities": {
+        "Coccidiosis": 6.1208447e-09,
+        "Healthy": 2.9498448e-08,
+        "Salmonella": 1.0,
+        "NCD": 8.8719476e-10
+      },
+      "width": 1440,
+      "height": 3200,
+      "md5": "064b1e147a04aad7fa3157ef77243db9"
+    },
+    {
+      "id": "f06",
+      "relpath": "version-2/salmo/salmo.109.jpg",
+      "set": "internal",
+      "role": "internal_correct",
+      "true_class": "Salmonella",
+      "colab_predicted_class": "Salmonella",
+      "colab_probabilities": {
+        "Coccidiosis": 6.1717363e-12,
+        "Healthy": 2.2045307e-10,
+        "Salmonella": 1.0,
+        "NCD": 6.751089e-12
+      },
+      "width": 3200,
+      "height": 1440,
+      "md5": "5aa34692fc26975c9262554ea1752e8c"
+    },
+    {
+      "id": "f07",
+      "relpath": "version-2/ncd/ncd.289.jpg",
+      "set": "internal",
+      "role": "internal_correct",
+      "true_class": "NCD",
+      "colab_predicted_class": "NCD",
+      "colab_probabilities": {
+        "Coccidiosis": 2.0664885e-08,
+        "Healthy": 8.6649415e-10,
+        "Salmonella": 4.334132e-09,
+        "NCD": 1.0
+      },
+      "width": 1440,
+      "height": 3200,
+      "md5": "a38f254227ed018e2562f831ee43b237"
+    },
+    {
+      "id": "f08",
+      "relpath": "version-2/ncd/ncd.182.jpg",
+      "set": "internal",
+      "role": "internal_correct",
+      "true_class": "NCD",
+      "colab_predicted_class": "NCD",
+      "colab_probabilities": {
+        "Coccidiosis": 4.2998957e-07,
+        "Healthy": 5.410164e-07,
+        "Salmonella": 1.8308285e-06,
+        "NCD": 0.99999714
+      },
+      "width": 2048,
+      "height": 1152,
+      "md5": "950de55b755b7424b19e5a30207bef9b"
+    },
+    {
+      "id": "f09",
+      "relpath": "version-3/pcrcocci/pcrcocci.106.jpg",
+      "set": "external",
+      "role": "external_correct",
+      "true_class": "Coccidiosis",
+      "colab_predicted_class": "Coccidiosis",
+      "colab_probabilities": {
+        "Coccidiosis": 1.0,
+        "Healthy": 4.390772e-12,
+        "Salmonella": 4.8342715e-13,
+        "NCD": 1.7698955e-12
+      },
+      "width": 3328,
+      "height": 1872,
+      "md5": "5729ef3e8fea2b577ae5df97659ce01c"
+    },
+    {
+      "id": "f10",
+      "relpath": "version-3/pcrhealthy/pcrhealthy.342.jpg",
+      "set": "external",
+      "role": "external_correct",
+      "true_class": "Healthy",
+      "colab_predicted_class": "Healthy",
+      "colab_probabilities": {
+        "Coccidiosis": 2.9192452e-07,
+        "Healthy": 0.9999995,
+        "Salmonella": 1.7281528e-07,
+        "NCD": 3.7927592e-10
+      },
+      "width": 3120,
+      "height": 4160,
+      "md5": "e35bd6ce3d443c8d4cda476e1306b53b"
+    },
+    {
+      "id": "f11",
+      "relpath": "version-3/pcrsalmo/pcrsalmo.103.jpg",
+      "set": "external",
+      "role": "external_correct",
+      "true_class": "Salmonella",
+      "colab_predicted_class": "Salmonella",
+      "colab_probabilities": {
+        "Coccidiosis": 8.0482836e-11,
+        "Healthy": 1.6028354e-09,
+        "Salmonella": 1.0,
+        "NCD": 5.6997046e-10
+      },
+      "width": 3120,
+      "height": 4160,
+      "md5": "e77dbd0e4e94ff2292ff202ddf68c3bd"
+    },
+    {
+      "id": "f12",
+      "relpath": "version-3/pcrncd/pcrncd.171.jpg",
+      "set": "external",
+      "role": "external_correct",
+      "true_class": "NCD",
+      "colab_predicted_class": "NCD",
+      "colab_probabilities": {
+        "Coccidiosis": 1.7653015e-10,
+        "Healthy": 1.1328923e-05,
+        "Salmonella": 5.003739e-07,
+        "NCD": 0.9999882
+      },
+      "width": 750,
+      "height": 1000,
+      "md5": "9a5c3fcbb476dee41593ccf79b265df0"
+    },
+    {
+      "id": "f13",
+      "relpath": "version-2/salmo/salmo.146.jpg",
+      "set": "internal",
+      "role": "internal_error",
+      "true_class": "Salmonella",
+      "colab_predicted_class": "Healthy",
+      "colab_probabilities": {
+        "Coccidiosis": 2.5961365e-06,
+        "Healthy": 0.9995654,
+        "Salmonella": 0.00043192855,
+        "NCD": 2.8016487e-09
+      },
+      "width": 2448,
+      "height": 3264,
+      "md5": "2d225d9d8c9b035e4ec01febebc0f103"
+    },
+    {
+      "id": "f14",
+      "relpath": "version-2/salmo/salmo.1128.jpg",
+      "set": "internal",
+      "role": "internal_error",
+      "true_class": "Salmonella",
+      "colab_predicted_class": "Healthy",
+      "colab_probabilities": {
+        "Coccidiosis": 7.706166e-05,
+        "Healthy": 0.9995449,
+        "Salmonella": 0.00037257784,
+        "NCD": 5.3737176e-06
+      },
+      "width": 3200,
+      "height": 1440,
+      "md5": "0a3122eb8b3f17e7a15ef254754af6ae"
+    },
+    {
+      "id": "f15",
+      "relpath": "version-3/pcrncd/pcrncd.169.jpg",
+      "set": "external",
+      "role": "external_error",
+      "true_class": "NCD",
+      "colab_predicted_class": "Healthy",
+      "colab_probabilities": {
+        "Coccidiosis": 7.697464e-07,
+        "Healthy": 0.99316835,
+        "Salmonella": 5.1209436e-06,
+        "NCD": 0.006825708
+      },
+      "width": 750,
+      "height": 1000,
+      "md5": "39a720407948ec77d881263d8dae7a7b"
+    },
+    {
+      "id": "f16",
+      "relpath": "version-3/pcrhealthy/pcrhealthy.58.jpg",
+      "set": "external",
+      "role": "external_error",
+      "true_class": "Healthy",
+      "colab_predicted_class": "Salmonella",
+      "colab_probabilities": {
+        "Coccidiosis": 4.3773234e-06,
+        "Healthy": 2.7020204e-05,
+        "Salmonella": 0.9999685,
+        "NCD": 3.765513e-09
+      },
+      "width": 3120,
+      "height": 4160,
+      "md5": "c66a47e30475486efabf907703d2b4b3"
+    },
+    {
+      "id": "f17",
+      "relpath": "version-2/salmo/salmo.1144.jpg",
+      "set": "internal",
+      "role": "internal_low_margin",
+      "true_class": "Salmonella",
+      "colab_predicted_class": "Salmonella",
+      "colab_probabilities": {
+        "Coccidiosis": 0.44551206,
+        "Healthy": 0.0013725994,
+        "Salmonella": 0.46367338,
+        "NCD": 0.08944196
+      },
+      "width": 1440,
+      "height": 3200,
+      "md5": "bdd7b2c82029aa85c093b9f0d176a501"
+    },
+    {
+      "id": "f18",
+      "relpath": "version-3/pcrcocci/pcrcocci.63.jpg",
+      "set": "external",
+      "role": "external_low_margin",
+      "true_class": "Coccidiosis",
+      "colab_predicted_class": "Coccidiosis",
+      "colab_probabilities": {
+        "Coccidiosis": 0.44969478,
+        "Healthy": 0.00019326776,
+        "Salmonella": 0.44601378,
+        "NCD": 0.10409827
+      },
+      "width": 4160,
+      "height": 3120,
+      "md5": "8e83e56e42d2576c85339da8eea0890a"
+    }
+  ]
+}
