@@ -1,0 +1,46 @@
+# --- Raw inputs and scratch (never committed) ---
+/downloads/
+/.work/
+/data/
+/build/
+*.keras
+*.h5
+*.zip
+*_savedmodel/
+saved_model/
+.weights-cache/
+
+# --- Build / intermediate artefacts ---
+dist/
+*.npy
+*.npz
+
+# --- Python ---
+.venv*/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# --- Node / web ---
+node_modules/
+web/test-results/
+web/playwright-report/
+web/blob-report/
+web/.vite/
+*.tsbuildinfo
+coverage/
+
+# --- Editors / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Secrets ---
+.env
+.env.*
+!.env.example

@@ -1,0 +1,28 @@
+# Normalise text files to LF in the repository
+* text=auto eol=lf
+
+# Windows-only scripts keep CRLF
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+
+# Binary assets
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.webp binary
+*.gif  binary
+*.heic binary
+*.bin  binary
+*.woff binary
+*.woff2 binary
+
+# The executed notebook is stored verbatim (outputs included); do not diff or rewrite it
+*.ipynb -text -diff
+
+# Training artifacts are a record of the Colab run: keep them byte-identical
+results/**/*.csv -text
+results/**/*.json -text
+results/**/*.png binary
+
+# Committed TF.js model weights and topology are generated
+web/public/model/** linguist-generated=true
