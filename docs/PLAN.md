@@ -68,6 +68,10 @@ As in the brief: `notebooks/`, `results/` (training artifacts, `figures/`, `grad
 `.github/workflows/`. Weights (`.keras`, SavedModel zip) go to the GitHub Release only. The TF.js float16
 shards are committed under `web/public/model/` (as in saffron), because GitHub Pages must serve them.
 
+**Change, 2026-10-30 (after v1.0.0).** At the owner's request the project now matches saffron: the model runs
+only in the browser. `backend/` (FastAPI), the Docker image, `compose.yaml`, the web app's API mode and their
+tests and CI job were removed. The Python package, its parity tests and the release weights are unchanged.
+
 ## Risks
 
 1. **Antialiased resize parity.** TF's antialiased bilinear is a triangle-filter scale-and-translate. A
@@ -76,8 +80,7 @@ shards are committed under `web/public/model/` (as in saffron), because GitHub P
    model unrotated, exactly as in training, which looks odd to users; the UI will show the image as the
    model sees it and explain why.
 3. **TF.js size.** ResNet50 in float16 is about 47 MB. uint8 might pass parity; it will be measured.
-4. **Docker** needs Docker Desktop running for the image build.
-5. **Thresholds** for the "uncertain" state can only be a usability heuristic.
+4. **Thresholds** for the "uncertain" state can only be a usability heuristic.
 
 ## What I needed from you (resolved)
 

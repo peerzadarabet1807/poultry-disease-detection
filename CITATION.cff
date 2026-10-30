@@ -6,8 +6,8 @@ abstract: >-
   A ResNet50 classifier for photos of poultry droppings (Coccidiosis, Healthy, Salmonella, Newcastle disease),
   trained on version 2 of the Machuve et al. dataset and evaluated on the separately collected, PCR-annotated
   version 3. It reaches 96.7% accuracy on the internal test set and 79.5% on the PCR-confirmed set. Includes a
-  Python package, a FastAPI backend and a TensorFlow.js web app with class activation maps. Research and
-  decision-support prototype; not a veterinary diagnosis.
+  Python package and a TensorFlow.js web app with class activation maps that runs entirely in the browser.
+  Research and decision-support prototype; not a veterinary diagnosis.
 authors:
   - family-names: Rabet
     given-names: Peerzada Mohammad

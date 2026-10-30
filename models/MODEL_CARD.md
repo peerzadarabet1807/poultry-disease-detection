@@ -106,7 +106,7 @@ The probabilities are not calibrated for new data ([`calibration.json`](../resul
 | Internal | 0.981 | 0.967 | 0.017 [0.012, 0.029] | 89.1% | 0.997 |
 | External | 0.915 | 0.795 | 0.120 [0.101, 0.140] | 55.4% | 0.935 |
 
-## Decision thresholds in the app and API
+## Decision thresholds in the app
 
 A verdict is shown only when the top probability is at least 0.50 and leads the runner-up by at least 0.90;
 otherwise the result is "uncertain". The thresholds were chosen on the internal test set to withhold as many
@@ -133,8 +133,8 @@ confident verdict for 8, including all 5 photos of other animals' droppings
    hypothesis on a handful of images, not a measurement.
 4. **Overconfidence** on new data (table above).
 5. **JPEG decoding.** Training decoded JPEGs with TensorFlow's fast IDCT, which browsers cannot reproduce; on
-   borderline photos the browser and the API can rank the top two classes differently. Both then show
-   "uncertain" ([`PARITY.md`](PARITY.md)).
+   borderline photos the browser and the Python package can rank the top two classes differently. Both then
+   show "uncertain" ([`PARITY.md`](PARITY.md)).
 
 ## Ethical considerations
 
@@ -142,10 +142,10 @@ confident verdict for 8, including all 5 photos of other animals' droppings
   pattern can cause needless worry, cost or culling. The interface says "pattern consistent with", never
   "diagnosis", quotes the external Healthy precision, and shows an uncertain state.
 - Newcastle disease has legal reporting duties in many countries. Whenever NCD is the most likely class, the
-  app and API flag it and advise contacting a veterinarian or veterinary authority promptly.
+  app flags it and advises contacting a veterinarian or veterinary authority promptly.
 - The data come from one region of Tanzania. Performance elsewhere, on other breeds, housing or phones, is
   unknown.
-- In browser mode photos never leave the device; the API does not store uploads.
+- Photos never leave the device: the model runs in the browser and there is no server.
 
 ## How to cite
 

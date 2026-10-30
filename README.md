@@ -2,9 +2,9 @@
 
 **What do these droppings resemble?** A ResNet50 classifier looks at a photo of chicken droppings and says
 which of four classes it resembles most: **Coccidiosis**, **Salmonella**, **Newcastle disease (NCD)** or
-**Healthy**, with a class activation map of where it looked. It runs in your browser with TensorFlow.js, or
-behind a small FastAPI service. It is right on **96.7%** of held-out photos from its training data, but only on
-**79.5%** of a separately collected, PCR-confirmed set, and this README is mostly about that gap.
+**Healthy**, with a class activation map of where it looked. It runs entirely in your browser with
+TensorFlow.js: no server, no upload. It is right on **96.7%** of held-out photos from its training data, but
+only on **79.5%** of a separately collected, PCR-confirmed set, and this README is mostly about that gap.
 
 [![Live demo](https://img.shields.io/badge/live%20demo-GitHub%20Pages-1e5a48?logo=githubpages&logoColor=white)](https://peerzadarabet1807.github.io/poultry-disease-detection/)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/peerzadarabet1807/poultry-disease-detection/blob/main/notebooks/poultry_disease_resnet50_training_executed.ipynb)
@@ -19,7 +19,7 @@ behind a small FastAPI service. It is right on **96.7%** of held-out photos from
   </a>
   <br>
   <b><a href="https://peerzadarabet1807.github.io/poultry-disease-detection/">Try the live demo →</a></b>
-  &nbsp;(47 MB model, downloaded once and cached; your photo stays on your device)
+  &nbsp;(47 MB model, downloaded once and cached; no server, no upload)
 </p>
 
 > **Research prototype.** This is an image-based classification prototype, not a veterinary diagnosis. It does
@@ -49,7 +49,7 @@ other animals' droppings.
 
 [The problem](#the-problem) · [Dataset](#dataset) · [Method](#method) · [Results](#results) ·
 [Explainability](#explainability) · [Limitations](#limitations-and-threats-to-validity) · [Web app](#the-web-app) ·
-[API](#the-api) · [Reproduce](#reproduce-the-training) · [Run locally](#run-the-web-app-locally) ·
+[Reproduce](#reproduce-the-training) · [Run locally](#run-the-web-app-locally) ·
 [Repository](#repository-structure) · [Model card](#model-card) · [Roadmap](#roadmap) · [Citation](#citation)
 
 ## The problem
@@ -122,7 +122,7 @@ flowchart LR
   F --> G["Select on val macro-F1"]
   G --> H["Internal test<br/>evaluated once"]
   G --> I["External PCR test<br/>evaluated once"]
-  G --> J["Probs + CAM graph<br/>→ Python · API · TF.js"]
+  G --> J["Probs + CAM graph<br/>→ Python · TF.js"]
 ```
 
 **Architecture.** `image (224×224×3) → ResNet50 (ImageNet, include_top=False) → GlobalAveragePooling →
@@ -136,7 +136,7 @@ Dropout(0.3) → Dense(4, softmax)`.
    aspect ratio not kept; round half to even, clip, `uint8`.
 3. `resnet50.preprocess_input` ("caffe": RGB → BGR, subtract the ImageNet channel means).
 
-| | Training (Colab) | Python package / API | Browser |
+| | Training (Colab) | Python package | Browser |
 |---|---|---|---|
 | Decode | `tf.io.decode_image` | same | `createImageBitmap(imageOrientation: "none", colorSpaceConversion: "none")` |
 | Resize | `tf.image.resize`, bilinear, antialias | same | [`resize.ts`](web/src/lib/resize.ts), a float32 port, **bit-identical** to TF |
@@ -227,8 +227,8 @@ well calibrated in-distribution become overconfident under domain shift.
 
 ### Showing "uncertain" instead of a verdict
 
-The app and API show a verdict only when the top probability is at least 0.50 **and** leads the runner-up by at
-least 0.90; otherwise they say "uncertain". The thresholds were picked on the **internal** set by
+The app shows a verdict only when the top probability is at least 0.50 **and** leads the runner-up by at
+least 0.90; otherwise it says "uncertain". The thresholds were picked on the **internal** set by
 [`choose_thresholds.py`](scripts/choose_thresholds.py) (withhold as many errors as possible while withholding at
 most 5% of correct answers), so they are a usability heuristic, not a validated operating point
 ([`thresholds.json`](results/posthoc/thresholds.json)):
@@ -348,19 +348,17 @@ All screenshots were captured from the production build with
 ```mermaid
 flowchart LR
   subgraph Browser
-    UI["React UI<br/>(verdict, bars, CAM)"] --> E{"InferenceEngine<br/>VITE_INFERENCE_MODE"}
-    E -->|browser, default| BE["BrowserEngine"]
+    UI["React UI<br/>(verdict, bars, CAM)"] --> BE["BrowserEngine"]
     BE --> W["Web Worker<br/>decode → resize.ts → caffe → TF.js<br/>WebGL / WASM / CPU"]
     W --> M[("model.json + 12 shards<br/>IndexedDB cache")]
+    W --> V["validatePrediction()"]
+    V --> UI
   end
-  E -->|api| AE["ApiEngine"]
-  AE -->|POST /api/v1/predict?cam=true| API["FastAPI (Docker)<br/>poultry_disease package<br/>Keras + CAM head"]
-  BE & AE --> V["validatePrediction()<br/>same Prediction type"]
-  V --> UI
 ```
 
-Both engines return the same validated `Prediction` (probabilities, four class maps, the image the model saw),
-so the UI cannot tell them apart.
+There is no server: the page, the model and the sample photos are static files on GitHub Pages, and a photo you
+classify never leaves your device. Whatever the worker returns is checked by `validatePrediction` (four
+probabilities summing to one, four 7 × 7 class maps, the 224 × 224 image the model saw) before the UI shows it.
 
 **Preprocessing parity** ([`models/PARITY.md`](models/PARITY.md)):
 
@@ -368,7 +366,6 @@ so the UI cannot tell them apart.
 |---|---|
 | Python package vs notebook (Colab GPU), 18 fixtures | same top class 18 / 18, max prob. difference **2.2e-6** |
 | Python package vs notebook, all 2,175 evaluation images | **2,175 / 2,175**, max **5.7e-6** |
-| API in Docker vs notebook, 18 fixtures | 18 / 18, **1.4e-6** |
 | TypeScript resize vs `tf.image.resize`, golden images | **bit-identical** |
 | Browser model input from the original JPEGs vs Python (same IDCT), Chromium, Firefox, WebKit | **bit-identical** |
 | TF.js float16 (shipped) vs Keras, same input | 18 / 18, max prob. difference **0.0017**, CAM r ≥ 0.99999 |
@@ -391,47 +388,6 @@ external (1.2%) photos. All 21 were close calls (top-2 margin at most 0.24) that
 "Excluding the model download" loads the page with `?preload=0`; by default the 47 MB model starts downloading
 after the page has loaded, which costs main-thread time on a throttled phone.
 
-## The API
-
-A FastAPI service ([`backend/`](backend/poultry_api)) built on the same Python package. It is not deployed;
-run it locally with Docker.
-
-| Method | Path | Returns |
-|---|---|---|
-| `GET` | `/api/v1/health` | `{"status": "ok", "model_loaded": true, "model_version": "1.0.0"}` |
-| `GET` | `/api/v1/model` | Classes, preprocessing, weights checksum, thresholds, both evaluations with intervals, read from the committed files |
-| `POST` | `/api/v1/predict` | Probabilities, predicted class, confidence, verdict (category, runner-up, margin, reasons, notifiable), low-confidence flag, image info |
-| `POST` | `/api/v1/predict?cam=true` | The above plus the four 7 × 7 class maps, a heatmap overlay and the model input as base64 PNGs |
-
-OpenAPI docs at `/docs`. Uploads are checked by signature (JPEG, PNG, HEIC), size (25 MB, enforced while the
-body streams in) and pixel count from the header before decoding (decompression bombs). Every error has the
-same shape, `{"error": {"code": "...", "message": "..."}}`. CORS allows configured origins only. The model is
-loaded once at startup.
-
-```bash
-docker compose up --build        # first start downloads the release weights (95 MB) and checks their SHA-256
-curl -F "file=@web/public/samples/f07.jpg" "http://localhost:8000/api/v1/predict"
-```
-
-```json
-{
-  "predicted_class": "NCD",
-  "confidence": 1.0,
-  "probabilities": {"Coccidiosis": 2.9e-08, "Healthy": 7.5e-11, "Salmonella": 2e-09, "NCD": 1.0},
-  "low_confidence": false,
-  "verdict": {"category": "disease_pattern", "top_class": "NCD", "runner_up": "Coccidiosis", "notifiable": true, "...": "..."},
-  "disclaimer": "Image-based classification prototype for research. Not a veterinary diagnosis; ..."
-}
-```
-
-The image runs as a non-root user on a read-only file system, with CPU TensorFlow (2.2 GB). Build with
-`--build-arg BAKE_WEIGHTS=1` to put the weights in the image instead of downloading them on first start.
-
-**Deploy options** (not done here): any host that runs a Docker image with about 2 GB of RAM, for example a
-[Hugging Face Space](https://huggingface.co/docs/hub/spaces-sdks-docker) with the Docker SDK (expose port 8000),
-[Render](https://render.com/docs/docker) or Google Cloud Run. Set `POULTRY_API_CORS_ORIGINS` to the web app's
-origin and build the web app with `VITE_INFERENCE_MODE=api VITE_API_URL=https://your-api`.
-
 ## Reproduce the training
 
 1. Open the notebook with the Colab badge above and choose **Runtime → Change runtime type → T4 GPU**.
@@ -446,10 +402,10 @@ rerun gives slightly different numbers (see the run table above). The executed n
 **Use the Python package** (Python 3.10 to 3.13):
 
 ```bash
-pip install -e ".[api,dev]"
+pip install -e ".[dev]"
 python scripts/fetch_weights.py           # downloads poultry_resnet50.keras, checks its SHA-256, caches it
 python -c "from poultry_disease import Predictor; print(Predictor.from_release().predict_image('web/public/samples/f05.jpg').to_dict())"
-pytest                                     # 50 tests; parity tests run when the weights are available
+pytest                                     # 33 tests; parity tests run when the weights are available
 ```
 
 ## Run the web app locally
@@ -464,20 +420,6 @@ npm run lint && npm run typecheck
 npm run build && npm run preview
 npx playwright install chromium firefox webkit
 npm run e2e            # Playwright: Chromium, Firefox, WebKit and an emulated Pixel 7
-```
-
-**API mode** (Windows PowerShell: `$env:VITE_INFERENCE_MODE="api"; $env:VITE_API_URL="http://localhost:8000"`):
-
-```bash
-docker compose up -d
-VITE_INFERENCE_MODE=api VITE_API_URL=http://localhost:8000 npm run dev
-```
-
-**Run the backend without Docker:**
-
-```bash
-pip install -e ".[api]"
-uvicorn poultry_api.main:app --app-dir backend --port 8000    # http://localhost:8000/docs
 ```
 
 **Rebuild the browser model** (Python 3.11; the converter gets its own venv, as in the saffron project):
@@ -498,17 +440,16 @@ bash scripts/convert_to_tfjs.sh --install float16
 │                     other_runs/ (four more runs with the same configuration)
 ├── models/           class names, model config, MODEL_CARD.md, PARITY.md, checksums (weights: GitHub Release)
 ├── src/poultry_disease/   installable package: preprocessing, model + CAM head, inference, verdict, weights
-├── backend/          FastAPI app, Dockerfile, tests
 ├── web/              Vite + React + TypeScript app
 │   ├── public/model/     TF.js graph model (float16, 12 shards of at most 4 MiB)
 │   ├── public/samples/   11 dataset photos (1024 px, CC BY 4.0) + manifest
-│   ├── src/              UI, engines, worker, preprocessing, CAM
+│   ├── src/              UI, engine, worker, preprocessing, CAM
 │   └── tests/            unit, parity and Playwright tests + fixtures
 ├── tests/            Python tests and the 18 parity fixtures (CC BY 4.0)
 ├── scripts/          fetching, release packaging, post-hoc analyses, web model build, TF.js conversion,
 │                     references, samples, OOD evaluation
 ├── docs/             PLAN.md, screenshots, ood/ (non-poultry photos with credits), Lighthouse summary
-└── .github/workflows CI (Python, web, Docker) and GitHub Pages deploy
+└── .github/workflows CI (Python, web) and GitHub Pages deploy
 ```
 
 ## Model card

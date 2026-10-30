@@ -1,7 +1,7 @@
 # Parity report
 
-One preprocessing contract runs in three places: the Python package (and the API built on it), and the
-browser. This report shows that each one reproduces the training notebook, and where it cannot, by how much.
+One preprocessing contract runs in two places outside the training notebook: the Python package and the
+browser. This report shows that each one reproduces the notebook, and where it cannot, by how much.
 Every number below is read from a file in [`results/parity/`](../results/parity), written by a committed
 script or test. These are engineering checks, not model evaluations.
 
@@ -32,28 +32,21 @@ The CAM head is exact by construction: for a GlobalAveragePooling -> Dense head,
 ReLU(sum_k w_k A^k) / 49, a 1 x 1 convolution of the last feature map with the Dense kernel
 ([`src/poultry_disease/model.py`](../src/poultry_disease/model.py)).
 
-## 2. API vs the notebook
-
-| Path | Same top class | Max abs. probability difference |
-|---|---|---|
-| FastAPI test client ([`backend/tests/test_api_parity.py`](../backend/tests/test_api_parity.py)) | 18 / 18 | 2.2e-6 |
-| Docker image, Linux, `tensorflow-cpu` ([`scripts/parity_api.py`](../scripts/parity_api.py), [`api_vs_colab_docker.json`](../results/parity/api_vs_colab_docker.json)) | **18 / 18** | **1.4e-6** |
-
-## 3. Browser model vs Keras
+## 2. Browser model vs Keras
 
 The browser runs the same graph converted to TF.js ([`scripts/build_web_model.py`](../scripts/build_web_model.py),
 [`scripts/convert_to_tfjs.sh`](../scripts/convert_to_tfjs.sh)) after the same preprocessing ported to
 TypeScript ([`web/src/lib/resize.ts`](../web/src/lib/resize.ts), [`preprocess.ts`](../web/src/lib/preprocess.ts)).
 
-### 3a. The JPEG decoder is the one thing the browser cannot match
+### 2a. The JPEG decoder is the one thing the browser cannot match
 
 `tf.io.decode_image` decodes JPEGs with libjpeg's **fast** integer IDCT (TensorFlow's default). Browsers,
 Pillow and sharp use the **accurate** integer IDCT. On the fixtures the two decodes differ by up to 15 grey
 levels per pixel (about 1 level on average), and no browser API selects the fast IDCT. So the browser
 cannot see the exact training pixels; it sees what `tf.io.decode_jpeg(dct_method="INTEGER_ACCURATE")`
-sees. Section 4 measures what that changes.
+sees. Section 3 measures what that changes.
 
-### 3b. Preprocessing: exact
+### 2b. Preprocessing: exact
 
 | Check | Result |
 |---|---|
@@ -61,7 +54,7 @@ sees. Section 4 measures what that changes.
 | Node decode (sharp) vs TensorFlow's accurate-IDCT decode, 18 fixtures | **18 / 18 identical** (SHA-256 of the pixels) |
 | 224 x 224 image after the TypeScript resize vs the Python package | **18 / 18 identical** |
 
-### 3c. Conversion: float16 ships, uint8 is rejected
+### 2c. Conversion: float16 ships, uint8 is rejected
 
 TF.js in Node on the WASM backend, fed by the TypeScript preprocessing, vs Keras on the same decoded
 pixels ([`web/tests/parity.node.test.ts`](../web/tests/parity.node.test.ts)):
@@ -73,7 +66,7 @@ pixels ([`web/tests/parity.node.test.ts`](../web/tests/parity.node.test.ts)):
 
 No tensors leak across the 18 predictions on either variant.
 
-### 3d. End to end: browser path vs training path
+### 2d. End to end: browser path vs training path
 
 Combining the decoder difference with the float16 conversion, against the training pipeline on the same
 machine and against Colab:
@@ -84,7 +77,7 @@ machine and against Colab:
 | Same top class as Colab | **18 / 18** |
 | Max absolute probability difference | 0.104 (f18, a 0.49 / 0.49 Healthy / NCD image the app labels uncertain) |
 
-## 4. How much does the decoder matter?
+## 3. How much does the decoder matter?
 
 [`scripts/parity_python.py --decoder-effect`](../scripts/parity_python.py) predicts every evaluation image twice,
 from TensorFlow's default (fast IDCT, the training pipeline) and from the accurate IDCT (what a browser sees),
@@ -96,17 +89,17 @@ and scores both against the labels:
 | PCR-confirmed | 1,201 | 15 (1.2%) | 0.238 (1.0e-3) | 0.795 | 0.799 | 0.794 | 0.800 |
 
 The decoder changes the top class on about 1% of photos. All 21 were close calls under the training decode (top-2
-margin 0.24 at most, median 0.11), so the app and the API already show "uncertain" for every one of them. It does
+margin 0.24 at most, median 0.11), so the app and the package already show "uncertain" for every one of them. It does
 not make the model systematically better or worse. Every number in the README and the app is for the training decode, as
 recorded by the notebook. A borderline example: the 1024 px copy of f18 in the web app's samples (Healthy, PCR set) is NCD 0.517 / Healthy 0.457 on
-the training decode (the API) and Healthy 0.575 / NCD 0.405 on the browser decode; both show "uncertain".
+the training decode (the Python package) and Healthy 0.575 / NCD 0.405 on the browser decode; both show "uncertain".
 
 ## Reproduce
 
 ```bash
 python scripts/fetch_zenodo_images.py --selection tests/fixtures/selection.json   # fixtures, MD5-checked
 python scripts/build_fixtures.py
-pytest tests/test_parity.py backend/tests/test_api_parity.py                     # needs the weights
+pytest tests/test_parity.py                                                      # needs the weights
 python scripts/parity_python.py --fixtures --decoder-effect
 python scripts/fetch_zenodo_images.py --set internal --set external --workers 6   # ~2.6 GB
 python scripts/parity_python.py --set internal --set external --no-gradcam --decoder-effect
@@ -114,5 +107,4 @@ python scripts/build_web_model.py && bash scripts/convert_to_tfjs.sh
 python scripts/make_web_references.py
 PARITY_MODEL_DIR=../build/tfjs/float16 npm --prefix web run test:parity
 PARITY_MODEL_DIR=../build/tfjs/uint8 npm --prefix web run test:parity
-docker compose up -d && python scripts/parity_api.py --label docker
 ```
