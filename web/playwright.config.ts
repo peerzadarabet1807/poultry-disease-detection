@@ -24,19 +24,6 @@ export default defineConfig({
     { name: 'firefox', use: { ...devices['Desktop Firefox'] }, grep: /@cross-browser/ },
     { name: 'webkit', use: { ...devices['Desktop Safari'] }, grep: /@cross-browser/ },
     { name: 'mobile', use: { ...devices['Pixel 7'] }, grep: /@cross-browser/ },
-    // Opt-in (E2E_API=1): the app built in API mode on port 4174 against a running backend, see tests/e2e-api.
-    ...(process.env.E2E_API
-      ? [
-          {
-            name: 'api',
-            testDir: 'tests/e2e-api',
-            use: {
-              ...devices['Desktop Chrome'],
-              baseURL: 'http://localhost:4174/poultry-disease-detection/',
-            },
-          },
-        ]
-      : []),
   ],
   webServer: {
     command: 'npm run preview',

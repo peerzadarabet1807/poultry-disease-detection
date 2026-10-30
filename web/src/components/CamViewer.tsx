@@ -1,5 +1,5 @@
 import { useEffect, useId, useRef, useState } from 'react';
-import type { Prediction } from '../engine';
+import type { Prediction } from '../engine/types';
 import { bilinearUpsample, CAM_SIZE, heatmapRGBA } from '../lib/cam';
 import { CLASS_IDS, CLASS_INFO, type ClassId } from '../lib/classes';
 import { MODEL_SIZE } from '../lib/resize';

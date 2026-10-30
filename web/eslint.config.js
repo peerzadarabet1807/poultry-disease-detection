@@ -7,7 +7,7 @@ import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
   {
-    ignores: ['dist', 'dist-api', 'public', 'coverage', 'playwright-report', 'test-results', 'node_modules'],
+    ignores: ['dist', 'public', 'coverage', 'playwright-report', 'test-results', 'node_modules'],
   },
   {
     files: ['**/*.{ts,tsx,js,mjs}'],

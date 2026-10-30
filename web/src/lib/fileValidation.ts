@@ -1,6 +1,6 @@
 /**
  * Upload validation by file signature ("magic bytes"), not by the (often wrong or empty) MIME type.
- * Same formats and size limit as the API (backend/poultry_api/imaging.py): JPEG, PNG and HEIC, 25 MB.
+ * Accepted: JPEG, PNG and HEIC (phone photos), up to 25 MB.
  */
 
 export const MAX_FILE_BYTES = 25_000_000;

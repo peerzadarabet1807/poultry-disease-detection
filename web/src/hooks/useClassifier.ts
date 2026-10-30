@@ -1,12 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import {
-  createEngine,
-  EngineError,
-  type EngineInfo,
-  type InferenceEngine,
-  type LoadProgress,
-  type Prediction,
-} from '../engine';
+import { BrowserEngine } from '../engine/browserEngine';
+import { EngineError, type EngineInfo, type LoadProgress, type Prediction } from '../engine/types';
 import { decodeForModel, DecodeError, makeDisplayUrl } from '../lib/decode';
 import { validateFile } from '../lib/fileValidation';
 import type { SampleInfo } from '../lib/samples';
@@ -49,34 +43,34 @@ export type JobState =
 class UserFacingError extends Error {}
 
 // One engine for the whole app (survives React StrictMode's double effects).
-let enginePromise: Promise<InferenceEngine> | null = null;
+let engine: BrowserEngine | null = null;
 let initPromise: Promise<EngineInfo> | null = null;
 let readyInfo: EngineInfo | null = null;
 const progressListeners = new Set<(p: LoadProgress) => void>();
 
-function getEngine(): Promise<InferenceEngine> {
-  enginePromise ??= createEngine();
-  return enginePromise;
+function getEngine(): BrowserEngine {
+  engine ??= new BrowserEngine();
+  return engine;
 }
 
 // Read-only diagnostics for the e2e tests: tensor count inside the worker (memory leaks) and the last model
 // input as RGB bytes (browser preprocessing parity against the Python reference).
 let lastSeen: Uint8ClampedArray | null = null;
 (globalThis as { __poultryDebug?: unknown }).__poultryDebug = {
-  memory: async () => (await getEngine()).memory?.(),
+  memory: () => getEngine().memory(),
   lastSeenRgb: () => (lastSeen ? Array.from(lastSeen).filter((_, i) => i % 4 !== 3) : null),
 };
 
 function initModel(): Promise<EngineInfo> {
   initPromise ??= getEngine()
-    .then((engine) => engine.init((p) => progressListeners.forEach((listener) => listener(p))))
+    .init((p) => progressListeners.forEach((listener) => listener(p)))
     .then((info) => (readyInfo = info));
   return initPromise;
 }
 
-async function retryInit(): Promise<EngineInfo> {
-  if (enginePromise) (await enginePromise.catch(() => null))?.dispose();
-  enginePromise = null;
+function retryInit(): Promise<EngineInfo> {
+  engine?.dispose();
+  engine = null;
   initPromise = null;
   return initModel();
 }
@@ -174,9 +168,8 @@ export function useClassifier() {
         if (isStale()) return null;
 
         setJob({ status: 'working', step: 'classifying', source });
-        const engine = await getEngine();
         bitmap = null; // the engine takes ownership
-        const prediction = await engine.classify({ file, kind: validation.kind, photo });
+        const prediction = await getEngine().classify(photo.bitmap);
         lastSeen = prediction.seen;
         if (isStale()) return null;
 

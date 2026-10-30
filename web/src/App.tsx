@@ -7,7 +7,6 @@ import { PhotoGuidelines } from './components/PhotoGuidelines';
 import { ResultPanel } from './components/ResultPanel';
 import { SampleGallery } from './components/SampleGallery';
 import { UploadCard } from './components/UploadCard';
-import { inferenceMode } from './engine';
 import { useClassifier, type JobState, type SourceKind } from './hooks/useClassifier';
 import { useSamples } from './hooks/useSamples';
 import { useTheme } from './hooks/useTheme';
@@ -118,7 +117,6 @@ export default function App() {
             </div>
             <UploadCard
               busy={busy}
-              remote={inferenceMode() === 'api'}
               error={job.status === 'error' ? job.message : undefined}
               onFile={onFile}
               status={<ModelStatus model={model} lastInferenceMs={lastInferenceMs} onRetry={retryModel} />}

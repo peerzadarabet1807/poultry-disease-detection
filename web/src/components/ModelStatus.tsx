@@ -24,12 +24,9 @@ export function ModelStatus({ model, lastInferenceMs, onRetry }: Props) {
   if (model.status === 'loading') {
     const downloading = model.phase === 'download';
     const pct = Math.round(model.fraction * 100);
-    const label =
-      model.phase === 'connect'
-        ? 'Connecting to the API…'
-        : downloading
-          ? `Downloading the model: ${formatBytes(model.fraction * __MODEL_BYTES__)} of ${formatBytes(__MODEL_BYTES__)}`
-          : 'Preparing the model (compiling kernels)…';
+    const label = downloading
+      ? `Downloading the model: ${formatBytes(model.fraction * __MODEL_BYTES__)} of ${formatBytes(__MODEL_BYTES__)}`
+      : 'Preparing the model (compiling kernels)…';
     return (
       <div className="space-y-2 text-sm" data-testid="model-status" data-state="loading">
         <div className="flex items-baseline justify-between gap-3 text-ink-2">

@@ -9,13 +9,11 @@ const ACCEPT = 'image/jpeg,image/png,image/heic,image/heif,.heic,.heif,.jpg,.jpe
 interface Props {
   busy: boolean;
   error?: string;
-  /** true when photos are uploaded to the API instead of staying on the device */
-  remote: boolean;
   onFile: (file: File, kind: SourceKind) => void;
   status: ReactNode;
 }
 
-export function UploadCard({ busy, error, remote, onFile, status }: Props) {
+export function UploadCard({ busy, error, onFile, status }: Props) {
   const fileInput = useRef<HTMLInputElement>(null);
   const cameraInput = useRef<HTMLInputElement>(null);
   const [dragging, setDragging] = useState(false);
@@ -130,17 +128,10 @@ export function UploadCard({ busy, error, remote, onFile, status }: Props) {
 
       <div className="mt-4 flex items-start gap-2.5 text-sm text-ink-2">
         <LockIcon className="mt-0.5 shrink-0 text-base text-yolk-ink" />
-        {remote ? (
-          <p>
-            <strong className="font-semibold text-ink">Your photo is sent to the API</strong> for this
-            prediction and is not stored.
-          </p>
-        ) : (
-          <p>
-            <strong className="font-semibold text-ink">Your photo never leaves your device;</strong> the model
-            runs in your browser.
-          </p>
-        )}
+        <p>
+          <strong className="font-semibold text-ink">Your photo never leaves your device;</strong> the model
+          runs in your browser.
+        </p>
       </div>
       <div className="mt-4 border-t border-line pt-4">{status}</div>
     </div>

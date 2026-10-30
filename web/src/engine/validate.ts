@@ -1,4 +1,4 @@
-/** Boundary checks: whatever an engine returns is checked here before the UI sees it. */
+/** Boundary check: whatever the worker returns is checked here before the UI sees it. */
 import { CLASS_IDS } from '../lib/classes';
 import { CAM_SIZE } from '../lib/cam';
 import { MODEL_SIZE } from '../lib/resize';
@@ -29,24 +29,4 @@ export function validatePrediction(p: Prediction): Prediction {
   if (typeof p.exactPreprocessing !== 'boolean') fail('preprocessing flag');
   if (!(p.inferenceMs >= 0)) fail('timing');
   return p;
-}
-
-/** The subset of the API response the app uses (backend/poultry_api/schemas.py: PredictResponse). */
-export interface ApiPredictResponse {
-  probabilities: Record<string, number>;
-  cam: { maps: Record<string, number[][]>; input_png_base64: string };
-}
-
-export function parseApiResponse(json: unknown): ApiPredictResponse {
-  const r = json as Partial<ApiPredictResponse> | null;
-  if (!r || typeof r !== 'object') fail('not a JSON object');
-  if (!r.probabilities || CLASS_IDS.some((c) => typeof r.probabilities![c] !== 'number')) {
-    fail('missing class probabilities');
-  }
-  const maps = r.cam?.maps;
-  if (!maps || CLASS_IDS.some((c) => !Array.isArray(maps[c]) || maps[c].length !== CAM_SIZE)) {
-    fail('missing class maps');
-  }
-  if (typeof r.cam?.input_png_base64 !== 'string') fail('missing model input image');
-  return r as ApiPredictResponse;
 }
