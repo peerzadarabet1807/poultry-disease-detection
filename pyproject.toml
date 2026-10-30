@@ -22,21 +22,15 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-api = [
-  "fastapi==0.162.0",
-  "uvicorn==0.54.0",
-  "python-multipart==0.0.32",
-  "pillow-heif==1.8.0",
-]
 analysis = [
   "pandas==2.2.3",
   "scikit-learn==1.6.1",
   "matplotlib==3.11.2",
   "seaborn==0.13.2",
+  "pillow-heif==1.8.0",
 ]
 dev = [
   "pytest==9.2.0",
-  "httpx==0.28.1",
   "ruff==0.17.3",
 ]
 
@@ -60,16 +54,15 @@ select = ["E", "F", "I", "B", "UP", "S"]
 ignore = ["S101", "S311"]
 
 [tool.ruff.lint.isort]
-known-first-party = ["poultry_disease", "poultry_api"]
+known-first-party = ["poultry_disease"]
 
 [tool.ruff.lint.per-file-ignores]
 "tests/**" = ["S"]
-"backend/tests/**" = ["S"]
 "scripts/**" = ["S", "I001"]
 
 [tool.pytest.ini_options]
-testpaths = ["tests", "backend/tests"]
-pythonpath = [".", "backend"]
+testpaths = ["tests"]
+pythonpath = ["."]
 markers = [
   "weights: needs the trained weights (POULTRY_DISEASE_WEIGHTS or the release cache)",
   "fixtures: needs the dataset fixture images in tests/fixtures/images",

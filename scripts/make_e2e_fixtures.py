@@ -4,7 +4,7 @@
 * exif-rotated.jpg     a sample with an EXIF orientation tag of 6 (90 degrees); its pixels are unchanged
 * not-an-image.txt     plain text, for the validation error
 
-Usage:
+Usage (needs the analysis extras, for pillow-heif):
     python scripts/make_e2e_fixtures.py
 """
 

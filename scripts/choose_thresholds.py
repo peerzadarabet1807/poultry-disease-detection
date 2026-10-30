@@ -1,4 +1,4 @@
-"""Choose the "uncertain" thresholds of the app and the API from saved prediction distributions.
+"""Choose the "uncertain" thresholds of the web app and the package from saved prediction distributions.
 
 A usability heuristic, not a validated operating point. A prediction is shown as "uncertain" when the top
 probability is below T or the gap between the two most likely classes is below M.
@@ -10,7 +10,7 @@ Rule (decided before looking at the external set's effect, and applied to the in
 The 5% budget limits how often a photo like the training data is refused. The external PCR set is used only
 to report what the chosen thresholds do under domain shift, never to choose them.
 
-Outputs: src/poultry_disease/data/decision_thresholds.json (read by the package, the API and the web app),
+Outputs: src/poultry_disease/data/decision_thresholds.json (read by the package and the web app),
 results/posthoc/thresholds.json, results/posthoc/risk_coverage.png
 """
 

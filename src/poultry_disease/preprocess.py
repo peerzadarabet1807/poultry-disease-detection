@@ -7,7 +7,7 @@
 4. Cast to float32 and apply ``keras.applications.resnet50.preprocess_input`` (RGB -> BGR, subtract the
    ImageNet channel means, no scaling).
 
-The model graph starts after step 4. The browser (web/src/lib/preprocess.ts) and the API use the same steps.
+The model graph starts after step 4. The browser (web/src/lib/preprocess.ts) uses the same steps.
 """
 
 from __future__ import annotations

@@ -1,7 +1,7 @@
 """Run the model on the out-of-distribution photos in docs/ood/ and write predictions.json and README.md.
 
 Uses the Python package (the training preprocessing) and the app's verdict rule, so "verdict shown" means
-the web app and the API would display a disease or no-disease verdict instead of "uncertain".
+the web app would display a disease or no-disease verdict instead of "uncertain".
 
 Usage:
     python scripts/fetch_ood_images.py     # once

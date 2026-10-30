@@ -1,4 +1,4 @@
-"""Turn probabilities into a cautious verdict category, shared by the API and (in TypeScript) the web app.
+"""Turn probabilities into a cautious verdict category, mirrored in TypeScript by the web app.
 
 Categories:
 * ``uncertain``: the top-2 margin or the top probability is below the thresholds in

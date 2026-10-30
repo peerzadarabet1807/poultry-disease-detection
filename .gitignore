@@ -45,4 +45,3 @@ desktop.ini
 .env
 .env.*
 !.env.example
-web/dist-api/

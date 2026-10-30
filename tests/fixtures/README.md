@@ -1,6 +1,6 @@
 # Test fixtures
 
-`images/` holds 18 original, unmodified photos from the dataset, used by the parity tests (Python, API and
+`images/` holds 18 original, unmodified photos from the dataset, used by the parity tests (Python and
 TF.js). `fixtures.json` lists them with the class probabilities the training notebook recorded for each
 in Colab, which are the reference the tests compare against.
 
