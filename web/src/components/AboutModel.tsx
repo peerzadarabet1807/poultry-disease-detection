@@ -2,6 +2,8 @@ import experiment from '../data/experiment_summary.json';
 import confusions from '../data/external_confusions.json';
 import ood from '../data/ood.json';
 import { CLASS_IDS, CLASS_INFO } from '../lib/classes';
+import { formatBytes } from '../lib/fileValidation';
+import { INPUT_CHECK_SUMMARY as IC } from '../lib/inputCheckCopy';
 import { blob, PAPER_URL, ZENODO_V2, ZENODO_V3 } from '../lib/links';
 import {
   EXTERNAL,
@@ -69,6 +71,85 @@ function EvalTable() {
           ))}
         </tbody>
       </table>
+    </div>
+  );
+}
+
+interface Rate {
+  k: number;
+  n: number;
+  rate: number;
+  ci95: number[];
+}
+
+const rateCell = (r: Rate) => (
+  <>
+    <strong className="text-ink">{p1(r.rate)}</strong> ({r.k} of {r.n.toLocaleString('en')})
+    <span className="block text-xs text-ink-3">
+      {p1(r.ci95[0])} to {p1(r.ci95[1])}
+    </span>
+  </>
+);
+
+function InputCheck() {
+  const fr = IC.false_rejection;
+  const fa = IC.false_acceptance;
+  const v = IC.ood_test_verdict_shown;
+  const counts = Object.values(IC.prototype_photos_per_class);
+  const perClass =
+    Math.min(...counts) === Math.max(...counts)
+      ? counts[0]
+      : `${Math.min(...counts)} to ${Math.max(...counts)}`;
+  const rows: [string, string, Rate][] = [
+    ['Droppings photos turned away', 'internal test set', fr.test_internal],
+    ['', 'PCR-confirmed set', fr.test_external],
+    ['Other photos let through', "look-alikes (other animals' droppings, eggs, litter, food…)", fa.near],
+    ['', 'unrelated (people, documents, scenes…)', fa.far],
+  ];
+  return (
+    <div className="card space-y-4 p-4 sm:p-6" id="input-check" data-testid="input-check-about">
+      <h3 className="text-xl font-semibold">Input check</h3>
+      <div className="prose-tight text-ink-2">
+        <p>
+          Before the classifier runs, a small second model checks whether the photo looks like the droppings
+          photos the classifier was trained on: the image encoder of TinyCLIP ViT-8M/16 (Microsoft, MIT
+          licence, {formatBytes(__GATE_BYTES__)} download), compared with the average of {perClass} training
+          photos per class. If the photo is not similar enough to any of the four, no verdict is shown; you
+          can still choose Analyse anyway, and the result is then labelled as unchecked. It runs in your
+          browser like the classifier.
+        </p>
+        <p>
+          The threshold was chosen on the validation photos alone, to turn away at most 1% of them. Measured
+          on the test photos and on {fa.overall.n} openly licensed photos of other things that played no part
+          in that choice (95% intervals):
+        </p>
+      </div>
+      <div className="overflow-x-auto">
+        <table className="tabular w-full min-w-[30rem] text-left text-sm">
+          <caption className="sr-only">Error rates of the input check on the test sets</caption>
+          <tbody>
+            {rows.map(([what, set, r]) => (
+              <tr key={set} className="border-b border-line align-top">
+                <th scope="row" className="py-2 pr-3 font-semibold text-ink">
+                  {what}
+                </th>
+                <td className="py-2 pr-3 text-ink-2">{set}</td>
+                <td className="py-2">{rateCell(r)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p className="text-sm text-ink-3">
+        A safeguard, not a guarantee. It lets through some photos of other birds' and animals' droppings, and
+        it turns away more PCR-set photos than internal ones because it compares with the training photos. All{' '}
+        {IC.samples.n} sample photos below pass. Post-hoc: on the {v.classifier_alone.n} test photos of other
+        things, the classifier alone would show a verdict for {p1(v.classifier_alone.rate)}; with the check in
+        front, for {p1(v.after_input_check.rate)}.
+      </p>
+      <a className="link text-sm" href={blob('results/input_check/evaluation.md')}>
+        The full evaluation
+      </a>
     </div>
   );
 }
@@ -195,13 +276,15 @@ export function AboutModel() {
             {otherDroppings.verdict_shown} of {otherDroppings.n} photos of other animals' droppings
             {farmShown.length > 0 &&
               `, and ${farmShown.map((x) => `${x.description.toLowerCase()} (${name(x.top_class)}, ${p1(x.top_probability)})`).join(' and ')}`}
-            . Only use it on photos of poultry droppings.
+            . That is why the input check below now runs first. Only use it on photos of poultry droppings.
           </p>
           <a className="link text-sm" href={blob('docs/ood/README.md')}>
             The photos and predictions
           </a>
         </div>
       </div>
+
+      <InputCheck />
 
       <Limitations />
 

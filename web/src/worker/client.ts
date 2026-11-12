@@ -3,13 +3,16 @@ import { bitmapToRGBA } from '../lib/pixels';
 import type {
   BackendName,
   ClassifierApi,
+  ClassifyOptions,
   ModelInfo,
   RunsIn,
   WorkerLoadProgress,
-  WorkerPrediction,
+  WorkerResult,
 } from './types';
 
 export const MODEL_URL = new URL(`${import.meta.env.BASE_URL}model/model.json`, window.location.origin).href;
+export const GATE_URL = new URL(`${import.meta.env.BASE_URL}gate/model.json`, window.location.origin).href;
+const URLS = { model: MODEL_URL, gate: GATE_URL };
 
 /** Optional ?backend=webgl|wasm|cpu override (used by the e2e tests to exercise every backend). */
 export function backendFromUrl(search = window.location.search): BackendName | undefined {
@@ -69,17 +72,19 @@ export class ClassifierClient {
   }
 
   async init(onProgress: (p: WorkerLoadProgress) => void): Promise<ModelInfo> {
-    if (this.remote) return this.remote.init(MODEL_URL, Comlink.proxy(onProgress), this.backend);
-    return (await this.local!).init(MODEL_URL, onProgress, this.backend ?? 'webgl');
+    if (this.remote) return this.remote.init(URLS, Comlink.proxy(onProgress), this.backend);
+    return (await this.local!).init(URLS, onProgress, this.backend ?? 'webgl');
   }
 
   /** Takes ownership of (and consumes) the bitmap. */
-  async classify(bitmap: ImageBitmap): Promise<WorkerPrediction> {
-    if (!this.remote) return (await this.local!).classify(bitmap);
-    if (this.workerHasOffscreenCanvas) return this.remote.classify(Comlink.transfer(bitmap, [bitmap]));
+  async classify(bitmap: ImageBitmap, options: ClassifyOptions): Promise<WorkerResult> {
+    if (!this.remote) return (await this.local!).classify(bitmap, options);
+    if (this.workerHasOffscreenCanvas) {
+      return this.remote.classify(Comlink.transfer(bitmap, [bitmap]), options);
+    }
     const { data, width, height, exact } = bitmapToRGBA(bitmap);
     bitmap.close();
-    return this.remote.classifyPixels(Comlink.transfer(data, [data.buffer]), width, height, exact);
+    return this.remote.classifyPixels(Comlink.transfer(data, [data.buffer]), width, height, exact, options);
   }
 
   async memory() {

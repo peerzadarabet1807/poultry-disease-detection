@@ -1,6 +1,12 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { BrowserEngine } from '../engine/browserEngine';
-import { EngineError, type EngineInfo, type LoadProgress, type Prediction } from '../engine/types';
+import {
+  EngineError,
+  type EngineInfo,
+  type InputCheckResult,
+  type LoadProgress,
+  type Prediction,
+} from '../engine/types';
 import { decodeForModel, DecodeError, makeDisplayUrl } from '../lib/decode';
 import { validateFile } from '../lib/fileValidation';
 import type { SampleInfo } from '../lib/samples';
@@ -30,13 +36,29 @@ export interface ClassificationResult {
   orientation: number;
   prediction: Prediction;
   verdict: Verdict;
+  inputCheck: InputCheckResult;
+  /** the input check failed and the user chose "Analyse anyway" */
+  unchecked: boolean;
 }
 
-export type JobStep = 'reading' | 'decoding' | 'waiting-for-model' | 'classifying';
+/** The input check failed: no verdict is shown unless the user chooses "Analyse anyway". */
+export interface RejectedPhoto {
+  id: number;
+  source: ImageSource;
+  displayUrl: string;
+  width: number;
+  height: number;
+  inputCheck: InputCheckResult;
+  /** kept so "Analyse anyway" can run the classifier on the same file */
+  file: Blob;
+}
+
+export type JobStep = 'reading' | 'decoding' | 'waiting-for-model' | 'checking' | 'classifying';
 
 export type JobState =
   | { status: 'idle' }
   | { status: 'working'; step: JobStep; source: ImageSource }
+  | { status: 'rejected'; photo: RejectedPhoto }
   | { status: 'done'; result: ClassificationResult }
   | { status: 'error'; message: string; source?: ImageSource };
 
@@ -56,9 +78,11 @@ function getEngine(): BrowserEngine {
 // Read-only diagnostics for the e2e tests: tensor count inside the worker (memory leaks) and the last model
 // input as RGB bytes (browser preprocessing parity against the Python reference).
 let lastSeen: Uint8ClampedArray | null = null;
+let lastInputCheck: InputCheckResult | null = null;
 (globalThis as { __poultryDebug?: unknown }).__poultryDebug = {
   memory: () => getEngine().memory(),
   lastSeenRgb: () => (lastSeen ? Array.from(lastSeen).filter((_, i) => i % 4 !== 3) : null),
+  lastInputCheck: () => lastInputCheck,
 };
 
 function initModel(): Promise<EngineInfo> {
@@ -104,8 +128,9 @@ export function useClassifier() {
     const onProgress = (p: LoadProgress) =>
       setModel({ status: 'loading', phase: p.phase, fraction: p.fraction });
     progressListeners.add(onProgress);
-    // The browser model is 47 MB: start downloading once the page has loaded and painted, so fonts, styles and
-    // the app are not competing with it. Classifying earlier starts it straight away (see classify).
+    // The browser models (classifier and input check) are about 64 MB together: start downloading once the page
+    // has loaded and painted, so fonts, styles and the app are not competing with them. Classifying earlier
+    // starts the download straight away (see classify).
     // ?preload=0 skips the background download until the first classification (used to measure page
     // performance without the model, since Lighthouse cannot block a worker's requests).
     let cancelled = new URLSearchParams(window.location.search).get('preload') === '0';
@@ -138,11 +163,13 @@ export function useClassifier() {
   }, [watchModel]);
 
   /**
-   * Validate, decode and classify one image. `input` may be a lazy loader (e.g. fetching a sample) so that
-   * its failures surface as job errors too. Resolves with the result, or null if it failed or was superseded.
+   * Validate, decode, check and classify one image. `input` may be a lazy loader (e.g. fetching a sample) so
+   * that its failures surface as job errors too. With `force`, the classifier runs even if the input check
+   * fails ("Analyse anyway"). Resolves with the result, or null if it failed, was rejected by the input check
+   * or was superseded.
    */
   const classify = useCallback(
-    async (input: Blob | (() => Promise<Blob>), source: ImageSource) => {
+    async (input: Blob | (() => Promise<Blob>), source: ImageSource, force = false) => {
       const id = ++jobId.current;
       const isStale = () => id !== jobId.current;
       let displayUrl: string | null = null;
@@ -167,15 +194,25 @@ export function useClassifier() {
         await modelReady;
         if (isStale()) return null;
 
-        setJob({ status: 'working', step: 'classifying', source });
+        setJob({ status: 'working', step: force ? 'classifying' : 'checking', source });
         bitmap = null; // the engine takes ownership
-        const prediction = await getEngine().classify(photo.bitmap);
-        lastSeen = prediction.seen;
+        const output = await getEngine().classify(photo.bitmap, force);
+        lastSeen = output.seen;
+        lastInputCheck = output.inputCheck;
         if (isStale()) return null;
 
         if (shownUrl.current) URL.revokeObjectURL(shownUrl.current);
         shownUrl.current = displayUrl;
         displayUrl = null; // now owned by the result
+
+        const { prediction, inputCheck } = output;
+        if (!prediction) {
+          setJob({
+            status: 'rejected',
+            photo: { id, source, displayUrl: shownUrl.current, width, height, inputCheck, file },
+          });
+          return null;
+        }
         const result: ClassificationResult = {
           id,
           source,
@@ -185,6 +222,8 @@ export function useClassifier() {
           orientation: photo.orientation,
           prediction,
           verdict: interpret(prediction.probabilities),
+          inputCheck,
+          unchecked: !inputCheck.passed,
         };
         setJob({ status: 'done', result });
         return result;
@@ -204,5 +243,11 @@ export function useClassifier() {
     setJob({ status: 'idle' });
   }, []);
 
-  return { model, job, classify, reset, retryModel };
+  /** Run the classifier on the photo the input check turned away. */
+  const analyseAnyway = useCallback(
+    (photo: RejectedPhoto) => classify(photo.file, photo.source, true),
+    [classify],
+  );
+
+  return { model, job, classify, reset, retryModel, analyseAnyway };
 }

@@ -1,0 +1,109 @@
+{
+ "description": "The numbers the web app shows about the input check (from evaluation.json).",
+ "version": "tinyclip-8m16-proto-1",
+ "model": {
+  "name": "tinyclip-vit-8m-16-yfcc15m",
+  "repo": "wkcn/TinyCLIP-ViT-8M-16-Text-3M-YFCC15M",
+  "license": "MIT"
+ },
+ "threshold": 0.8455056835796044,
+ "prototype_photos_per_class": {
+  "Coccidiosis": 150,
+  "Healthy": 150,
+  "Salmonella": 150,
+  "NCD": 150
+ },
+ "false_rejection": {
+  "val": {
+   "k": 9,
+   "n": 973,
+   "rate": 0.009249743062692703,
+   "ci95": [
+    0.004873849143542566,
+    0.01748541773924249
+   ]
+  },
+  "test_internal": {
+   "k": 8,
+   "n": 974,
+   "rate": 0.008213552361396304,
+   "ci95": [
+    0.004167700536650468,
+    0.016123379066372002
+   ]
+  },
+  "test_external": {
+   "k": 21,
+   "n": 1201,
+   "rate": 0.017485428809325562,
+   "ci95": [
+    0.011464645367534929,
+    0.026583065012435
+   ]
+  },
+  "test_all": {
+   "k": 29,
+   "n": 2175,
+   "rate": 0.013333333333333334,
+   "ci95": [
+    0.009299488502147301,
+    0.01908323692710347
+   ]
+  }
+ },
+ "false_acceptance": {
+  "near": {
+   "k": 6,
+   "n": 101,
+   "rate": 0.0594059405940594,
+   "ci95": [
+    0.02750812735295155,
+    0.12359105659900085
+   ]
+  },
+  "far": {
+   "k": 0,
+   "n": 47,
+   "rate": 0.0,
+   "ci95": [
+    0.0,
+    0.07555760526591085
+   ]
+  },
+  "overall": {
+   "k": 6,
+   "n": 148,
+   "rate": 0.04054054054054054,
+   "ci95": [
+    0.01871037317014551,
+    0.08561856964961667
+   ]
+  }
+ },
+ "samples": {
+  "passed": 11,
+  "n": 11
+ },
+ "ood_test_verdict_shown": {
+  "rule": "the app's verdict rule (decision_thresholds.json): top >= 0.5 and lead >= 0.9",
+  "classifier_alone": {
+   "k": 62,
+   "n": 148,
+   "rate": 0.4189189189189189,
+   "ci95": [
+    0.34246750332807036,
+    0.49947289834600533
+   ]
+  },
+  "after_input_check": {
+   "k": 6,
+   "n": 148,
+   "rate": 0.04054054054054054,
+   "ci95": [
+    0.01871037317014551,
+    0.08561856964961667
+   ]
+  }
+ },
+ "source": "scripts/build_input_check.py"
+}

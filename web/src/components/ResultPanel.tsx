@@ -1,9 +1,11 @@
 import { useEffect, useRef } from 'react';
-import type { ClassificationResult, JobState, JobStep } from '../hooks/useClassifier';
+import type { ClassificationResult, JobState, JobStep, RejectedPhoto } from '../hooks/useClassifier';
 import { CLASS_INFO } from '../lib/classes';
 import { swapsAxes } from '../lib/exif';
+import { INPUT_CHECK_COPY } from '../lib/inputCheckCopy';
 import { CamViewer } from './CamViewer';
-import { InfoIcon, RefreshIcon } from './icons';
+import { AlertIcon, InfoIcon, RefreshIcon } from './icons';
+import { InputCheckNotice } from './InputCheckNotice';
 import { ProbabilityBars } from './ProbabilityBars';
 import { VerdictCard } from './VerdictCard';
 
@@ -11,15 +13,18 @@ const STEP_LABEL: Record<JobStep, string> = {
   reading: 'Reading the file…',
   decoding: 'Decoding the photo…',
   'waiting-for-model': 'Waiting for the model to finish loading…',
+  checking: 'Checking the photo, then running the model…',
   classifying: 'Running the model…',
 };
 
 interface Props {
   job: JobState;
   onAnother: () => void;
+  onPhotoTips: () => void;
+  onAnalyseAnyway: (photo: RejectedPhoto) => void;
 }
 
-export function ResultPanel({ job, onAnother }: Props) {
+export function ResultPanel({ job, onAnother, onPhotoTips, onAnalyseAnyway }: Props) {
   const heading = useRef<HTMLHeadingElement>(null);
   const resultId = job.status === 'done' ? job.result.id : null;
 
@@ -29,6 +34,18 @@ export function ResultPanel({ job, onAnother }: Props) {
   }, [resultId]);
 
   if (job.status === 'idle' || job.status === 'error') return null;
+
+  if (job.status === 'rejected') {
+    const { photo } = job;
+    return (
+      <InputCheckNotice
+        photo={photo}
+        onAnother={onAnother}
+        onPhotoTips={onPhotoTips}
+        onAnalyseAnyway={() => onAnalyseAnyway(photo)}
+      />
+    );
+  }
 
   if (job.status === 'working') {
     return (
@@ -58,6 +75,20 @@ export function ResultPanel({ job, onAnother }: Props) {
           <RefreshIcon /> Classify another photo
         </button>
       </div>
+
+      {result.unchecked && (
+        <p
+          role="note"
+          className="mt-4 flex gap-3 rounded-xl border border-uncertain-line/60 bg-uncertain-soft px-4 py-3 text-sm text-uncertain-ink"
+          data-testid="unchecked-label"
+        >
+          <AlertIcon className="mt-0.5 shrink-0 text-base" />
+          <span>
+            <strong className="font-semibold">Unchecked input:</strong>{' '}
+            {INPUT_CHECK_COPY.uncheckedLabel.replace(/^Unchecked input: /, '')}
+          </span>
+        </p>
+      )}
 
       <div className="mt-5 grid gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-8">
         <div className="space-y-5">
