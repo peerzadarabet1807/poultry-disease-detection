@@ -8,6 +8,11 @@ bytes are exactly the ones the model was trained and evaluated on.
 Usage:
     python scripts/fetch_zenodo_images.py --selection tests/fixtures/selection.json
     python scripts/fetch_zenodo_images.py --set internal --set external --workers 6   # all 2,175 test images
+    python scripts/fetch_zenodo_images.py --split val --workers 6                     # all 973 validation images
+    python scripts/fetch_zenodo_images.py --split train --per-class 150 --workers 6   # seeded training sample
+
+``--split`` reads the split column of results/dataset_manifest.csv. ``--per-class N`` keeps a seeded random
+sample of N images per class from that split (``--seed``, default 0), so the same images come back every time.
 
 Images land in data/zenodo/<relpath> (gitignored). Files already present with the right MD5 are skipped.
 """
@@ -139,6 +144,9 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--selection", type=Path, help="JSON with an 'images' list of {relpath}")
     ap.add_argument("--set", action="append", choices=sorted(SETS), default=[], help="all images of a test set")
+    ap.add_argument("--split", action="append", choices=["train", "val"], default=[], help="images of a split")
+    ap.add_argument("--per-class", type=int, help="with --split: seeded sample of N images per class")
+    ap.add_argument("--seed", type=int, default=0, help="seed for --per-class")
     ap.add_argument("--out", type=Path, default=DEFAULT_OUT)
     ap.add_argument("--workers", type=int, default=1, help="parallel downloads (each opens its own zip)")
     args = ap.parse_args()
@@ -148,8 +156,16 @@ def main() -> int:
         relpaths += [im["relpath"] for im in json.loads(args.selection.read_text("utf-8"))["images"]]
     for s in args.set:
         relpaths += pd.read_csv(RESULTS / SETS[s], usecols=["relpath"])["relpath"].tolist()
+    if args.split:
+        split = pd.read_csv(RESULTS / "dataset_manifest.csv", usecols=["relpath", "class", "split"])
+        split = split[split["split"].isin(args.split)].sort_values("relpath")
+        if args.per_class:
+            split = pd.concat(
+                [g.sample(n=min(args.per_class, len(g)), random_state=args.seed) for _, g in split.groupby("class")]
+            )
+        relpaths += split["relpath"].tolist()
     if not relpaths:
-        ap.error("nothing to fetch: pass --selection and/or --set")
+        ap.error("nothing to fetch: pass --selection, --set and/or --split")
 
     manifest = pd.read_csv(RESULTS / "dataset_manifest.csv", usecols=["relpath", "md5"]).set_index("relpath")["md5"]
     todo = defaultdict(list)
