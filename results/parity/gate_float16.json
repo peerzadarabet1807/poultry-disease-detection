@@ -1,0 +1,509 @@
+{
+  "summary": {
+    "description": "Input check image encoder as a TF.js graph model in Node (WASM backend) vs the original PyTorch model. conversion: TF.js fed exactly the 224 x 224 image Python made. endToEnd: from the original JPEG through sharp decode and the TypeScript resize. Engineering check, not a model evaluation.",
+    "variant": "float16",
+    "model": "tinyclip-vit-8m-16-yfcc15m",
+    "version": "tinyclip-8m16-proto-1",
+    "backend": "wasm",
+    "images": 30,
+    "conversion": {
+      "minCosine": 0.999999454117031,
+      "meanCosine": 0.9999997349931132,
+      "maxScoreDiff": 0.00016293999902960987,
+      "sameDecision": 30
+    },
+    "endToEnd": {
+      "seenIdenticalToPython": 27,
+      "minCosine": 0.9959383372321562,
+      "sameDecision": 30
+    },
+    "passedDroppings": 18,
+    "droppings": 18,
+    "rejectedOod": 11,
+    "ood": 12,
+    "requiredMinCosine": 0.999,
+    "leakedTensors": 0
+  },
+  "perImage": [
+    {
+      "id": "f01",
+      "kind": "droppings",
+      "pythonScore": 0.9118192770225391,
+      "pythonPassed": true,
+      "cosine": 0.9999998282611638,
+      "tfjsScore": 0.9118672173597419,
+      "scoreDiff": 0.000047940337202789784,
+      "tfjsPassed": true,
+      "endToEnd": {
+        "seenIdenticalToPython": true,
+        "cosine": 0.9999998282611638,
+        "score": 0.9118672173597419,
+        "passed": true
+      }
+    },
+    {
+      "id": "f02",
+      "kind": "droppings",
+      "pythonScore": 0.9367218943850092,
+      "pythonPassed": true,
+      "cosine": 0.9999997807268148,
+      "tfjsScore": 0.9366689470232441,
+      "scoreDiff": 0.00005294736176508774,
+      "tfjsPassed": true,
+      "endToEnd": {
+        "seenIdenticalToPython": true,
+        "cosine": 0.9999997807268148,
+        "score": 0.9366689470232441,
+        "passed": true
+      }
+    },
+    {
+      "id": "f03",
+      "kind": "droppings",
+      "pythonScore": 0.9461252523683916,
+      "pythonPassed": true,
+      "cosine": 0.9999997778047139,
+      "tfjsScore": 0.9460993734190706,
+      "scoreDiff": 0.000025878949321045397,
+      "tfjsPassed": true,
+      "endToEnd": {
+        "seenIdenticalToPython": true,
+        "cosine": 0.9999997778047139,
+        "score": 0.9460993734190706,
+        "passed": true
+      }
+    },
+    {
+      "id": "f04",
+      "kind": "droppings",
+      "pythonScore": 0.9248258157739921,
+      "pythonPassed": true,
+      "cosine": 0.9999998179392368,
+      "tfjsScore": 0.9247601923283982,
+      "scoreDiff": 0.00006562344559390976,
+      "tfjsPassed": true,
+      "endToEnd": {
+        "seenIdenticalToPython": true,
+        "cosine": 0.9999998179392368,
+        "score": 0.9247601923283982,
+        "passed": true
+      }
+    },
+    {
+      "id": "f05",
+      "kind": "droppings",
+      "pythonScore": 0.9536571930659559,
+      "pythonPassed": true,
+      "cosine": 0.9999996983626147,
+      "tfjsScore": 0.9537134417258426,
+      "scoreDiff": 0.00005624865988673733,
+      "tfjsPassed": true,
+      "endToEnd": {
+        "seenIdenticalToPython": true,
+        "cosine": 0.9999996983626147,
+        "score": 0.9537134417258426,
+        "passed": true
+      }
+    },
+    {
+      "id": "f06",
+      "kind": "droppings",
+      "pythonScore": 0.8751550521463073,
+      "pythonPassed": true,
+      "cosine": 0.9999998004093056,
+      "tfjsScore": 0.8751131500075593,
+      "scoreDiff": 0.00004190213874799564,
+      "tfjsPassed": true,
+      "endToEnd": {
+        "seenIdenticalToPython": true,
+        "cosine": 0.9999998004093056,
+        "score": 0.8751131500075593,
+        "passed": true
+      }
+    },
+    {
+      "id": "f07",
+      "kind": "droppings",
+      "pythonScore": 0.877417195392786,
+      "pythonPassed": true,
+      "cosine": 0.9999997583117839,
+      "tfjsScore": 0.8773592444814633,
+      "scoreDiff": 0.000057950911322657284,
+      "tfjsPassed": true,
+      "endToEnd": {
+        "seenIdenticalToPython": true,
+        "cosine": 0.9999997583117839,
+        "score": 0.8773592444814633,
+        "passed": true
+      }
+    },
+    {
+      "id": "f08",
+      "kind": "droppings",
+      "pythonScore": 0.8991782271960649,
+      "pythonPassed": true,
+      "cosine": 0.9999996603081936,
+      "tfjsScore": 0.899197027544514,
+      "scoreDiff": 0.00001880034844914391,
+      "tfjsPassed": true,
+      "endToEnd": {
+        "seenIdenticalToPython": true,
+        "cosine": 0.9999996603081936,
+        "score": 0.899197027544514,
+        "passed": true
+      }
+    },
+    {
+      "id": "f09",
+      "kind": "droppings",
+      "pythonScore": 0.9104704060947806,
+      "pythonPassed": true,
+      "cosine": 0.9999998674552727,
+      "tfjsScore": 0.9104615276433624,
+      "scoreDiff": 0.000008878451418170563,
+      "tfjsPassed": true,
+      "endToEnd": {
+        "seenIdenticalToPython": true,
+        "cosine": 0.9999998674552727,
+        "score": 0.9104615276433624,
+        "passed": true
+      }
+    },
+    {
+      "id": "f10",
+      "kind": "droppings",
+      "pythonScore": 0.9423175535481093,
+      "pythonPassed": true,
+      "cosine": 0.9999996648631929,
+      "tfjsScore": 0.9423033773930574,
+      "scoreDiff": 0.000014176155051948136,
+      "tfjsPassed": true,
+      "endToEnd": {
+        "seenIdenticalToPython": true,
+        "cosine": 0.9999996648631929,
+        "score": 0.9423033773930574,
+        "passed": true
+      }
+    },
+    {
+      "id": "f11",
+      "kind": "droppings",
+      "pythonScore": 0.8801618284602909,
+      "pythonPassed": true,
+      "cosine": 0.9999998213436773,
+      "tfjsScore": 0.8801777479603766,
+      "scoreDiff": 0.000015919500085725957,
+      "tfjsPassed": true,
+      "endToEnd": {
+        "seenIdenticalToPython": true,
+        "cosine": 0.9999998213436773,
+        "score": 0.8801777479603766,
+        "passed": true
+      }
+    },
+    {
+      "id": "f12",
+      "kind": "droppings",
+      "pythonScore": 0.8886808744553387,
+      "pythonPassed": true,
+      "cosine": 0.9999997875357156,
+      "tfjsScore": 0.8886402089852508,
+      "scoreDiff": 0.00004066547008796384,
+      "tfjsPassed": true,
+      "endToEnd": {
+        "seenIdenticalToPython": true,
+        "cosine": 0.9999997875357156,
+        "score": 0.8886402089852508,
+        "passed": true
+      }
+    },
+    {
+      "id": "f13",
+      "kind": "droppings",
+      "pythonScore": 0.9125052585717504,
+      "pythonPassed": true,
+      "cosine": 0.9999996954375725,
+      "tfjsScore": 0.9125145257581462,
+      "scoreDiff": 0.00000926718639582269,
+      "tfjsPassed": true,
+      "endToEnd": {
+        "seenIdenticalToPython": true,
+        "cosine": 0.9999996954375725,
+        "score": 0.9125145257581462,
+        "passed": true
+      }
+    },
+    {
+      "id": "f14",
+      "kind": "droppings",
+      "pythonScore": 0.9127320404746769,
+      "pythonPassed": true,
+      "cosine": 0.9999996984392654,
+      "tfjsScore": 0.9127615513529108,
+      "scoreDiff": 0.000029510878233884874,
+      "tfjsPassed": true,
+      "endToEnd": {
+        "seenIdenticalToPython": true,
+        "cosine": 0.9999996984392654,
+        "score": 0.9127615513529108,
+        "passed": true
+      }
+    },
+    {
+      "id": "f15",
+      "kind": "droppings",
+      "pythonScore": 0.9206637666319407,
+      "pythonPassed": true,
+      "cosine": 0.9999997938931604,
+      "tfjsScore": 0.9206213399357978,
+      "scoreDiff": 0.00004242669614296091,
+      "tfjsPassed": true,
+      "endToEnd": {
+        "seenIdenticalToPython": true,
+        "cosine": 0.9999997938931604,
+        "score": 0.9206213399357978,
+        "passed": true
+      }
+    },
+    {
+      "id": "f16",
+      "kind": "droppings",
+      "pythonScore": 0.9221028948005274,
+      "pythonPassed": true,
+      "cosine": 0.9999997944231064,
+      "tfjsScore": 0.9220821135774744,
+      "scoreDiff": 0.00002078122305304575,
+      "tfjsPassed": true,
+      "endToEnd": {
+        "seenIdenticalToPython": true,
+        "cosine": 0.9999997944231064,
+        "score": 0.9220821135774744,
+        "passed": true
+      }
+    },
+    {
+      "id": "f17",
+      "kind": "droppings",
+      "pythonScore": 0.920255748769388,
+      "pythonPassed": true,
+      "cosine": 0.9999995126839819,
+      "tfjsScore": 0.9202817509856885,
+      "scoreDiff": 0.00002600221630055799,
+      "tfjsPassed": true,
+      "endToEnd": {
+        "seenIdenticalToPython": true,
+        "cosine": 0.9999995126839819,
+        "score": 0.9202817509856885,
+        "passed": true
+      }
+    },
+    {
+      "id": "f18",
+      "kind": "droppings",
+      "pythonScore": 0.9063985764567339,
+      "pythonPassed": true,
+      "cosine": 0.999999754372503,
+      "tfjsScore": 0.9064421441646132,
+      "scoreDiff": 0.00004356770787927733,
+      "tfjsPassed": true,
+      "endToEnd": {
+        "seenIdenticalToPython": true,
+        "cosine": 0.999999754372503,
+        "score": 0.9064421441646132,
+        "passed": true
+      }
+    },
+    {
+      "id": "ood_hen_free_range",
+      "kind": "ood",
+      "pythonScore": 0.6140797356413157,
+      "pythonPassed": false,
+      "cosine": 0.9999998194962632,
+      "tfjsScore": 0.6141833405301746,
+      "scoreDiff": 0.0001036048888589658,
+      "tfjsPassed": false,
+      "endToEnd": {
+        "seenIdenticalToPython": true,
+        "cosine": 0.9999998194962632,
+        "score": 0.6141833405301746,
+        "passed": false
+      }
+    },
+    {
+      "id": "ood_egg_tray",
+      "kind": "ood",
+      "pythonScore": 0.5555691351485722,
+      "pythonPassed": false,
+      "cosine": 0.9999996256584426,
+      "tfjsScore": 0.55553760601207,
+      "scoreDiff": 0.00003152913650217304,
+      "tfjsPassed": false,
+      "endToEnd": {
+        "seenIdenticalToPython": true,
+        "cosine": 0.9999996256584426,
+        "score": 0.55553760601207,
+        "passed": false
+      }
+    },
+    {
+      "id": "ood_wood_shavings",
+      "kind": "ood",
+      "pythonScore": 0.56595431560055,
+      "pythonPassed": false,
+      "cosine": 0.9999997113656505,
+      "tfjsScore": 0.56587391222172,
+      "scoreDiff": 0.00008040337882997406,
+      "tfjsPassed": false,
+      "endToEnd": {
+        "seenIdenticalToPython": false,
+        "cosine": 0.9977377502599614,
+        "score": 0.5475393192629446,
+        "passed": false
+      }
+    },
+    {
+      "id": "ood_straw_bedding",
+      "kind": "ood",
+      "pythonScore": 0.6002645906785513,
+      "pythonPassed": false,
+      "cosine": 0.9999997588251588,
+      "tfjsScore": 0.6003006224748629,
+      "scoreDiff": 0.00003603179631161968,
+      "tfjsPassed": false,
+      "endToEnd": {
+        "seenIdenticalToPython": true,
+        "cosine": 0.9999997588251588,
+        "score": 0.6003006224748629,
+        "passed": false
+      }
+    },
+    {
+      "id": "ood_concrete_floor",
+      "kind": "ood",
+      "pythonScore": 0.7265207566213356,
+      "pythonPassed": false,
+      "cosine": 0.999999454117031,
+      "tfjsScore": 0.726357816622306,
+      "scoreDiff": 0.00016293999902960987,
+      "tfjsPassed": false,
+      "endToEnd": {
+        "seenIdenticalToPython": true,
+        "cosine": 0.999999454117031,
+        "score": 0.726357816622306,
+        "passed": false
+      }
+    },
+    {
+      "id": "ood_pigeon_droppings",
+      "kind": "ood",
+      "pythonScore": 0.872386636485144,
+      "pythonPassed": true,
+      "cosine": 0.999999789777092,
+      "tfjsScore": 0.8722730982623381,
+      "scoreDiff": 0.00011353822280590897,
+      "tfjsPassed": true,
+      "endToEnd": {
+        "seenIdenticalToPython": false,
+        "cosine": 0.9989020427886945,
+        "score": 0.8782852862116819,
+        "passed": true
+      }
+    },
+    {
+      "id": "ood_wood_pigeon_droppings",
+      "kind": "ood",
+      "pythonScore": 0.8274022980189528,
+      "pythonPassed": false,
+      "cosine": 0.9999996932856805,
+      "tfjsScore": 0.8273624084725606,
+      "scoreDiff": 0.00003988954639222442,
+      "tfjsPassed": false,
+      "endToEnd": {
+        "seenIdenticalToPython": true,
+        "cosine": 0.9999996932856805,
+        "score": 0.8273624084725606,
+        "passed": false
+      }
+    },
+    {
+      "id": "ood_cow_dung",
+      "kind": "ood",
+      "pythonScore": 0.8244597212355697,
+      "pythonPassed": false,
+      "cosine": 0.9999996681529568,
+      "tfjsScore": 0.8243247284189716,
+      "scoreDiff": 0.00013499281659801188,
+      "tfjsPassed": false,
+      "endToEnd": {
+        "seenIdenticalToPython": true,
+        "cosine": 0.9999996681529568,
+        "score": 0.8243247284189716,
+        "passed": false
+      }
+    },
+    {
+      "id": "ood_horse_manure",
+      "kind": "ood",
+      "pythonScore": 0.7776956310297601,
+      "pythonPassed": false,
+      "cosine": 0.9999997383686572,
+      "tfjsScore": 0.7775940162831911,
+      "scoreDiff": 0.00010161474656900094,
+      "tfjsPassed": false,
+      "endToEnd": {
+        "seenIdenticalToPython": true,
+        "cosine": 0.9999997383686572,
+        "score": 0.7775940162831911,
+        "passed": false
+      }
+    },
+    {
+      "id": "ood_dog_feces",
+      "kind": "ood",
+      "pythonScore": 0.8070786738158484,
+      "pythonPassed": false,
+      "cosine": 0.9999996441290487,
+      "tfjsScore": 0.8071414373818276,
+      "scoreDiff": 0.00006276356597922916,
+      "tfjsPassed": false,
+      "endToEnd": {
+        "seenIdenticalToPython": true,
+        "cosine": 0.9999996441290487,
+        "score": 0.8071414373818276,
+        "passed": false
+      }
+    },
+    {
+      "id": "ood_porridge",
+      "kind": "ood",
+      "pythonScore": 0.6150783834211802,
+      "pythonPassed": false,
+      "cosine": 0.9999998222239762,
+      "tfjsScore": 0.6150923268135802,
+      "scoreDiff": 0.000013943392400017629,
+      "tfjsPassed": false,
+      "endToEnd": {
+        "seenIdenticalToPython": true,
+        "cosine": 0.9999998222239762,
+        "score": 0.6150923268135802,
+        "passed": false
+      }
+    },
+    {
+      "id": "ood_oat_porridge",
+      "kind": "ood",
+      "pythonScore": 0.6527751429067297,
+      "pythonPassed": false,
+      "cosine": 0.9999998118221685,
+      "tfjsScore": 0.6527736352453976,
+      "scoreDiff": 0.000001507661332111887,
+      "tfjsPassed": false,
+      "endToEnd": {
+        "seenIdenticalToPython": false,
+        "cosine": 0.9959383372321562,
+        "score": 0.6377763911420348,
+        "passed": false
+      }
+    }
+  ]
+}

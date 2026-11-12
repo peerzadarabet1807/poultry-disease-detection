@@ -64,6 +64,19 @@ async function uploadFile(page: Page, path: string) {
   await page.getByTestId('file-input').setInputFiles(path);
 }
 
+/** CC0, Wilfredor, Wikimedia Commons (docs/ood/credits.json): cow dung, which the input check turns away. */
+const OOD_FIXTURE = join(ROOT, 'docs', 'ood', 'cow_dung.jpg');
+
+async function lastInputCheck(page: Page): Promise<{ score: number; passed: boolean } | null> {
+  return page.evaluate(() =>
+    (
+      globalThis as unknown as {
+        __poultryDebug: { lastInputCheck(): { score: number; passed: boolean } | null };
+      }
+    ).__poultryDebug.lastInputCheck(),
+  );
+}
+
 test.describe('poultry droppings classifier', () => {
   test('classifies samples like Keras, with responsible copy @cross-browser', async ({ page }) => {
     await page.goto('./');
@@ -95,11 +108,17 @@ test.describe('poultry droppings classifier', () => {
     await page.goto('./');
     await waitForModel(page);
     const diffs: Record<string, number> = {};
+    const scores: Record<string, number> = {};
     for (const ref of references) {
       await classifySample(page, ref.id);
+      const check = await lastInputCheck(page);
+      expect(check?.passed, `${ref.id}: passes the input check`).toBe(true);
+      await expect(page.getByTestId('unchecked-label')).toHaveCount(0);
+      scores[ref.id] = check!.score;
       diffs[ref.id] = await expectMatchesReference(page, ref.id);
     }
     console.log('max |prob diff| per sample:', JSON.stringify(diffs));
+    console.log('input check score per sample:', JSON.stringify(scores));
   });
 
   test('browser preprocessing reproduces the Python model input @cross-browser', async ({ page }, info) => {
@@ -167,12 +186,87 @@ test.describe('poultry droppings classifier', () => {
     await expect(page.getByTestId('input-notes')).toContainText('rotation tag');
   });
 
+  test('turns away a photo that is not poultry droppings, and can analyse it anyway @cross-browser', async ({
+    page,
+  }) => {
+    await page.goto('./');
+    await waitForModel(page);
+    await uploadFile(page, OOD_FIXTURE);
+    const notice = page.getByTestId('input-check-notice');
+    await expect(notice).toBeVisible();
+    await expect(
+      page.getByRole('heading', { name: "This doesn't look like a photo of poultry droppings." }),
+    ).toBeFocused();
+    await expect(page.getByTestId('verdict')).toHaveCount(0);
+    await expect(page.getByTestId('prob-row')).toHaveCount(0);
+    await expect(page.getByTestId('cam-canvas')).toHaveCount(0);
+    await expect(page.getByTestId('live-region')).toContainText(
+      "This doesn't look like a photo of poultry droppings.",
+    );
+    expect((await lastInputCheck(page))?.passed).toBe(false);
+
+    await page.getByRole('link', { name: 'Photo tips' }).click();
+    await expect(page.locator('#photo-guidelines')).toHaveAttribute('open', '');
+
+    await page.getByTestId('analyse-anyway').click();
+    await expect(page.getByTestId('result')).toBeVisible();
+    await expect(page.getByTestId('unchecked-label')).toHaveText(
+      'Unchecked input: this photo did not look like poultry droppings, so treat the result with extra caution.',
+    );
+    await expect(page.getByTestId('verdict')).toBeVisible();
+    await expect(page.getByTestId('live-region')).toContainText('Unchecked input');
+
+    await page.getByRole('button', { name: 'Classify another photo' }).click();
+    await uploadFile(page, OOD_FIXTURE);
+    await expect(notice).toBeVisible();
+    await page.getByRole('button', { name: 'Try another photo' }).click();
+    await expect(notice).toHaveCount(0);
+  });
+
+  test('the input check notice works with the keyboard @cross-browser', async ({
+    page,
+    isMobile,
+    browserName,
+  }) => {
+    test.skip(isMobile, 'no keyboard on the phone profile');
+    test.skip(browserName === 'webkit' && process.platform === 'win32', 'WebKit on Windows ignores Tab');
+    await page.goto('./');
+    await waitForModel(page);
+    await uploadFile(page, OOD_FIXTURE);
+    await expect(
+      page.getByRole('heading', { name: /doesn't look like a photo of poultry droppings/ }),
+    ).toBeFocused();
+    await page.keyboard.press('Tab');
+    await expect(page.getByRole('button', { name: 'Try another photo' })).toBeFocused();
+    await page.keyboard.press('Tab');
+    await expect(page.getByRole('link', { name: 'Photo tips' })).toBeFocused();
+    await page.keyboard.press('Tab');
+    await expect(page.getByRole('button', { name: 'Analyse anyway' })).toBeFocused();
+    await page.keyboard.press('Enter');
+    await expect(page.getByTestId('unchecked-label')).toBeVisible();
+    await expect(page.getByRole('heading', { name: /^Result/ })).toBeFocused();
+  });
+
   test('does not leak tensors', async ({ page }) => {
     await page.goto('./');
     await waitForModel(page);
     await classifySample(page, 'f01');
     const after1 = await tensorCount(page);
     for (const id of ['f05', 'f09', 'f12']) await classifySample(page, id);
+    expect(await tensorCount(page)).toBe(after1);
+    // repeated input checks: rejected photos, and the classifier forced on one of them
+    for (let i = 0; i < 3; i++) {
+      await page.getByRole('button', { name: 'Classify another photo' }).click();
+      await uploadFile(page, OOD_FIXTURE);
+      await expect(page.getByTestId('input-check-notice')).toBeVisible();
+      if (i === 2) {
+        await page.getByTestId('analyse-anyway').click();
+        await expect(page.getByTestId('unchecked-label')).toBeVisible();
+      } else {
+        await page.getByRole('button', { name: 'Try another photo' }).click();
+        await classifySample(page, 'f01');
+      }
+    }
     expect(await tensorCount(page)).toBe(after1);
   });
 

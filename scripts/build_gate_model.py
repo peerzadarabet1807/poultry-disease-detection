@@ -184,6 +184,20 @@ def keras_step(name: str) -> int:
     diff = float(np.abs(served - got).max())
     print(f"[check] SavedModel vs Keras: max |diff| {diff:.2e}")
     assert diff < 1e-5
+    report = {
+        "description": "Keras copy of the vision tower vs the original PyTorch model (Hugging Face weights) on the "
+        "shipped sample photos, and the exported SavedModel vs Keras. scripts/build_gate_model.py keras",
+        "model": name,
+        "images": int(len(seen)),
+        "keras_vs_pytorch_min_cosine": float(cos.min()),
+        "keras_vs_pytorch_mean_cosine": float(cos.mean()),
+        "required_min_cosine": MIN_COS,
+        "savedmodel_vs_keras_max_abs_diff": diff,
+    }
+    (ROOT / "results" / "parity").mkdir(parents=True, exist_ok=True)
+    (ROOT / "results" / "parity" / f"gate_keras_{name}.json").write_text(
+        json.dumps(report, indent=1) + "\n", encoding="utf-8", newline="\n"
+    )
     print(f"Exported -> {saved}")
     return 0
 

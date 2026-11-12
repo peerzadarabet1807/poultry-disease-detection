@@ -1,0 +1,9 @@
+{
+ "description": "Keras copy of the vision tower vs the original PyTorch model (Hugging Face weights) on the shipped sample photos, and the exported SavedModel vs Keras. scripts/build_gate_model.py keras",
+ "model": "tinyclip-vit-8m-16-yfcc15m",
+ "images": 11,
+ "keras_vs_pytorch_min_cosine": 0.9999999403953552,
+ "keras_vs_pytorch_mean_cosine": 1.0,
+ "required_min_cosine": 0.9999,
+ "savedmodel_vs_keras_max_abs_diff": 0.0
+}

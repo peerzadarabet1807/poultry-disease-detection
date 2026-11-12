@@ -122,8 +122,17 @@ async function main() {
         runs: '20',
       });
       await page.goto(`http://localhost:${PORT}/?${q}`);
-      await page.waitForFunction(() => window.__benchResult !== undefined, null, { timeout: 600_000 });
-      const r = (await page.evaluate(() => window.__benchResult)) as Record<string, unknown>;
+      // inline: Playwright serialises these callbacks into the page
+      await page.waitForFunction(
+        () => (window as unknown as { __benchResult?: unknown }).__benchResult !== undefined,
+        null,
+        {
+          timeout: 600_000,
+        },
+      );
+      const r = (await page.evaluate(
+        () => (window as unknown as { __benchResult?: unknown }).__benchResult,
+      )) as Record<string, unknown>;
       const row = { profile, ...job, ...r };
       fresh.push(row);
       console.log(
