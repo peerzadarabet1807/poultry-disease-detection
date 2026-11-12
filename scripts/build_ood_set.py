@@ -197,7 +197,7 @@ def discover(limit: int, only: list[str] | None = None) -> int:
                     seen[title] = {**d, "query": query, "thumb": info["thumburl"]}
                     per_query[-1].append(title)
         # round-robin over the queries, so the first query cannot fill the whole list
-        order = [t for group in zip(*[q + [None] * (50 - len(q)) for q in per_query]) for t in group if t]
+        order = [t for group in zip(*[q + [None] * (50 - len(q)) for q in per_query], strict=True) for t in group if t]
         cands = [seen[t] for t in dict.fromkeys(order)][:limit]
         (DISCOVER / f"{slug}.json").write_text(json.dumps(cands, indent=2, ensure_ascii=False), "utf-8")
         tiles = []
@@ -227,8 +227,12 @@ def fetch() -> int:
     selection = json.loads(SELECTION.read_text("utf-8"))
     credits = json.loads((OOD / "credits.json").read_text("utf-8"))
     original = [
-        {**p, "category": ORIGINAL_CATEGORY[p["file"]], "proximity": CATEGORIES[ORIGINAL_CATEGORY[p["file"]]][0],
-         "original": True}
+        {
+            **p,
+            "category": ORIGINAL_CATEGORY[p["file"]],
+            "proximity": CATEGORIES[ORIGINAL_CATEGORY[p["file"]]][0],
+            "original": True,
+        }
         for p in credits["photos"]
         if "/" not in p["file"]
     ]

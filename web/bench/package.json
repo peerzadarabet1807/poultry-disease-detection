@@ -1,0 +1,10 @@
+{
+  "name": "input-check-bench",
+  "private": true,
+  "description": "Browser latency benchmark for the input-check image encoder candidates (TF.js and ONNX Runtime Web). Not part of the app build.",
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {
+    "onnxruntime-web": "1.20.1"
+  }
+}
