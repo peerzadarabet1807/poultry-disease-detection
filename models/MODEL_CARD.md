@@ -121,6 +121,30 @@ The model has no "not poultry droppings" class. On 12 openly licensed photos of 
 confident verdict for 8, including all 5 photos of other animals' droppings
 ([`docs/ood/`](../docs/ood/README.md)). It must only be used on photos of poultry droppings.
 
+### Input check in the app
+
+Since November 2026 the web app runs an input check before this model. It does not change the model or its
+outputs; it decides whether the model is asked at all. The image encoder of TinyCLIP ViT-8M/16 (Microsoft, MIT
+licence, revision `a2a8c6e`) embeds the same 224 x 224 image, and the photo passes when its cosine similarity
+with the nearest of four class prototypes (mean embeddings of 150 training photos per class) is at least
+0.8455, the highest threshold with at most 1% false rejection on the validation split
+([`input_check.json`](../src/poultry_disease/data/input_check.json)). Measured on the test sets only, with 95%
+Wilson intervals ([`evaluation.md`](../results/input_check/evaluation.md)):
+
+| | Rate |
+|---|---|
+| Droppings photos turned away, internal test set | 0.8% (8 of 974; 0.4 to 1.6) |
+| Droppings photos turned away, PCR-confirmed set | 1.7% (21 of 1,201; 1.1 to 2.7) |
+| Look-alike photos let through (other droppings, eggs, litter, soil, food, hens, feathers) | 5.9% (6 of 101; 2.8 to 12.4) |
+| Unrelated photos let through | 0.0% (0 of 47; 0.0 to 7.6) |
+
+Per class on the PCR set, it turns away 3.1% of Coccidiosis, 2.9% of Healthy, 0.3% of Salmonella and 0.0% of
+NCD photos. A failed check shows a notice instead of a verdict; the user can still choose "Analyse anyway", and
+the result is then labelled "Unchecked input". The check is a safeguard, not a guarantee: it compares with the
+training photos, so it lets some look-alikes through (horse manure, wild-bird droppings) and turns away more
+photos that look unlike the training data. Post-hoc, it does not catch this model's mistakes on droppings
+photos (it turned away 4 of 246 PCR-set errors).
+
 ## Known failure modes
 
 1. **Domain shift.** About 17 points of accuracy are lost between the internal and the PCR-confirmed set.
@@ -132,7 +156,9 @@ confident verdict for 8, including all 5 photos of other animals' droppings
    ([`cam_internal_vs_pcr.png`](../results/posthoc/cam_internal_vs_pcr.png)); this is consistent with the
    hypothesis on a handful of images, not a measurement.
 4. **Overconfidence** on new data (table above).
-5. **JPEG decoding.** Training decoded JPEGs with TensorFlow's fast IDCT, which browsers cannot reproduce; on
+5. **Not every unsuitable photo is caught.** The input check lets 5.9% of look-alike photos through in testing
+   (see above), and calling the Python package directly runs no input check at all.
+6. **JPEG decoding.** Training decoded JPEGs with TensorFlow's fast IDCT, which browsers cannot reproduce; on
    borderline photos the browser and the Python package can rank the top two classes differently. Both then
    show "uncertain" ([`PARITY.md`](PARITY.md)).
 

@@ -19,7 +19,7 @@ only on **79.5%** of a separately collected, PCR-confirmed set, and this README 
   </a>
   <br>
   <b><a href="https://peerzadarabet1807.github.io/poultry-disease-detection/">Try the live demo →</a></b>
-  &nbsp;(47 MB model, downloaded once and cached; no server, no upload)
+  &nbsp;(47 MB classifier and 17 MB input check, downloaded once and cached; no server, no upload)
 </p>
 
 > **Research prototype.** This is an image-based classification prototype, not a veterinary diagnosis. It does
@@ -43,12 +43,16 @@ average but 79.5% right. When it says "Healthy" on that set, it is right 72% of 
 best of five identical training runs on the external set; the five-run mean is **76.3%**. Expect the lower
 numbers, or worse, on your own photos. And because the model always picks one of its four classes, it gave a
 confident verdict for 8 of 12 photos that were not poultry droppings at all, including all five photos of
-other animals' droppings.
+other animals' droppings. An [input check](#input-check) now runs first and holds back the verdict for photos
+that do not look like poultry droppings. On 148 test photos of other things it let 4.1% through (5.9% of
+look-alikes such as other animals' droppings), and it turned away 0.8% of internal and 1.7% of PCR-confirmed
+droppings photos.
 
 ## Contents
 
 [The problem](#the-problem) · [Dataset](#dataset) · [Method](#method) · [Results](#results) ·
-[Explainability](#explainability) · [Limitations](#limitations-and-threats-to-validity) · [Web app](#the-web-app) ·
+[Explainability](#explainability) · [Input check](#input-check) · [Limitations](#limitations-and-threats-to-validity) ·
+[Web app](#the-web-app) ·
 [Reproduce](#reproduce-the-training) · [Run locally](#run-the-web-app-locally) ·
 [Repository](#repository-structure) · [Model card](#model-card) · [Roadmap](#roadmap) · [Citation](#citation)
 
@@ -284,6 +288,87 @@ inference graph ([`model.py`](src/poultry_disease/model.py)) adds a 1 × 1 convo
 weights, and one forward pass returns the probabilities and all four 7 × 7 class maps. On the 18 fixtures the
 maps correlate with the notebook's gradient-based Grad-CAM at **r ≥ 0.99999999999**.
 
+## Input check
+
+The classifier always answers with one of its four classes, whatever the photo shows. A second, small model now
+runs first and asks one question: does this photo look like the droppings photos the classifier was trained
+on? It never changes the classifier's answer.
+
+**How it works.** The image encoder of [TinyCLIP ViT-8M/16](https://huggingface.co/wkcn/TinyCLIP-ViT-8M-16-Text-3M-YFCC15M)
+(Microsoft, MIT licence) turns the 224 × 224 image the classifier sees into an embedding. The score is the
+cosine similarity with the nearest of four class prototypes, the mean embeddings of 150 training photos per
+class. A photo passes when the score is at least **0.8455**, the highest threshold that turns away at most 1%
+of the 973 validation photos. Prototypes, threshold and model details are in
+[`input_check.json`](src/poultry_disease/data/input_check.json), written by
+[`build_input_check.py`](scripts/build_input_check.py); the rule is mirrored in
+[`input_check.py`](src/poultry_disease/input_check.py) and [`inputCheck.ts`](web/src/lib/inputCheck.ts). In
+the app the encoder runs in the same Web Worker with TF.js (16.9 MB of float16 weights in four shards),
+downloaded in parallel with the classifier.
+
+**When a photo fails**, the app shows no verdict, probability bars or heatmap. Instead it says "This doesn't
+look like a photo of poultry droppings.", why, and how to take a better photo, with three actions: **Try
+another photo**, **Photo tips** and **Analyse anyway**. "Analyse anyway" shows the result with a persistent
+label: "Unchecked input: this photo did not look like poultry droppings, so treat the result with extra
+caution."
+
+**Measured** on the test sets only (the threshold came from the validation split), with 95% Wilson intervals
+([`evaluation.md`](results/input_check/evaluation.md)):
+
+| | Rate |
+|---|---|
+| Droppings photos turned away, internal test set | **0.8%** (8 of 974; 0.4 to 1.6) |
+| Droppings photos turned away, PCR-confirmed set | **1.7%** (21 of 1,201; 1.1 to 2.7) |
+| Look-alike photos let through (other droppings, eggs, litter, soil, food, hens, feathers) | **5.9%** (6 of 101; 2.8 to 12.4) |
+| Unrelated photos let through (people, documents, screenshots, scenes, objects, other animals) | **0.0%** (0 of 47; 0.0 to 7.6) |
+
+All 11 sample photos pass. Post-hoc: on the 148 ood-test photos, the classifier alone would show a verdict
+(not "uncertain") for 41.9%; with the check in front, for 4.1%. The check does not catch the classifier's
+mistakes on droppings photos: it turned away 1 of 32 internal errors and 4 of 246 PCR-set errors, about as
+often as correct answers. It checks the kind of photo, not the answer.
+
+<p align="center"><img src="results/input_check/figures/input_check_roc.png" alt="False rejection of test droppings photos against false acceptance of ood-test photos, all and near, with the shipped threshold marked" width="560"></p>
+
+**The out-of-distribution set.** 251 openly licensed photos from Wikimedia Commons (CC0, public domain, CC BY,
+CC BY-SA), 169 "near" (other animals' and birds' droppings, soil and mud, look-alike food, eggs, live poultry,
+feathers, litter) and 82 "far" (people, documents, screenshots, scenes, objects, other animals), including the
+12 original OOD photos. It was split once, before any tuning, into ood-tune (103) and ood-test (148), stratified
+by category with a fixed seed ([`docs/ood/`](docs/ood/README.md), [`split.json`](docs/ood/split.json)).
+
+**How it was chosen** ([`candidate_study.md`](results/input_check/candidate_study.md)). Six image-text models
+and two feature-distance baselines on the published ResNet50, all with the same threshold rule:
+
+| Gate | Licence | Download | PCR photos turned away | Look-alikes let through (tune → test) |
+|---|---|---|---|---|
+| ResNet50 features, Mahalanobis | the app's own | none | 8.8% | 14 of 68 → 18.8% |
+| ResNet50 features, 10-nearest-neighbour | the app's own | none | 29.6% | 1 of 68 → 0.0% |
+| CLIP ViT-B/32, zero-shot prompts | MIT; model card: deployed use out of scope | 168 MiB | 3.2% | 23 of 68 → 31.7% |
+| SigLIP base, prototypes | Apache-2.0 | 178 MiB | 3.2% | 3 of 68 → 9.9% |
+| TinyCLIP 40M/32, prototypes | MIT | 76 MiB | 1.3% | 6 of 68 → 5.0% |
+| TinyCLIP 8M/16, zero-shot prompts | MIT | 16 MiB | 1.1% | 35 of 68 → 43.6% |
+| **TinyCLIP 8M/16, prototypes (shipped)** | **MIT** | **16 MiB** | **1.7%** | **4 of 68 → 5.9%** |
+
+Zero-shot text prompts, the approach planned first, let 33.8% to 51.5% of the look-alike tuning photos through
+at the 1% target across the six models; comparing with image prototypes instead cut that sharply. Distance in
+the ResNet50's own features needs no extra download but turns away far more PCR-confirmed photos. TinyCLIP
+8M/16 is the only candidate inside the 25 MB budget. MobileCLIP was excluded by its licence (research use
+only). The test numbers were printed next to the tuning numbers during the study; no choice was made on them.
+
+**What it cannot do.**
+- It lets some look-alikes through: on ood-test, 2 of 7 horse manure photos, 2 of 10 wild-bird droppings, 1 of
+  8 other animals' droppings (pygmy rabbit) and 1 of 8 egg photos, as well as one of the original 12 (pigeon
+  droppings, [`input_check.json`](docs/ood/input_check.json)).
+- It compares with the training photos, so droppings photos that look different from them are turned away more
+  often: 1.7% of the PCR set against 0.8% internally, and 3.1% of PCR Coccidiosis and 2.9% of PCR Healthy
+  photos. The validation split holds only version 2 photos, so this could not show when the threshold was set.
+  Farms with other floors, litter or lighting may see more rejections; "Analyse anyway" stays available.
+- Latency per photo ([`browser_bench.json`](results/input_check/browser_bench.json)): 68.0 ms on an integrated
+  Intel GPU (WebGL), 212.5 ms on WebAssembly on the same laptop, 918.8 ms on an emulated mid-range phone
+  (WebAssembly, 4× CPU slowdown).
+
+**Parity** ([`models/PARITY.md`](models/PARITY.md#4-input-check)): on 30 fixtures (18 dataset photos, the 12
+original OOD photos), the TF.js float16 encoder matches the original PyTorch model at cosine ≥ 0.999999 with
+the same pass/fail decision on all 30; uint8 weights reached only 0.9918 and were rejected.
+
 ## Limitations and threats to validity
 
 1. **Domain shift.** 96.7% internal vs 79.5% external accuracy. The internal test set shares photographers,
@@ -298,7 +383,9 @@ maps correlate with the notebook's gradient-based Grad-CAM at **r ≥ 0.99999999
 5. **Small external NCD count.** 186 PCR-confirmed NCD photos (and 56 internal): NCD metrics are the least
    certain.
 6. **A closed set of four answers.** No "not poultry droppings" class: 8 of 12 unrelated photos got a confident
-   verdict ([`docs/ood/`](docs/ood/README.md)). No "mixed infection" class either.
+   verdict ([`docs/ood/`](docs/ood/README.md)). The [input check](#input-check) in front of it holds most such
+   photos back but lets 5.9% of look-alikes through and turns away 1.7% of PCR-confirmed droppings photos. No
+   "mixed infection" class either.
 7. **Uncalibrated probabilities** on new data (ECE 0.120 external); temperature scaling is future work.
 8. **One region, one season, phone photos.** Arusha and Kilimanjaro, Tanzania, September 2020 to February
    2021. Other breeds, litter, floors, lighting and cameras are untested.
@@ -311,13 +398,15 @@ maps correlate with the notebook's gradient-based Grad-CAM at **r ≥ 0.99999999
 | | |
 |---|---|
 | ![Landing page with the upload card, disclaimer and photo guidelines](docs/screenshots/01-landing.png) | ![Model download progress bar](docs/screenshots/02-model-loading.png) |
-| **Landing:** drop, pick, paste or photograph | **First visit:** 47 MB model with progress, then cached |
+| **Landing:** drop, pick, paste or photograph | **First visit:** both models (64 MB) with progress, then cached |
 | ![A PCR-confirmed Coccidiosis sample: Pattern consistent with Coccidiosis](docs/screenshots/03-result-coccidiosis.png) | ![A Healthy sample: No disease pattern recognised, with the PCR-set precision quoted](docs/screenshots/04-result-healthy.png) |
 | **Coccidiosis:** "Pattern consistent with", never "Diagnosis" | **Healthy:** explicitly not a clean bill of health |
 | ![A Salmonella sample](docs/screenshots/05-result-salmonella.png) | ![A Newcastle disease sample with the notifiable-disease notice](docs/screenshots/06-result-newcastle.png) |
 | **Salmonella** | **Newcastle disease:** notifiable, contact a vet promptly |
-| ![A split sample: Uncertain, no verdict shown, with the heatmap on the floor](docs/screenshots/07-result-uncertain.png) | ![Cow dung classified as Healthy at 99.5%](docs/screenshots/08-not-poultry.png) |
-| **Uncertain:** 57% vs 41%, so no verdict; the heatmap sits on the floor | **Not poultry:** cow dung (CC0) gets a confident "Healthy" |
+| ![A split sample: Uncertain, no verdict shown, with the heatmap on the floor](docs/screenshots/07-result-uncertain.png) | ![A photo of cow dung turned away by the input check, with Try another photo, Photo tips and Analyse anyway](docs/screenshots/08-not-poultry.png) |
+| **Uncertain:** 57% vs 41%, so no verdict; the heatmap sits on the floor | **Not poultry:** the input check turns cow dung (CC0) away |
+| ![The same cow dung photo after Analyse anyway: a confident Healthy, labelled Unchecked input](docs/screenshots/12-unchecked.png) | ![The input check notice in the dark theme](docs/screenshots/13-input-check-dark.png) |
+| **Analyse anyway:** still a confident "Healthy", now labelled "Unchecked input" | **Input check notice, dark theme** |
 | ![About section with both evaluation tables and confusion matrices](docs/screenshots/09-about-model.png) | ![Dark theme showing a Salmonella sample](docs/screenshots/11-dark-mode.png) |
 | **About the model:** every number read from `results/` | **Dark mode** |
 
@@ -332,6 +421,9 @@ All screenshots were captured from the production build with
   25 MB limit and clear messages.
 - **Samples:** 11 dataset photos (CC BY 4.0) from both test sets, including two confident mistakes and one
   split case; the dataset label is revealed after classification.
+- **Input check first.** A photo that does not look like poultry droppings gets a notice instead of a verdict,
+  with **Try another photo**, **Photo tips** and **Analyse anyway** (the result is then labelled "Unchecked
+  input"). See [Input check](#input-check) for how it works and its measured error rates.
 - **Responsible verdicts.** "Pattern consistent with …" for disease classes; Healthy is "No disease pattern
   recognised", with the PCR-set precision; a notifiable-disease notice whenever NCD is the top class; an
   **uncertain** state below the thresholds, labelled a usability heuristic.
@@ -339,26 +431,30 @@ All screenshots were captured from the production build with
   and an explanation of what the map does and does not mean. A note appears when a photo carries an EXIF
   rotation tag (the model, like training, reads the unrotated pixels).
 - **About the model**, rendered from the committed results: both test sets with intervals, confusion matrices,
-  calibration, run variability, the OOD check and limitations.
-- TF.js in a **Web Worker** (Comlink), **WebGL → WASM → CPU** fallback, **IndexedDB** model cache keyed by the
-  model's content hash, explicit tensor disposal (a test checks for leaks), warm-up with parallel shader
-  compilation.
+  calibration, run variability, the OOD check, the input check's error rates and limitations.
+- TF.js in a **Web Worker** (Comlink), **WebGL → WASM → CPU** fallback, both models downloaded in parallel,
+  **IndexedDB** cache keyed by each model's content hash, explicit tensor disposal (a test checks for leaks),
+  warm-up with parallel shader compilation.
 - Keyboard navigation, visible focus, an ARIA live region for results, AA contrast in both themes.
 
 ```mermaid
 flowchart LR
   subgraph Browser
-    UI["React UI<br/>(verdict, bars, CAM)"] --> BE["BrowserEngine"]
-    BE --> W["Web Worker<br/>decode → resize.ts → caffe → TF.js<br/>WebGL / WASM / CPU"]
-    W --> M[("model.json + 12 shards<br/>IndexedDB cache")]
-    W --> V["validatePrediction()"]
+    UI["React UI<br/>(input check notice, verdict, bars, CAM)"] --> BE["BrowserEngine"]
+    BE --> W["Web Worker<br/>decode → resize.ts → input check → caffe → classifier<br/>TF.js on WebGL / WASM / CPU"]
+    W --> G[("gate/: TinyCLIP image encoder<br/>4 shards, IndexedDB cache")]
+    W --> M[("model/: ResNet50 + CAM<br/>12 shards, IndexedDB cache")]
+    W --> V["validateOutput()"]
     V --> UI
   end
 ```
 
-There is no server: the page, the model and the sample photos are static files on GitHub Pages, and a photo you
-classify never leaves your device. Whatever the worker returns is checked by `validatePrediction` (four
-probabilities summing to one, four 7 × 7 class maps, the 224 × 224 image the model saw) before the UI shows it.
+There is no server: the page, both models and the sample photos are static files on GitHub Pages, and a photo
+you classify never leaves your device. The worker resizes each photo once; the input check runs on that image,
+and the classifier only if the check passes or the user chose "Analyse anyway". Whatever the worker returns is
+checked by `validateOutput` (an input check score in [-1, 1] whose decision matches the threshold, four
+probabilities summing to one, four 7 × 7 class maps, the 224 × 224 image the models saw) before the UI shows
+it.
 
 **Preprocessing parity** ([`models/PARITY.md`](models/PARITY.md)):
 
@@ -370,23 +466,30 @@ probabilities summing to one, four 7 × 7 class maps, the 224 × 224 image the m
 | Browser model input from the original JPEGs vs Python (same IDCT), Chromium, Firefox, WebKit | **bit-identical** |
 | TF.js float16 (shipped) vs Keras, same input | 18 / 18, max prob. difference **0.0017**, CAM r ≥ 0.99999 |
 | TF.js uint8 vs Keras | 17 / 18, max 0.170: **rejected** |
+| Input check, TF.js float16 (shipped) vs PyTorch, same input, 30 fixtures | cosine ≥ **0.999999**, same decision 30 / 30 |
+| Input check, TF.js uint8 vs PyTorch | cosine 0.9918: **rejected** |
 
 One step cannot be matched: training decoded JPEGs with TensorFlow's **fast** integer IDCT, and browsers use the
 accurate one. Over all 2,175 evaluation images this changes the top class on 6 internal (0.6%) and 15
 external (1.2%) photos. All 21 were close calls (top-2 margin at most 0.24) that the app already shows as
 "uncertain", and the model is no better or worse overall (external accuracy 79.5% vs 79.9%).
 
-**Lighthouse** (13.5.0, median of 3 runs, [`docs/lighthouse/summary.json`](docs/lighthouse/summary.json))
+**Lighthouse** (13.5.0, median of 3 runs, headless Chromium on the same machine and day; after:
+[`docs/lighthouse/summary.json`](docs/lighthouse/summary.json), before the input check (`main` at `9713dd6`):
+[`before_input_check.json`](docs/lighthouse/before_input_check.json))
 
-| | Performance | Accessibility | Best practices | SEO |
+| | Performance before → after | Accessibility | Best practices | SEO |
 |---|---|---|---|---|
-| Mobile, excluding the model download | **95** | 100 | 100 | 100 |
-| Desktop, excluding the model download | **100** | 100 | 100 | 100 |
-| Mobile, model downloading in the background | 66 | 100 | 100 | 100 |
-| Desktop, model downloading in the background | 100 | 100 | 100 | 100 |
+| Mobile, excluding the model download | 95 → **95** | 100 → 100 | 100 → 100 | 100 → 100 |
+| Desktop, excluding the model download | 100 → **100** | 100 → 100 | 100 → 100 | 100 → 100 |
+| Mobile, models downloading in the background | 95 → **98** | 100 → 100 | 100 → 100 | 100 → 100 |
+| Desktop, models downloading in the background | 100 → **100** | 100 → 100 | 100 → 100 | 100 → 100 |
 
-"Excluding the model download" loads the page with `?preload=0`; by default the 47 MB model starts downloading
-after the page has loaded, which costs main-thread time on a throttled phone.
+"Excluding the model download" loads the page with `?preload=0`; by default both models (47 MB classifier, 17 MB
+input check) start downloading once the page has loaded and the browser is idle. In these runs the
+"downloading" rows score like the others, which suggests the download started after Lighthouse stopped
+measuring; an earlier run (2026-10-29) scored 66 on mobile with the download. Treat those two rows as an upper
+bound.
 
 ## Reproduce the training
 
@@ -405,7 +508,7 @@ rerun gives slightly different numbers (see the run table above). The executed n
 pip install -e ".[dev]"
 python scripts/fetch_weights.py           # downloads poultry_resnet50.keras, checks its SHA-256, caches it
 python -c "from poultry_disease import Predictor; print(Predictor.from_release().predict_image('web/public/samples/f05.jpg').to_dict())"
-pytest                                     # 33 tests; parity tests run when the weights are available
+pytest                                     # 41 tests; parity tests run when the weights are available
 ```
 
 ## Run the web app locally
@@ -415,7 +518,7 @@ cd web
 npm ci
 npm run dev            # http://localhost:5173/poultry-disease-detection/
 npm test               # unit tests (Vitest)
-npm run test:parity    # TF.js vs Keras on the committed fixtures (Node, WASM)
+npm run test:parity    # TF.js vs Keras, and the input check vs PyTorch, on the committed fixtures (Node, WASM)
 npm run lint && npm run typecheck
 npm run build && npm run preview
 npx playwright install chromium firefox webkit
@@ -432,23 +535,44 @@ PARITY_MODEL_DIR=../build/tfjs/float16 npm --prefix web run test:parity
 bash scripts/convert_to_tfjs.sh --install float16
 ```
 
+**Rebuild the input check** (three venvs, as the frameworks need: the package's TensorFlow venv, a PyTorch venv
+with `transformers`, and the converter venv; each script's docstring lists its steps):
+
+```bash
+python scripts/fetch_zenodo_images.py --split val                       # 973 validation photos (gitignored)
+python scripts/fetch_zenodo_images.py --split train --per-class 150     # seeded training sample (gitignored)
+python scripts/gate_extract.py                       # TF venv: 224 x 224 images + classifier outputs per set
+python scripts/gate_study.py                         # PyTorch venv: candidate study, embeddings
+python scripts/build_input_check.py                  # PyTorch venv: prototypes, threshold, evaluation
+python scripts/build_gate_model.py export tinyclip-vit-8m-16-yfcc15m   # PyTorch venv
+python scripts/build_gate_model.py keras tinyclip-vit-8m-16-yfcc15m    # TF venv: Keras copy, checked
+bash scripts/convert_to_tfjs.sh --gate tinyclip-vit-8m-16-yfcc15m       # converter venv
+python scripts/make_gate_references.py seen          # TF venv
+python scripts/make_gate_references.py embed         # PyTorch venv
+PARITY_GATE_DIR=../build/gate/tinyclip-vit-8m-16-yfcc15m/tfjs/float16 npm --prefix web run test:parity
+```
+
 ## Repository structure
 
 ```
 ├── notebooks/        executed Colab training notebook (outputs kept)
 ├── results/          metrics, reports, figures/, gradcam/ from the run; posthoc/ analyses; parity/ reports;
+│                     input_check/ (candidate study, evaluation, browser latency);
 │                     other_runs/ (four more runs with the same configuration)
 ├── models/           class names, model config, MODEL_CARD.md, PARITY.md, checksums (weights: GitHub Release)
-├── src/poultry_disease/   installable package: preprocessing, model + CAM head, inference, verdict, weights
+├── src/poultry_disease/   installable package: preprocessing, model + CAM head, inference, verdict, weights,
+│                          input check rule (data/input_check.json)
 ├── web/              Vite + React + TypeScript app
 │   ├── public/model/     TF.js graph model (float16, 12 shards of at most 4 MiB)
+│   ├── public/gate/      input check image encoder, TinyCLIP ViT-8M/16 (float16, 4 shards, MIT notice)
 │   ├── public/samples/   11 dataset photos (1024 px, CC BY 4.0) + manifest
 │   ├── src/              UI, engine, worker, preprocessing, CAM
 │   └── tests/            unit, parity and Playwright tests + fixtures
 ├── tests/            Python tests and the 18 parity fixtures (CC BY 4.0)
 ├── scripts/          fetching, release packaging, post-hoc analyses, web model build, TF.js conversion,
-│                     references, samples, OOD evaluation
-├── docs/             PLAN.md, screenshots, ood/ (non-poultry photos with credits), Lighthouse summary
+│                     references, samples, OOD set and evaluation, input check study and build
+├── docs/             PLAN.md, screenshots, ood/ (251 non-poultry photos, credits, tune/test split),
+│                     Lighthouse summaries
 └── .github/workflows CI (Python, web) and GitHub Pages deploy
 ```
 
@@ -463,7 +587,8 @@ photos of poultry droppings. It must not be used for diagnosis, treatment, culli
 - [ ] **Multi-seed study** (deterministic ops, several seeds) to replace the best-of-five headline with a mean
 - [ ] A **combined-data run** that trains on part of the PCR set and tests on the rest
 - [ ] **Background-controlled re-capture**: all classes photographed on matched floors and litter
-- [ ] An **out-of-distribution rejection** class or detector ("not poultry droppings")
+- [x] An **input check** in front of the classifier ("not poultry droppings"), November 2026
+- [ ] Input check photos from **other farms**, to measure and reduce false rejection outside the training data
 - [ ] **Temperature scaling** on a held-out calibration split from the target domain
 - [ ] **Field validation** with local farms and a veterinarian, with laboratory confirmation
 
@@ -511,11 +636,14 @@ Evarist Maguo and Charles Munisi (Nelson Mandela African Institution of Science 
 and Elang'ata Agrovet Services), funded by the International Development Research Centre (IDRC, grant
 109187-002) and the Organization for Women in Science for the Developing World (OWSD, grant 4500406715), as
 credited on Zenodo. Thank you for publishing them openly. The non-poultry test photos are by Wikimedia Commons
-contributors, credited in [`docs/ood/`](docs/ood/README.md). Fonts are Literata and Public Sans (SIL OFL 1.1).
+contributors, credited in [`docs/ood/credits.json`](docs/ood/credits.json). The input check uses the image
+encoder of TinyCLIP (Wu et al., ICCV 2023; Microsoft, MIT licence, notice in
+[`web/public/gate/LICENSE.txt`](web/public/gate/LICENSE.txt)). Fonts are Literata and Public Sans (SIL OFL 1.1).
 
 ## License and contact
 
-Code and model weights: [MIT](LICENSE). The dataset photos in `tests/fixtures/` and `web/public/samples/` are
+Code and model weights: [MIT](LICENSE). The input check's TinyCLIP weights: MIT, Copyright (c) Microsoft
+Corporation. The dataset photos in `tests/fixtures/` and `web/public/samples/` are
 CC BY 4.0 (Machuve et al.); the photos in `docs/ood/` keep their own licenses.
 
 **Peerzada Mohammad Rabet** · GitHub [@peerzadarabet1807](https://github.com/peerzadarabet1807) ·

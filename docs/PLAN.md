@@ -72,6 +72,10 @@ shards are committed under `web/public/model/` (as in saffron), because GitHub P
 only in the browser. `backend/` (FastAPI), the Docker image, `compose.yaml`, the web app's API mode and their
 tests and CI job were removed. The Python package, its parity tests and the release weights are unchanged.
 
+**Change, 2026-11-12.** An input check (TinyCLIP ViT-8M/16 image prototypes) now runs before the classifier in
+the browser; its weights are committed under `web/public/gate/`. The classifier, its weights, its preprocessing
+and every reported metric are unchanged. See the README's Input check section.
+
 ## Risks
 
 1. **Antialiased resize parity.** TF's antialiased bilinear is a triangle-filter scale-and-translate. A

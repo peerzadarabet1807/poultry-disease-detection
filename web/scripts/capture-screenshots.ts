@@ -99,10 +99,32 @@ async function main() {
       await showResult(page);
       await shot(page, name);
     }
-    // a photo that is not poultry droppings (CC0, see docs/ood/README.md): still a confident answer
+    // a photo that is not poultry droppings (CC0, see docs/ood/README.md): the input check turns it away
     await page.getByTestId('file-input').setInputFiles(join(ROOT, 'docs', 'ood', 'cow_dung.jpg'));
-    await showResult(page);
+    await page.getByTestId('input-check-notice').waitFor({ timeout: 120_000 });
+    await settle(page, 800);
+    await scrollToId(page, 'result');
+    await settle(page, 400);
     await shot(page, '08-not-poultry.png');
+    // "Analyse anyway": the classifier's (confident, meaningless) answer, labelled as unchecked
+    await page.getByTestId('analyse-anyway').click();
+    await showResult(page);
+    await shot(page, '12-unchecked.png');
+    await ctx.close();
+  }
+
+  // 13: the input check notice, dark
+  {
+    const ctx = await browser.newContext({ ...DESKTOP, colorScheme: 'dark' });
+    const page = await ctx.newPage();
+    await page.goto(BASE);
+    await modelReady(page);
+    await page.getByTestId('file-input').setInputFiles(join(ROOT, 'docs', 'ood', 'cow_dung.jpg'));
+    await page.getByTestId('input-check-notice').waitFor({ timeout: 120_000 });
+    await settle(page, 800);
+    await scrollToId(page, 'result');
+    await settle(page, 400);
+    await shot(page, '13-input-check-dark.png');
     await ctx.close();
   }
 
@@ -110,7 +132,7 @@ async function main() {
   {
     const ctx = await browser.newContext({ ...DESKTOP, colorScheme: 'light' });
     // shards download in parallel; stagger them so the progress bar moves visibly
-    await ctx.route('**/model/group1-shard*', async (route) => {
+    await ctx.route(/\/(model|gate)\/group1-shard/, async (route) => {
       const n = Number(/shard(\d+)of/.exec(route.request().url())?.[1] ?? 1);
       await new Promise((r) => setTimeout(r, 700 * n));
       await route.continue();

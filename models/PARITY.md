@@ -1,7 +1,7 @@
 # Parity report
 
 One preprocessing contract runs in two places outside the training notebook: the Python package and the
-browser. This report shows that each one reproduces the notebook, and where it cannot, by how much.
+browser. Section 4 covers the input check's image encoder, which runs on the same preprocessed image. This report shows that each one reproduces the notebook, and where it cannot, by how much.
 Every number below is read from a file in [`results/parity/`](../results/parity), written by a committed
 script or test. These are engineering checks, not model evaluations.
 
@@ -94,6 +94,36 @@ not make the model systematically better or worse. Every number in the README an
 recorded by the notebook. A borderline example: the 1024 px copy of f18 in the web app's samples (Healthy, PCR set) is NCD 0.517 / Healthy 0.457 on
 the training decode (the Python package) and Healthy 0.575 / NCD 0.405 on the browser decode; both show "uncertain".
 
+## 4. Input check
+
+The input check's image encoder (TinyCLIP ViT-8M/16, see the README's [Input check](../README.md#input-check))
+runs in the browser as a TF.js graph model. Its reference is the original PyTorch model with the Hugging Face
+weights. Two steps, each checked:
+
+**Keras copy.** The vision tower was rebuilt in Keras with the original weights (exact GELU) and exported as a
+SavedModel for the converter ([`build_gate_model.py`](../scripts/build_gate_model.py)). On the 11 sample photos
+the Keras embeddings match PyTorch at minimum cosine 0.99999994, and the SavedModel matches Keras exactly
+([`gate_keras_tinyclip-vit-8m-16-yfcc15m.json`](../results/parity/gate_keras_tinyclip-vit-8m-16-yfcc15m.json)).
+
+**TF.js vs PyTorch** ([`web/tests/parity.gate.node.test.ts`](../web/tests/parity.gate.node.test.ts), Node, WASM
+backend). Fixtures: the 18 dataset photos above and the 12 original OOD photos in
+[`docs/ood/`](../docs/ood/README.md); references from
+[`make_gate_references.py`](../scripts/make_gate_references.py). "Conversion" feeds TF.js exactly the
+224 x 224 image Python made; "end to end" starts from the original JPEG (sharp decode, TypeScript resize).
+Required: conversion cosine at least 0.999 and the same pass/fail decision on every fixture in both paths.
+
+| TF.js weights | Size | Conversion: min cosine | Max score difference | Same decision (conversion / end to end) | Shipped |
+|---|---|---|---|---|---|
+| **float16** ([`gate_float16.json`](../results/parity/gate_float16.json)) | 16.9 MB, 4 shards | **0.999999** | 1.6e-4 | **30 / 30**, **30 / 30** | yes |
+| uint8 ([`gate_uint8.json`](../results/parity/gate_uint8.json)) | 8.6 MB, 2 shards | 0.9918 | 0.015 | 30 / 30, 30 / 30 | no: cosine below 0.999 |
+
+End to end, 27 of 30 fixtures decode to exactly the Python image. Three OOD JPEGs (`wood_shavings`,
+`pigeon_droppings`, `oat_porridge`) decode to slightly different pixels in sharp's libjpeg-turbo than in
+TensorFlow's, so their end-to-end cosine is lower (minimum 0.9959) while the decision stays the same. Browsers
+ship their own JPEG decoders, so this kind of difference is expected in the app too; the closest fixture is
+0.018 from the threshold. No tensors leak. Reconverting the SavedModel gives byte-identical weight shards; the
+`model.json` differs only in the order of attribute keys.
+
 ## Reproduce
 
 ```bash
@@ -107,4 +137,10 @@ python scripts/build_web_model.py && bash scripts/convert_to_tfjs.sh
 python scripts/make_web_references.py
 PARITY_MODEL_DIR=../build/tfjs/float16 npm --prefix web run test:parity
 PARITY_MODEL_DIR=../build/tfjs/uint8 npm --prefix web run test:parity
+# input check (see the README for the venvs)
+python scripts/build_gate_model.py export tinyclip-vit-8m-16-yfcc15m && python scripts/build_gate_model.py keras tinyclip-vit-8m-16-yfcc15m
+bash scripts/convert_to_tfjs.sh --gate tinyclip-vit-8m-16-yfcc15m
+python scripts/make_gate_references.py seen && python scripts/make_gate_references.py embed
+PARITY_GATE_DIR=../build/gate/tinyclip-vit-8m-16-yfcc15m/tfjs/float16 npm --prefix web run test:parity
+PARITY_GATE_DIR=../build/gate/tinyclip-vit-8m-16-yfcc15m/tfjs/uint8 npm --prefix web run test:parity
 ```
