@@ -247,6 +247,18 @@ test.describe('poultry droppings classifier', () => {
     await expect(page.getByRole('heading', { name: /^Result/ })).toBeFocused();
   });
 
+  test('a failed model download shows the error and Retry works', async ({ page }) => {
+    // one classifier shard fails while the input check's model keeps downloading
+    await page.route(/\/model\/group1-shard3of/, (route) => route.abort('connectionreset'));
+    await page.goto('./');
+    await expect(page.getByRole('button', { name: /Retry/ })).toBeVisible({ timeout: 180_000 });
+    await page.waitForTimeout(3000); // a late progress report must not replace the error
+    await expect(page.getByRole('button', { name: /Retry/ })).toBeVisible();
+    await page.unroute(/\/model\/group1-shard3of/);
+    await page.getByRole('button', { name: /Retry/ }).click();
+    await waitForModel(page);
+  });
+
   test('does not leak tensors', async ({ page }) => {
     await page.goto('./');
     await waitForModel(page);

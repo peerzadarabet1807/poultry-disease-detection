@@ -125,8 +125,11 @@ export function useClassifier() {
   }, []);
 
   useEffect(() => {
+    // never let a late progress report replace an error (the user needs its Retry button)
     const onProgress = (p: LoadProgress) =>
-      setModel({ status: 'loading', phase: p.phase, fraction: p.fraction });
+      setModel((m) =>
+        m.status === 'error' ? m : { status: 'loading', phase: p.phase, fraction: p.fraction },
+      );
     progressListeners.add(onProgress);
     // The browser models (classifier and input check) are about 64 MB together: start downloading once the page
     // has loaded and painted, so fonts, styles and the app are not competing with them. Classifying earlier
