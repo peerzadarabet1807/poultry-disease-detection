@@ -2,7 +2,7 @@
 import { CLASS_IDS } from '../lib/classes';
 import { CAM_SIZE } from '../lib/cam';
 import { MODEL_SIZE } from '../lib/resize';
-import { EngineError, type Prediction } from './types';
+import { EngineError, type EngineOutput, type InputCheckResult, type Prediction } from './types';
 
 const N = CLASS_IDS.length;
 const CAM_CELLS = CAM_SIZE * CAM_SIZE;
@@ -29,4 +29,22 @@ export function validatePrediction(p: Prediction): Prediction {
   if (typeof p.exactPreprocessing !== 'boolean') fail('preprocessing flag');
   if (!(p.inferenceMs >= 0)) fail('timing');
   return p;
+}
+
+export function validateInputCheck(c: InputCheckResult): InputCheckResult {
+  if (typeof c.score !== 'number' || !Number.isFinite(c.score) || c.score < -1.0001 || c.score > 1.0001) {
+    fail('input check score outside [-1, 1]');
+  }
+  if (typeof c.threshold !== 'number' || !Number.isFinite(c.threshold)) fail('input check threshold');
+  if (c.passed !== c.score >= c.threshold) fail('input check decision does not match its score');
+  if (typeof c.version !== 'string' || !c.version) fail('input check version');
+  return c;
+}
+
+export function validateOutput(o: EngineOutput): EngineOutput {
+  validateInputCheck(o.inputCheck);
+  if (!(o.inputCheckMs >= 0)) fail('input check timing');
+  if (!(o.seen instanceof Uint8ClampedArray) || o.seen.length !== SEEN_BYTES) fail('model input image size');
+  if (o.prediction !== null) validatePrediction(o.prediction);
+  return o;
 }

@@ -3,8 +3,8 @@ import { CLASS_IDS } from '../lib/classes';
 import { extractClassMap, reluMaxNormalize } from '../lib/cam';
 import { ClassifierClient } from '../worker/client';
 import type { BackendName } from '../worker/types';
-import { validatePrediction } from './validate';
-import type { EngineInfo, Prediction, ProgressCallback } from './types';
+import { validateOutput } from './validate';
+import type { EngineInfo, EngineOutput, ProgressCallback } from './types';
 
 const BACKEND_LABEL: Record<BackendName, string> = {
   webgl: 'WebGL (GPU)',
@@ -27,15 +27,24 @@ export class BrowserEngine {
     };
   }
 
-  /** Classify a decoded photo; the engine takes ownership of the bitmap and closes it. */
-  async classify(bitmap: ImageBitmap): Promise<Prediction> {
-    const raw = await this.client.classify(bitmap);
-    return validatePrediction({
-      probabilities: raw.probabilities,
-      camMaps: CLASS_IDS.map((_, i) => reluMaxNormalize(extractClassMap(raw.cam, i, CLASS_IDS.length))),
+  /**
+   * Check, then classify, a decoded photo; the engine takes ownership of the bitmap and closes it. The
+   * classifier runs only when the input check passes, or when `force` is set ("Analyse anyway").
+   */
+  async classify(bitmap: ImageBitmap, force = false): Promise<EngineOutput> {
+    const raw = await this.client.classify(bitmap, { force });
+    const p = raw.prediction;
+    return validateOutput({
+      inputCheck: raw.inputCheck,
+      inputCheckMs: raw.inputCheckMs,
       seen: raw.seen,
-      exactPreprocessing: raw.exact,
-      inferenceMs: raw.inferenceMs,
+      prediction: p && {
+        probabilities: p.probabilities,
+        camMaps: CLASS_IDS.map((_, i) => reluMaxNormalize(extractClassMap(p.cam, i, CLASS_IDS.length))),
+        seen: raw.seen,
+        exactPreprocessing: raw.exact,
+        inferenceMs: p.inferenceMs,
+      },
     });
   }
 

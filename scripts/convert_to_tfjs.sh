@@ -5,7 +5,10 @@
 # (scripts/make_reference_predictions.py + web/tests/parity.node.test.ts) decides which one ships; copy it with
 #   scripts/convert_to_tfjs.sh --install uint8     (or float16)
 #
-# Usage: scripts/convert_to_tfjs.sh [--install float16|uint8]
+# The input check's image encoder (scripts/build_gate_model.py) is converted the same way with
+#   scripts/convert_to_tfjs.sh --gate <name>            -> build/gate/<name>/tfjs/{float16,uint8}
+#
+# Usage: scripts/convert_to_tfjs.sh [--install float16|uint8] [--gate <name>]
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -14,6 +17,13 @@ SAVED_MODEL="$ROOT/build/web_saved_model"
 OUT="$ROOT/build/tfjs"
 WEB_MODEL="$ROOT/web/public/model"
 SHARD_BYTES=4194304   # 4 MiB shards
+
+if [[ "${1:-}" == "--gate" ]]; then
+  gate="${2:?usage: --gate <name>}"
+  SAVED_MODEL="$ROOT/build/gate/$gate/saved_model"
+  OUT="$ROOT/build/gate/$gate/tfjs"
+  set --
+fi
 
 if [[ "${1:-}" == "--install" ]]; then
   variant="${2:?usage: --install float16|uint8}"
@@ -35,7 +45,7 @@ if [[ ! -x "$PY" ]]; then
   "$PY" -m pip install -q --no-deps tensorflowjs==4.22.0
 fi
 
-[[ -f "$SAVED_MODEL/saved_model.pb" ]] || { echo "Run python scripts/build_web_model.py first" >&2; exit 1; }
+[[ -f "$SAVED_MODEL/saved_model.pb" ]] || { echo "No SavedModel at $SAVED_MODEL (run build_web_model.py or build_gate_model.py)" >&2; exit 1; }
 
 export PYTHONPATH="$ROOT/scripts/tfjs_shims${PYTHONPATH:+:$PYTHONPATH}"
 export TF_CPP_MIN_LOG_LEVEL=2

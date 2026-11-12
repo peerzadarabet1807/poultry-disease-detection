@@ -1,9 +1,9 @@
 {
  "lighthouse": "13.5.0",
- "date": "2026-10-29",
+ "date": "2026-11-12",
  "browser": "Chromium (Playwright build), headless",
  "server": "vite preview of the production build",
- "note": "Median of 3 runs. excludingModel = page loaded with ?preload=0 (the 47 MB model is not fetched until the first classification; Lighthouse cannot block a Web Worker's requests). withModel = default behaviour, the model downloads in the background after page load.",
+ "note": "Median of 3 runs. excludingModel = page loaded with ?preload=0 (the models, a 47 MB classifier and a 17 MB input check, are not fetched until the first classification; Lighthouse cannot block a Web Worker's requests). withModel = default behaviour, both models download in the background after page load.",
  "results": {
   "excludingModel_mobile": {
    "median": {
@@ -11,22 +11,12 @@
     "accessibility": 100,
     "bestPractices": 100,
     "seo": 100,
-    "fcp_s": 1.61,
-    "lcp_s": 2.88,
+    "fcp_s": 1.58,
+    "lcp_s": 2.78,
     "tbt_ms": 0,
     "cls": 0.007
    },
    "runs": [
-    {
-     "performance": 95,
-     "accessibility": 100,
-     "bestPractices": 100,
-     "seo": 100,
-     "fcp_s": 1.61,
-     "lcp_s": 2.88,
-     "tbt_ms": 0,
-     "cls": 0
-    },
     {
      "performance": 95,
      "accessibility": 100,
@@ -42,9 +32,19 @@
      "accessibility": 100,
      "bestPractices": 100,
      "seo": 100,
-     "fcp_s": 1.62,
-     "lcp_s": 2.89,
-     "tbt_ms": 9,
+     "fcp_s": 1.58,
+     "lcp_s": 2.78,
+     "tbt_ms": 0,
+     "cls": 0.007
+    },
+    {
+     "performance": 98,
+     "accessibility": 100,
+     "bestPractices": 100,
+     "seo": 100,
+     "fcp_s": 1.58,
+     "lcp_s": 2.26,
+     "tbt_ms": 0,
      "cls": 0.007
     }
    ]
@@ -55,10 +55,10 @@
     "accessibility": 100,
     "bestPractices": 100,
     "seo": 100,
-    "fcp_s": 0.39,
-    "lcp_s": 0.58,
+    "fcp_s": 0.38,
+    "lcp_s": 0.49,
     "tbt_ms": 0,
-    "cls": 0
+    "cls": 0.003
    },
    "runs": [
     {
@@ -66,18 +66,18 @@
      "accessibility": 100,
      "bestPractices": 100,
      "seo": 100,
-     "fcp_s": 0.39,
-     "lcp_s": 0.55,
+     "fcp_s": 0.38,
+     "lcp_s": 0.49,
      "tbt_ms": 0,
-     "cls": 0
+     "cls": 0.003
     },
     {
      "performance": 100,
      "accessibility": 100,
      "bestPractices": 100,
      "seo": 100,
-     "fcp_s": 0.4,
-     "lcp_s": 0.59,
+     "fcp_s": 0.38,
+     "lcp_s": 0.49,
      "tbt_ms": 0,
      "cls": 0.003
     },
@@ -87,53 +87,53 @@
      "bestPractices": 100,
      "seo": 100,
      "fcp_s": 0.39,
-     "lcp_s": 0.58,
+     "lcp_s": 0.59,
      "tbt_ms": 0,
-     "cls": 0
+     "cls": 0.003
     }
    ]
   },
   "withModel_mobile": {
    "median": {
-    "performance": 66,
+    "performance": 98,
     "accessibility": 100,
     "bestPractices": 100,
     "seo": 100,
-    "fcp_s": 1.68,
-    "lcp_s": 2.96,
-    "tbt_ms": 2107,
-    "cls": 0
+    "fcp_s": 1.58,
+    "lcp_s": 2.26,
+    "tbt_ms": 0,
+    "cls": 0.007
    },
    "runs": [
     {
-     "performance": 65,
+     "performance": 98,
      "accessibility": 100,
      "bestPractices": 100,
      "seo": 100,
-     "fcp_s": 1.68,
-     "lcp_s": 2.96,
-     "tbt_ms": 2915,
+     "fcp_s": 1.58,
+     "lcp_s": 2.26,
+     "tbt_ms": 0,
      "cls": 0.007
     },
     {
-     "performance": 71,
+     "performance": 98,
      "accessibility": 100,
      "bestPractices": 100,
      "seo": 100,
-     "fcp_s": 1.66,
+     "fcp_s": 1.58,
      "lcp_s": 2.26,
-     "tbt_ms": 1893,
-     "cls": 0
+     "tbt_ms": 0,
+     "cls": 0.007
     },
     {
-     "performance": 66,
+     "performance": 95,
      "accessibility": 100,
      "bestPractices": 100,
      "seo": 100,
-     "fcp_s": 1.69,
-     "lcp_s": 2.98,
-     "tbt_ms": 2107,
-     "cls": 0
+     "fcp_s": 1.58,
+     "lcp_s": 2.86,
+     "tbt_ms": 38,
+     "cls": 0.007
     }
    ]
   },
@@ -143,9 +143,9 @@
     "accessibility": 100,
     "bestPractices": 100,
     "seo": 100,
-    "fcp_s": 0.42,
-    "lcp_s": 0.6,
-    "tbt_ms": 52,
+    "fcp_s": 0.38,
+    "lcp_s": 0.59,
+    "tbt_ms": 0,
     "cls": 0.003
    },
    "runs": [
@@ -154,19 +154,9 @@
      "accessibility": 100,
      "bestPractices": 100,
      "seo": 100,
-     "fcp_s": 0.42,
-     "lcp_s": 0.5,
-     "tbt_ms": 52,
-     "cls": 0.003
-    },
-    {
-     "performance": 81,
-     "accessibility": 100,
-     "bestPractices": 100,
-     "seo": 100,
-     "fcp_s": 0.42,
-     "lcp_s": 0.6,
-     "tbt_ms": 434,
+     "fcp_s": 0.38,
+     "lcp_s": 0.49,
+     "tbt_ms": 0,
      "cls": 0.003
     },
     {
@@ -174,9 +164,19 @@
      "accessibility": 100,
      "bestPractices": 100,
      "seo": 100,
-     "fcp_s": 0.42,
-     "lcp_s": 0.6,
-     "tbt_ms": 42,
+     "fcp_s": 0.38,
+     "lcp_s": 0.59,
+     "tbt_ms": 0,
+     "cls": 0.003
+    },
+    {
+     "performance": 100,
+     "accessibility": 100,
+     "bestPractices": 100,
+     "seo": 100,
+     "fcp_s": 0.38,
+     "lcp_s": 0.59,
+     "tbt_ms": 0,
      "cls": 0.003
     }
    ]

@@ -3,9 +3,9 @@
 //   npm run build && npm run preview     # in one terminal
 //   node scripts/lighthouse.mjs          # in another
 //
-// excludingModel: the page with ?preload=0, so the 47 MB model is not fetched until the first classification
-// (Lighthouse cannot block a Web Worker's requests). withModel: default behaviour, the model downloads in the
-// background after page load.
+// excludingModel: the page with ?preload=0, so the models (47 MB classifier, 17 MB input check) are not fetched
+// until the first classification (Lighthouse cannot block a Web Worker's requests). withModel: default
+// behaviour, both models download in the background after page load.
 import { execFileSync } from 'node:child_process';
 import { mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
@@ -84,9 +84,9 @@ const summary = {
   browser: 'Chromium (Playwright build), headless',
   server: 'vite preview of the production build',
   note:
-    'Median of 3 runs. excludingModel = page loaded with ?preload=0 (the 47 MB model is not fetched until the ' +
-    "first classification; Lighthouse cannot block a Web Worker's requests). withModel = default behaviour, " +
-    'the model downloads in the background after page load.',
+    'Median of 3 runs. excludingModel = page loaded with ?preload=0 (the models, a 47 MB classifier and a ' +
+    "17 MB input check, are not fetched until the first classification; Lighthouse cannot block a Web Worker's " +
+    'requests). withModel = default behaviour, both models download in the background after page load.',
   results,
 };
 writeFileSync(join(OUT, 'summary.json'), JSON.stringify(summary, null, 1) + '\n');

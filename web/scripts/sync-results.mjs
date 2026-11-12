@@ -18,6 +18,8 @@ const files = [
   ['results/posthoc/external_confusions.json', 'external_confusions.json'],
   ['results/parity/tfjs_float16.json', 'tfjs_parity.json'],
   ['docs/ood/predictions.json', 'ood.json'],
+  ['src/poultry_disease/data/input_check.json', 'input_check.json'],
+  ['results/input_check/summary.json', 'input_check_summary.json'],
 ];
 
 mkdirSync(data, { recursive: true });

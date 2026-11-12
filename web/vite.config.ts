@@ -7,25 +7,34 @@ import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 
 const MODEL_DIR = join(__dirname, 'public', 'model');
-const modelFiles = () => (existsSync(MODEL_DIR) ? readdirSync(MODEL_DIR).sort() : []);
+const GATE_DIR = join(__dirname, 'public', 'gate');
+const modelFiles = (dir: string) =>
+  existsSync(dir)
+    ? readdirSync(dir)
+        .filter((f) => f === 'model.json' || f.endsWith('.bin'))
+        .sort()
+    : [];
 
-/** Content hash of the shipped TF.js model: the IndexedDB cache key, so a new model invalidates old caches. */
-function modelVersion(): string {
+/** Content hash of a shipped TF.js model: the IndexedDB cache key, so a new model invalidates old caches. */
+function modelVersion(dir: string): string {
   const hash = createHash('sha256');
-  for (const file of modelFiles()) hash.update(file).update(readFileSync(join(MODEL_DIR, file)));
+  for (const file of modelFiles(dir)) hash.update(file).update(readFileSync(join(dir, file)));
   return hash.digest('hex').slice(0, 12);
 }
 
-function modelBytes(): number {
-  return modelFiles().reduce((n, f) => n + statSync(join(MODEL_DIR, f)).size, 0);
+function modelBytes(dir: string): number {
+  return modelFiles(dir).reduce((n, f) => n + statSync(join(dir, f)).size, 0);
 }
 
 export default defineConfig({
   base: '/poultry-disease-detection/',
   plugins: [react(), tailwindcss()],
   define: {
-    __MODEL_VERSION__: JSON.stringify(modelVersion()),
-    __MODEL_BYTES__: JSON.stringify(modelBytes()),
+    __MODEL_VERSION__: JSON.stringify(modelVersion(MODEL_DIR)),
+    __MODEL_BYTES__: JSON.stringify(modelBytes(MODEL_DIR)),
+    // the input check's image encoder (TinyCLIP ViT-8M/16), downloaded in parallel with the classifier
+    __GATE_VERSION__: JSON.stringify(modelVersion(GATE_DIR)),
+    __GATE_BYTES__: JSON.stringify(modelBytes(GATE_DIR)),
   },
   worker: { format: 'es' },
   build: {

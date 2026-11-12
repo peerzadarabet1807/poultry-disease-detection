@@ -1,0 +1,2568 @@
+{
+  "description": "Photos chosen for the out-of-distribution set from the candidates of scripts/build_ood_set.py --discover, after looking at every candidate. Rule for near categories: the subject fills a large part of the frame, at most one photo per near-duplicate series, no people as the main subject. Far categories: any clear photo of the category. Every skipped candidate has a reason code.",
+  "reason_codes": {
+    "dup": "near-duplicate of a chosen photo or of another photo in the same series",
+    "subject": "the category's subject is small, partly hidden or not the main subject",
+    "other": "does not show this category",
+    "art": "drawing, print, painting, diagram or composite",
+    "people": "people are the main subject",
+    "animal": "an animal is the main subject"
+  },
+  "categories": {
+    "cow_dung": {
+      "titles": [
+        "Yellow dung fly on a cow dung (DSC 4468).jpg",
+        "Cow Dung Heap.jpg",
+        "Cow dung(BOLOKO JWA DIKGOMO).jpg",
+        "Storage of cow-dung cakes in Punjab.jpg",
+        "Drying Cow Dung for Fuel (5525872363).jpg",
+        "Smouldering cow dung cake sample.jpg",
+        "Man drying cow dung in Varanasi.jpg",
+        "Cow dung of Salem.jpg",
+        "Cow dung during Gobardhan Pujā 08.jpg",
+        "COW DUNG MANURE.jpg",
+        "Cow dung patty traditional fuel in India.jpg",
+        "A dried cake of cow-dung, used for fuel (எருவறட்டி).jpg"
+      ],
+      "skipped": [
+        {
+          "title": "Cow dung stick.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Cow dung transporting.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Cow dung dry 02.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Cow dung dry 03.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Cow dung dry 04.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Cow dung dry 01.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "20191203 Cow dung fuel in the center of Delhi 1144 6529 DxO.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Cow dung cake.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Purchase of cow dung.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "20191213 Cow dung fuel, Himtasar 1143 8405.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Cow dung during Gobardhan Pujā 04.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Cow dung during Gobardhan Pujā 02.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Cow dung during Gobardhan Pujā 05.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Cow dung during Gobardhan Pujā 03.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Cow dung during Gobardhan Pujā 06.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Cow dung during Gobardhan Pujā 01.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Cow dung during Gobardhan Pujā 07.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Cow dung flower pot.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Cow Dung Fuel Vendor, Railpar, Asansol.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Cow dung transport in India.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Cow dung cakes Bangladesh 2010.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Village woman collecting cow dung to make cow dung cake for her cooking fuel.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Yellow dung fly on a cow dung, square (DSC 4468).jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Cow dung patties (2715829461).jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Drying Cow Dung (27925780196).jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Dung cakes.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "India - Cow-Dung Fuel for Sale (9239416114).jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Cow dung cakes and heap set out for drying.JPG",
+          "reason": "subject"
+        }
+      ]
+    },
+    "horse_manure": {
+      "titles": [
+        "Horse Manure and Hay Detritus.jpg",
+        "Horse manure J1.JPG",
+        "Pile of manure on a field.jpg",
+        "Manure (DFdB).JPG",
+        "Paardenmest broeiend (Horse manure).jpg",
+        "Manure 0821.jpg",
+        "Manure from a horse.jpg",
+        "Paardenstalmest Horse manure.jpg",
+        "Pferdeapfel 01 ies.jpg",
+        "Manure 11.jpg",
+        "Manure 07.jpg"
+      ],
+      "skipped": [
+        {
+          "title": "Hestemøj.jpg",
+          "reason": "animal"
+        },
+        {
+          "title": "Free horse manure on Heckdyke Lane - geograph.org.uk - 4680603.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "PSM V81 D049 Horse manure piles in the suburbs.png",
+          "reason": "art"
+        },
+        {
+          "title": "Lambersart 143 chemin des muchaux.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Antero ja Oiva Yli-Vakkuri mättävät lantaa talikoilla kärryihin Kauhajoella 1937.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Manure spreading, Cavanacaw - geograph.org.uk - 1111969.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Horse Manure^ - geograph.org.uk - 1935521.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "John Deere Horse Drawn Manure Spreader Canton Michigan.JPG",
+          "reason": "other"
+        },
+        {
+          "title": "Manure preparation.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Manure Spreader.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Free horse manure - geograph.org.uk - 1229638.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Experiments in the destruction of fly larvae in horse manure BHL41830038.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Free horse manure^ - geograph.org.uk - 493126.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Experiments in the destruction of fly larvae in horse manure BHL41830039.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Horse manure sale sign at Gatebeck, Cumbria, England.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Bags of horse manure - geograph.org.uk - 757341.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Fungi growing on horse manure - geograph.org.uk - 7278217.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Noe wooden liquid manure tanker.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Horse Manure, £1 a bag - geograph.org.uk - 5762762.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Land Preparation from Cow Dung (Manure).jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Horse manure, Lady's Wood - geograph.org.uk - 7242801.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Free horse manure in Goodrich - geograph.org.uk - 3848345.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "The Samajh NGO Green Gold Collection Day 2021 in New Delhi.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Old Trailer Full of Horse Manure - geograph.org.uk - 6406987.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Horse manure for sale on the A 1101 - geograph.org.uk - 4493789.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Free horse manure in Down Ampney - geograph.org.uk - 2499784.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Wittenheim - tas de fumier dans un champs.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Manure 02.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Free Horse Manure Offer Dexter Michigan.JPG",
+          "reason": "subject"
+        }
+      ]
+    },
+    "dog_feces": {
+      "titles": [
+        "Dog Waste Feces (Poop) Bags filled with poop.jpg",
+        "Dog feces J1.jpg",
+        "Dog feces in grass.JPG",
+        "Feces de can (dog).jpg",
+        "Feces of a dog.JPG",
+        "Dog feces on the streets of Nesher 01.jpg",
+        "Dog feces on the streets of Nesher 03.jpg (4).jpg",
+        "Dog feces on the streets of Givat Nesher (1).jpg",
+        "Dog feces on the streets of Givat Nesher (3).jpg",
+        "Dog feces on the streets of Givat Nesher (4).jpg",
+        "Łajno końskie 400.jpg",
+        "Dog excrement on the street in detail.jpg",
+        "Dog excrement under feet.jpg",
+        "Dog ball poo.jpg"
+      ],
+      "skipped": [
+        {
+          "title": "Dog feces bin.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Dog feces on the streets of Givat Nesher (5).jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Dog feces container, Koltsovo 03.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Dog feces on the streets of Nesher 02.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Hondenpoepcontainer 03.JPG",
+          "reason": "other"
+        },
+        {
+          "title": "Dog feces on the streets of Givat Nesher (2).jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Dog feces on the streets of Nesher 03.jpg (2).jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Dog feces on the streets of Nesher 03.jpg (5).jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Dog feces on the streets of Nesher 03.jpg (3).jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Hintertux - dog feces container.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Dog feces on the streets of Nesher 03.jpg (1).jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Dog feces container in Budapest district XVI.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "HundehaufenInFeuerbach.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Dog feces remove.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Feces 4.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Biala-Podlaska-dog-feces-container-180827.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Dog feces container by Zhongli District Office 20161126.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Feces 1.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Feces 2.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Dog feces container - trail.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Feces. 3.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "OIC mount lawley forrest park dog dumpster.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Dog feces container, Koltsovo 02.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Dog feces container, Koltsovo 01.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Dog waste only.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Dog Waste Only.jpg",
+          "reason": "other"
+        }
+      ]
+    },
+    "soil_mud": {
+      "titles": [
+        "Cracks on dry ground, Dried muds.jpg",
+        "Dried mud creeks on the shores of the Wash - geograph.org.uk - 10669.jpg",
+        "Mud, glorious mud - geograph.org.uk - 631191.jpg",
+        "Midwinter farmland, mud and ice - geograph.org.uk - 1102320.jpg",
+        "Mud With Fossil Fragments- Harding Co SD.JPG",
+        "Mud paint pots thermal.jpg",
+        "Dried mud - geograph.org.uk - 599428.jpg",
+        "Fertile mud - geograph.org.uk - 947108.jpg",
+        "Butterflies Mud-Puddling on Sandy Shore.jpg",
+        "Muddy Football Ground in Dumurjala.jpg",
+        "GROUND FORMATION AT THE LESLIE SALT PONDS - NARA - 544682.jpg",
+        "Ponies in a mud bath - geograph.org.uk - 686488.jpg"
+      ],
+      "skipped": [
+        {
+          "title": "Earth mud ground by lake.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Bison near Mud Volcano (8284365107).jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Mud art with raw wet mud.JPG",
+          "reason": "other"
+        },
+        {
+          "title": "Mud, glorious mud - geograph.org.uk - 603358.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Surface Of Ground, Mud Sill Plan - NARA - 116764321.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Young women ready the plant marsh grass in mud ground by river.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Sea of mud, Cereals 2010 - geograph.org.uk - 1908064.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Wet ground on Elland FP80 (E5), Greetland - geograph.org.uk - 4512858.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "M1 on mud course.JPG",
+          "reason": "other"
+        },
+        {
+          "title": "Boats grounded in the mud between Albert Bridge and Battersea Bridge - geograph.org.uk - 2099058.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Bestival 2008 mud 2.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Blue Mud Steam Vent (ae174167-421e-44b2-944c-4bc3e893a94b).jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "TAM Boeing 777-300ER; PT-MUD@FRA;13.08.2012 674gt (7811431996).jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Bestival 2008 mud 3.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Mud Test Area 20121013.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Catopsilia pomona (yellow) and Graphium doson (black and blue) butterflies mud-puddling - 20100616.jpg",
+          "reason": "animal"
+        },
+        {
+          "title": "Mud ahead^ - geograph.org.uk - 694461.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Mud Brick Making.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Chandragup I Mud Volcano.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Mud Run 121016-M-IQ750-280.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Ground Penetrating Radar (GPR) is a popular technique that is used in archeology to identiy areas of interest and potential (dcf1debf-6d1d-4557-a61f-a965091ed8a6).JPG",
+          "reason": "people"
+        },
+        {
+          "title": "Furnarius rufus carrying mud in Argentina.png",
+          "reason": "animal"
+        },
+        {
+          "title": "Mud race 121027-M-XO797-186.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Mud flats at Longfield - geograph.org.uk - 515865.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Mud race 121027-M-XO797-260.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "THE MUD PEOPLE FESTIVAL IN NUEVA ECIJA.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Springboks and Wallabies in the mud, Sydney, 1937..jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Geology mud area mud lake.jpg",
+          "reason": "subject"
+        }
+      ]
+    },
+    "eggs": {
+      "titles": [
+        "Trays of eggs.jpg",
+        "Egg trays (Landmarks; 2023-08-12) E911a 08.jpg",
+        "An egg carton.jpg",
+        "Empty cardboard egg crate.jpg",
+        "Chicken eggs in tray.jpg",
+        "Standard Egg Template.jpg",
+        "Baki telur bebek asin.jpg",
+        "White eggs crate.jpg",
+        "Telur bebek asin baki.jpg",
+        "Eggs 1.jpg",
+        "Chicken eggs from Hong Kong.jpg",
+        "পুষ্টিকর খাদ্য ডিম.jpg"
+      ],
+      "skipped": [
+        {
+          "title": "Egg trays (Landmarks; 2023-08-12) E911a 09.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Egg trays (Landmarks; 2023-08-12) E911a 07.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Egg tart aluminum foil tray fragments.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Egg-trays (7156992982).jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Tray of eggs 4.50.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Egg rolls on a serving tray.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Egg toast cups with parsley pepper and and bacon on tray (17098582202).jpg",
+          "reason": "other"
+        },
+        {
+          "title": "50x Egg Trays and new book (16467064807).jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Fresh eggs carton and paper egg tray.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "A typical morning's egg tray of moths (35169964934).jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Tray of Ugandan cuisine.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "GroceryStoreEggs.JPG",
+          "reason": "subject"
+        },
+        {
+          "title": "Ennis NFH spawning tray 1 December 2021.png",
+          "reason": "other"
+        },
+        {
+          "title": "Scrambled egg in a tray.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "HK Food Hot n Fresh Egg Tart.JPG",
+          "reason": "other"
+        },
+        {
+          "title": "SZ 深圳 Shenzhen 龍崗 Longgang 禾坪崗村 Hepinggang Cun shop 江小長沙碗仔餸飯食店 Jiangxiao Changsha Steamed Rice Restaurant October 2023 R12S 11 food green tray n egg minced pork.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "India - Kolkata egg seller - 3291.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "FMIB 42221 Brook trout eggs on tray, just beginning to hatch.jpeg",
+          "reason": "subject"
+        },
+        {
+          "title": "Bloody-eggs.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "SZ Shenzhen 福田 Futian JinTian Road shop 七鮮超市 SevenFresh Supermarket eggs September 2023 SS2 06.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "FMIB 42220 Tray of trout eggs with mosquito net and moss in which packed.jpeg",
+          "reason": "art"
+        },
+        {
+          "title": "SZ 深圳 Shenzhen 福田 Futian 金田路 Jintian Road 七鮮超市 Seven Fresh Supermarket eggs January 2024 R12S.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "A box of Wubei Chicken Eggs from Evergreen.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "SZ 深圳 Shenzhen 羅湖 Luohu 羅沙路 Luosha Lu 蓮塘口岸 Liantang Port shop CRC 萬潤華家超級市場 China Resources Vanguard Supermarket December 2023 R12S 02.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "SZ 深圳 Shenzhen 福田 Futian 金田路 Jintian Road 七鮮超市 Seven Fresh Supermarket eggs April 2024 R12S 01.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Eggs in China 02.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Dworshak NFH salmon eggs poured 23 November 2021.png",
+          "reason": "other"
+        },
+        {
+          "title": "HK 中環 Central 干諾道中 Connaught Road 香林大廈 Heung Lam Building shop 超群西餅 Maria's Bakery since 1966 food egg tarts December 2019 SS2 02.jpg",
+          "reason": "other"
+        }
+      ]
+    },
+    "live_poultry": {
+      "titles": [
+        "Hen chicken.jpg",
+        "Rooster and Hen 06.jpg",
+        "Hen on street.jpg",
+        "Korean native hen from Guri Insectarium.jpg",
+        "Czech Brindle Chicken Hens.jpg",
+        "Korean native hen from Guri Insectarium (1).jpg",
+        "3 Chickens.jpg",
+        "Light Brahma (maybe bantam) hen in Gyeongju 2025-01-15.jpg",
+        "Dark Brahma hen, Oregon.jpg",
+        "Andalusian gallus (hen).jpg",
+        "Dark Brahma Hen, Oregon 2 (cropped).jpg",
+        "Coming out of the hen house.jpg",
+        "Easter Egger hen pair.jpg",
+        "Hen 0001.jpg"
+      ],
+      "skipped": [
+        {
+          "title": "Hen with chicks, Raisen district, MP, India.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "HEN AND CHICKEN.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Hen and Chicken, Worthing Rd, Southwater - geograph.org.uk - 1292283.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "The Hen ^ Chicken Inn - geograph.org.uk - 2348626.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "The Hen and Chicken Inn - geograph.org.uk - 3807948.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Hen ^ Chicken Inn, Upper Froyle - geograph.org.uk - 2348635.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "The Hen ^ Chicken Inn, Upper Froyle - geograph.org.uk - 2498655.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Czech Brindle Chicken Hens 2.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "The Hen and Chicken, Abergavenny - geograph.org.uk - 551941.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Seattle Chicken Coop and 2 Hens.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Rooster and Hen 04.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Dark Brahma hen, Oregon (cropped).jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Barnevelder bantam hen 2.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "The Hen ^ Chickens - geograph.org.uk - 1886594.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Sebright hen on a branch.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Killing hen for lunch.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Dark Brahma Hen, Oregon 2.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Sign for the Hen and Chicken - geograph.org.uk - 551949.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Hen Chicken reef 1999.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Brown Leghorn hen, Ohio.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Pavlovian black-white adult hen walking.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Hen ^ Chickens Hotel - geograph.org.uk - 3477108.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Hen ^ Chickens, Abergavenny - geograph.org.uk - 2723429.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Hen and Chickens Hotel - geograph.org.uk - 5800472.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Hen and Chickens Hotel - geograph.org.uk - 2640382.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Hen and Chickens Hotel - geograph.org.uk - 4249043.jpg",
+          "reason": "other"
+        }
+      ]
+    },
+    "people": {
+      "titles": [
+        "People walking on the street in Nairobi, Kenya.jpg",
+        "Young people walking in the street, Hungary 2011.jpg",
+        "People walking in a street.jpg",
+        "People walking on a street in Copenhagen.jpg",
+        "Throngs of people walking towards Himeji Castle, Himeji, 2016.jpg",
+        "People walking at Regent Street on a car-free day, London, United Kingdom julesvernex2.jpg",
+        "Street walking - Castelo, Lisbon, Portugal.jpg",
+        "Group of people walking down the street.jpg",
+        "Woman walking next to Edifício-sede da Caixa Geral de Depósitos, Arco do Cego Street, Lisbon, Portugal julesvernex2.jpg",
+        "Officers Walking on Jinzhou Street, Taipei in Lunch Time 20150901.jpg",
+        "People walking on sidewalk in central Pyongyang, with trolleybus and trams in background.jpg",
+        "People walking in the Kirkegata, Stavanger, Norway julesvernex2.jpg"
+      ],
+      "skipped": [
+        {
+          "title": "Temple street, Swansea, showing the bank, theatre, post office &c (1129302).jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Temple street, Swansea, showing the bank, theatre, post office &c.jpeg",
+          "reason": "art"
+        },
+        {
+          "title": "People walking in Bromo.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "People walking on street.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "People walking the Gwynns Falls Trail.png",
+          "reason": "subject"
+        },
+        {
+          "title": "Buddhist monks walking in front of the temple Haw Pha Bang in Luang Prabang.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "People walking between river and felled trees.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "People walking along Bunda Street during the 2026 National Multicultural Festival.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "People walking by Old Tombstone City Hall.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Street view in the quite Utrechtsestraat with people walking & talking; free photo Amsterdam, Fons Heijnsbroek 12-10-2021.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "People walking the path along Hadrian's Wall - geograph.org.uk - 528843.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Walking on Wharf Street, Washington D.C. 1 March 2025.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Old people walking in baganuur.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "People walking in Gladstone Park - geograph.org.uk - 1579708.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "People walking in Seba Beach.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "People walking on Charles Bridge.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "People walking through High Line, Section 2, at night, through the narrow section.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Walking on Watling Street - geograph.org.uk - 4353466.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "People walking in Ledra Street Nicosia April 2015.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "People walking along Lygon Street closed to vehicles for 2022 Italian Festival, Carlton.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Church Ave People Walking in Snow Chicken Restaurant Jan 2026 Brooklyn.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "People running and walking in the early morning, Percurso Ribeirinho de Loures, Bobadela, Lisbon, Portugal julesvernex2.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "People walking over the suspension footbridge at Guguan.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "StateLibQld 1 131547 People walking along the footpath outside the police department on George Street, Brisbane, 1940.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Walking Street, Pattaya (3662898488).jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Walking Street, Pattaya (3662096253).jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Jakob Smits - Portrait of a Farmer - 1914-HR - Museum of Fine Arts Ghent (MSK).jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Smits - Portrait of a Farmer.jpg",
+          "reason": "art"
+        }
+      ]
+    },
+    "goose_duck_droppings": {
+      "titles": [
+        "Goose droppings 01.jpg",
+        "Goose droppings 02.jpg",
+        "Bird feces in Sweden.jpg",
+        "Met schimmel bedekte uitwerpselen van een boerengans (Anser anser forma domesticus) 02.jpg",
+        "Met schimmel bedekte uitwerpselen van een boerengans (Anser anser forma domesticus) 01.jpg",
+        "Kot von Anser cygnoides.JPG",
+        "Mineola Memorial Pk td 64.jpg",
+        "Goose poop 1 2022-04-29.jpeg",
+        "Canada goose dropping.jpg",
+        "Poop of Canada goose.jpg",
+        "Goose scat.jpg",
+        "Bochum Langendreer - Ümminger See - Branta canadensis feces 03 ies.jpg",
+        "Bochum Langendreer - Ümminger See - Branta canadensis feces 01 ies.jpg",
+        "Bochum Langendreer - Ümminger See - Branta canadensis feces 02 ies.jpg"
+      ],
+      "skipped": [
+        {
+          "title": "Get Your Goose On! - Hazmat Style (8027273522).jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Pieter Brueghel the Elder - The Dutch Proverbs - Google Art Project.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Honkers (24037847922).jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Brace for Impact (4654606657).jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Mallard duckling 3.jpg",
+          "reason": "animal"
+        },
+        {
+          "title": "Geese Andrew Haydon Park (25265360647).jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Geese Andrew Haydon Park (28356668369).jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Geese Andrew Haydon Park (28356664389).jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Geese Andrew Haydon Park (40137326341).jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Geese Andrew Haydon Park (28356665899).jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Geese Andrew Haydon Park (28356671609).jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Geese Andrew Haydon Park (25265355707).jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Geese Andrew Haydon Park (28356658569).jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Geese Andrew Haydon Park (28356666819).jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Geese Andrew Haydon Park (28356662979).jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Geese Andrew Haydon Park (40137330401).jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Geese Andrew Haydon Park (28356661269).jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Geese Andrew Haydon Park (40137323641).jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Geese Andrew Haydon Park (28356669989).jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Geese Andrew Haydon Park (40137328901).jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Geese Andrew Haydon Park (40137324591).jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Geese Andrew Haydon Park (40137327541).jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Cercarial LifeCycle.png",
+          "reason": "art"
+        },
+        {
+          "title": "20190802 130535 Drumheller Fountain - goose excrement.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Print, satirical print (BM E,8.160).jpg",
+          "reason": "art"
+        },
+        {
+          "title": "A Canada goose sits on poop-riddled grass next to a pond, which is reflecting the goose's image.jpg",
+          "reason": "animal"
+        },
+        {
+          "title": "Münster, Botanischer Garten, Kanadagans -- 2021 -- 7291.jpg",
+          "reason": "animal"
+        },
+        {
+          "title": "Explication.No.1 George Roi d'Angleterre ... (BM 1882,0812.472).jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Leavenworth's \"S. G. Q.\" Border Ruffians Flag (1854).png",
+          "reason": "other"
+        },
+        {
+          "title": "Münster, Botanischer Garten, Kanadagans -- 2021 -- 7295.jpg",
+          "reason": "animal"
+        },
+        {
+          "title": "Explication.No.1 George Roi d'Angleterre ... (BM 1882,0812.472 1).jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Flickr - law keven - A Stretch in Time....jpg",
+          "reason": "animal"
+        }
+      ]
+    },
+    "wild_bird_droppings": {
+      "titles": [
+        "Due fuglemøkk avføring skitten hvitmalt vegg Vinduskarm Lepramuseet St Jørgen kirke 1706 (Pigeon bird droppings feces dirty white painted window sill Leprosy Museum Hospital church) Kong Oscars gate Bergen Norway April 2022 DSC05370.jpg",
+        "Due fuglemøkk avføring skitten hvitmalt vegg mot biltrafikk Lepramuseet St Jørgen kirke 1706 (Pigeon bird droppings feces dirty white painted wooden panel wall Leprosy Museum Hospital church) Kong Oscars gate Bergen Norway April 2022.jpg",
+        "Due fuglemøkk avføring skitten hvitmalt vegg mot biltrafikk Lepramuseet St Jørgen kirke 1706 (Pigeon bird droppings feces dirty white painted wooden panel wall Leprosy Museum Hospital church) Kong Oscars gate Bergen Norway April 202.jpg",
+        "Taubenkot-Belastung P4460587.JPG",
+        "Gehweg und Geländer durch Taubendreck verunreinigt. (2024-11-12) 02.jpg",
+        "Deutsche Post Bayreuth 20251222 HOF3585 RAW-Export.png",
+        "Deutsche Post Bayreuth 20251222 HOF3584 RAW-Export.png",
+        "Luftbrücke ist mit Taubendreck verschmutzt (2025-03-29) 02.jpg",
+        "Luftbrücke ist mit Taubendreck verschmutzt (2025-03-29) 01.jpg",
+        "Chestnut bob (Iambrix salsala) puddling on bird poop at Diamond Harbour, West Bengal, India 02.jpg",
+        "Guano.jpg",
+        "Bird's poop 02.jpg",
+        "Bird Droppings - Killarney, Ontario.jpg",
+        "Schite di cormorans dilé Mirleft.jpg"
+      ],
+      "skipped": [
+        {
+          "title": "Due fuglemøkk avføring skitten hvitmalt vegg Vindu Lepramuseet St Jørgen kirke 1706 (Pigeon bird droppings feces dirty white painted window Leprosy Museum Hospital church) Kong Oscars gate Bergen Norway April 2022 DSC04769.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Due fuglemøkk avføring skitten hvitmalt vegg Vinduskarm Lepramuseet St Jørgen kirke 1706 (Pigeon bird droppings feces dirty white painted window sill Leprosy Museum Hospital church) Kong Oscars gate Bergen Norway April 2022 DSC05377.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Due fuglemøkk avføring skitten hvitmalt vegg Vinduskarm Lepramuseet St Jørgen kirke 1706 (Pigeon bird droppings feces dirty white painted window sill Leprosy Museum Hospital church) Kong Oscars gate Bergen Norway April 2022 IMG 6785.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Due fuglemøkk avføring skitten hvitmalt vegg mot biltrafikk Vindu Lepramuseet St Jørgen kirke 1706 (Pigeon bird droppings feces dirty white painted wooden panel wall window Leprosy Museum) Kong Oscars gate Bergen Norway April 2022 DS.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Pigeon (3730089946).jpg",
+          "reason": "animal"
+        },
+        {
+          "title": "Ectopistes migratorius (passenger pigeon).jpg",
+          "reason": "animal"
+        },
+        {
+          "title": "Pigeon on William Shakespeare head.JPG",
+          "reason": "other"
+        },
+        {
+          "title": "Do not feed the pigeons.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Ectopistes migratorius (passenger pigeon) 4.jpg",
+          "reason": "animal"
+        },
+        {
+          "title": "Ectopistes migratorius (passenger pigeon) 6.jpg",
+          "reason": "animal"
+        },
+        {
+          "title": "Ectopistes migratorius (passenger pigeon) 3.jpg",
+          "reason": "animal"
+        },
+        {
+          "title": "Ectopistes migratorius (passenger pigeon) 1.jpg",
+          "reason": "animal"
+        },
+        {
+          "title": "Ectopistes migratorius (passenger pigeon) 2.jpg",
+          "reason": "animal"
+        },
+        {
+          "title": "Ectopistes migratorius (passenger pigeon) 7.jpg",
+          "reason": "animal"
+        },
+        {
+          "title": "Gehweg und Geländer durch Taubendreck verunreinigt. (2024-11-12) 01.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Deutsche Post Bayreuth 20251222 HOF3586 RAW-Export.png",
+          "reason": "dup"
+        },
+        {
+          "title": "Deutsche Post Bayreuth 20251222 HOF3587 RAW-Export.png",
+          "reason": "dup"
+        },
+        {
+          "title": "THE DIVE (3730828349).jpg",
+          "reason": "animal"
+        },
+        {
+          "title": "家鴿剝製標本.jpg",
+          "reason": "animal"
+        },
+        {
+          "title": "Dormizione della Vergine con escrementi di piccione sul cattedrale di Strasburgo.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Nest Boxes in Findlater Doocot - geograph.org.uk - 1761302.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "2025 Banco LGBT na Alameda de Santiago. Galiza.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Dachstuhl des Rathauses Hof 20231125 HOF02596-HDR RAW-Export.png",
+          "reason": "other"
+        },
+        {
+          "title": "Robert Burns, Union Terrace, Aberdeen, 1892 Henry Bain Smith, bronze, photo Jane Cartney 2010.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Über den Dächern von Hof - 3792292358.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Bats on the roof of the baoli.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Stoats Nest Bridge, Coulsdon, Surrey - geograph.org.uk - 586081.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Wiltshire gate, Compton Down - geograph.org.uk - 1452194.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Elder by the byway, Compton Down - geograph.org.uk - 1452222.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Elder, Throope Bottom - geograph.org.uk - 1490973.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Elder by the dismantled railway, Hinton St Mary - geograph.org.uk - 1465940.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Grand Canyon West – panoramic view from Guano Point.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "VARDØ Finnmark Norway Port harbour havn Brotkorbsjåene sjøboder Wooden dockside buildings Pomormuseet Museum seagull bird's droppings fugleskit Inngang entrance etc 2029-07-28 IMG 9490.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Guano Apes, Sala Apolo 2012.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Larus michahellis atlantis at Playa del Confital (47206133632) 2 March 2019.jpg",
+          "reason": "animal"
+        },
+        {
+          "title": "Chestnut bob (Iambrix salsala) puddling on bird poop at Diamond Harbour, West Bengal, India 01.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "VARDØ Finnmark Norway Abandoned building Graffiti Seagulls windowsills bird droppings Grand Hotel forlatt murbygning Festningsgata Kaigata Måker vinduskarmer fugleskit 2029-07-28 DSC09120.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "The Guano Shed - geograph.org.uk - 3499672.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Chestnut bob (Iambrix salsala) puddling on bird poop at Diamond Harbour, West Bengal, India 05.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "VARDØ Finnmark Norway Abandoned building Graffiti Seagulls windowsills bird droppings Grand Hotel forlatt murbygning Kaigata Måker vinduskarmer fugleskit 2029-07-28 IMG 8998.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "The Guano Shed - geograph.org.uk - 7334940.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Stump Guano Harangi Coorg Apr24 A7C 10816.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Chestnut bob (Iambrix salsala) puddling on bird poop at Diamond Harbour, West Bengal, India 04.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "VARDØ Finnmark Norway Abandoned building Graffiti Seagulls windowsills bird droppings Grand Hotel forlatt murbygning Kaigata Måker vinduskarmer fugleskit 2029-07-28 IMG 8996.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Soil testing at the Royster Guano Superfund site.png",
+          "reason": "other"
+        },
+        {
+          "title": "Baby Jesus covered in bird poop, with perching bird, in the Sagrada Familia's nativity scene.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Chestnut bob (Iambrix salsala) puddling on bird poop at Diamond Harbour, West Bengal, India 03.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "VARDØ Finnmark Norway Abandoned building Graffiti Seagulls windowsills bird droppings Grand Hotel forlatt murhus Festningsgata Kaigata Kystopprøret Naturressursene tilhører alle Måker vinduer fugleskit 2029-07 a.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Gun loop in Guano Shed - geograph.org.uk - 7334947.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Guanosaari.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "VARDØ Finnmark Norway Abandoned building Graffiti Seagulls windowsills bird droppings Grand Hotel forlatt murbygning Kaigata Måker vinduskarmer fugleskit 2029-07-28 IMG 9002.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "The Guano Shed - geograph.org.uk - 8153304.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Bird's poop 01.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "VARDØ Finnmark Norway Abandoned building Graffiti Seagulls windowsills bird droppings Grand Hotel forlatt murhus Festningsgata Kaigata Kystopprøret Naturressursene tilhører alle Måker vinduer fugleskit 2029-07 c.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Ruins of old guano shed - geograph.org.uk - 7880821.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Closed wing bird poop puddling activity Udaspes folus (Cramer, 1775) - Grass Demon WLB DSC 4821.jpg",
+          "reason": "animal"
+        },
+        {
+          "title": "VARDØ Finnmark Norway Port harbour havn Brotkorbsjåene sjøboder Wooden dockside buildings Pomormuseet Museum seagulls Tåke fog Pier bird's nests droppings fugleskit etc 2029-07-28 IMG 9579.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Collecting a soil sample at the Royster Guano Superfund site.png",
+          "reason": "other"
+        }
+      ]
+    },
+    "other_animal_droppings": {
+      "titles": [
+        "Droppings feral rabbit n2.jpg",
+        "Pogonatum urnigerum amongst rabbit droppings.jpg",
+        "Roe Deer Droppings - geograph.org.uk - 356096.jpg",
+        "Droppings feral rabbit.jpg",
+        "Roe Deer Droppings - geograph.org.uk - 6763547.jpg",
+        "Droppings of a rabbit.JPG",
+        "USFWS Pygmy rabbit droppings (22720443575).jpg",
+        "Frosty droppings, Scorhill Down - geograph.org.uk - 1710611.jpg",
+        "Pygmy rabbit droppings Seedskadee National Wildlife Refuge (39336403561).jpg",
+        "Roe deer droppings.jpg",
+        "Volcano rabbit droppings.jpg",
+        "Red Deer Droppings.jpg",
+        "Kneddel als hessischer Dialekt.jpg",
+        "Roe deer feces Puy-de-Dome 2013-04-03.jpg"
+      ],
+      "skipped": [
+        {
+          "title": "Sheep Droppings - geograph.org.uk - 5388865.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Deer Droppings at Ashridge - geograph.org.uk - 1376367.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Russian Porno Comic alphabet (1890) н 1.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Huge black slug feasting on hare droppings. - geograph.org.uk - 455122.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Droppings give the game away - geograph.org.uk - 1142921.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Bundesarchiv Bild 183-F0528-0026-001, Erfurt, Skatspieler im Park.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "File-Sheep, Dall--Bed and droppings. Locality- Savage River, Mount McKinley Park, Alaska -Denali National Park & Preserve-. Negative (1dd0e720d8a1480daceeac85cf266a75).jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Sex Machines Museum Prague - Coprophagy Chair.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Sheep in Maceys Meadow - geograph.org.uk - 784139.jpg",
+          "reason": "animal"
+        },
+        {
+          "title": "Deer droppings on the Hill of Fare - geograph.org.uk - 414764.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Sex Machines Museum Prague - Coprophagy Smother Box.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Fore sheep......... - geograph.org.uk - 90505.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Red deer droppings and traces.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Russian Porno Comic alphabet (1890) н.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Pieter Brueghel the Elder - The Dutch Proverbs - Google Art Project.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Deer droppings in Forbes Lake Park 2013.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Deckblatt.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Roodbruine schijnridderzwammen (Lepista flaccida). 22-01-2021 (d.j.b.) 01.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "1911-05-14 Targa Florio SCAT Ceirano Momo.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Where sheep have lain - geograph.org.uk - 1113177.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "2021 Charger Scat Pack.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Roodbruine schijnridderzwam (Lepista flaccida) (d.j.b.) 02.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Calling cards of a working rabbit on An Sithean - geograph.org.uk - 1424494.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Deer Spring June 13, 2012 (7421832682).jpg",
+          "reason": "other"
+        },
+        {
+          "title": "SCAT mod. 22-32, 1910.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Roodbruine schijnridderzwammen (Lepista flaccida). 22-01-2021 (d.j.b.) 02.jpg",
+          "reason": "other"
+        }
+      ]
+    },
+    "lookalike_food": {
+      "titles": [
+        "Meshi 001.jpg",
+        "MashedPotatoes.jpg",
+        "Cooked Rice 2.jpg",
+        "Refried beans-frijoles refritos.jpg",
+        "Hummus from The Nile.jpg",
+        "Bowl of porridge with spoon.jpg",
+        "Mercimek çorbasi.jpg",
+        "Rice (84003).jpg",
+        "Frijoles refritos.jpg",
+        "02021 0752 (2) Hummus, Vegan food in Poland.jpg",
+        "Bowl of lentil soup with green and red lentils.jpg",
+        "Oatmeal porridge 1-minute with additional ingredients.jpg",
+        "Whole Foods mashed potatoes - November 2023 - Sarah Stierch.jpg",
+        "Bap (cooked rice).jpg"
+      ],
+      "skipped": [
+        {
+          "title": "Devil's Porridge bowl - geograph.org.uk - 5288797.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Refried beans, tuna, and pickled garlic, with black pepper - Massachusetts.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Homemade hummus and pita 03.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Homemade Lentil Soup - Lavash 2025-02-10.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Devil's Porridge bowl - geograph.org.uk - 5288792.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Meat pie and mashed potatoes at a pub in Dublin.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Kapellenstraße München — mercimek çorbası — afiyet olsun 20201210 215041.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Cooked rice with vegetable sauce.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Avocado and fried chicken sausage on refried beans, with black pepper - Massachusetts.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Mashed Potatoes with Beef Gravy.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Rouhi AlAqili hummus restaurant.png",
+          "reason": "other"
+        },
+        {
+          "title": "Just a Bowl of Porridge and Her smile.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Sous vide mashed potatoes.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Lentil Soup - Schnitzel & Co. 2026-05-16.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "The Holy Family with the Porridge Bowl MET DP278900.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Cooked rice.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Refried beans, textured vegetable protein, salsa, cheddar cheese, and guacamole - Massachusetts.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Argentine-Style Mashed Potatoes with Meat Sauce.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Falafel and Homemade Hummus - Lavash 2024-09-11.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "A cooler of cooked rice and meat.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Refried Black Beans (4646266085).jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Homemade hummus and pitta - Long Man Inn 2024-12-18.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Lentil soup done.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "A bowl of porridge.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Steak and refried beans (2510368011).jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "PXL 20221215 231825450 macaroni and cheese and green beans and mashed potatoes.jpg",
+          "reason": "subject"
+        }
+      ]
+    },
+    "screenshots": {
+      "titles": [
+        "Screenshot wikiwand.jpg",
+        "Screenshot of the official website of the President of Ukraine 2019-05-20 uk.png",
+        "Wikipedia screenshot 2026.jpg",
+        "Screenshot of website South African COVID-19 Vaccination Programme Registration.png",
+        "Screenshot of ilo Muni.png",
+        "Screenshot of System-Tools.png",
+        "Screenshot Wikipedia Mobile Smartphone.png",
+        "Screenshot of X's website (Sept 2025).png",
+        "Screenshot of Crosstalk Mk.4.png",
+        "Tatoeba.org English screenshot 2021.png",
+        "Screenshot of the Main Page on the English Wikipedia - Wikipedia 25.png",
+        "Tea 62.0.1 - Screenshot - Editor Module.png",
+        "StatProofBook website screenshot.png",
+        "Screenshot FlyBack 0.3.3.png"
+      ],
+      "skipped": [
+        {
+          "title": "AZ Software Screenshot 2021.png",
+          "reason": "subject"
+        },
+        {
+          "title": "The Wikipedia Adventure mobile screenshot.png",
+          "reason": "dup"
+        },
+        {
+          "title": "Screenshot of website of South African COVID-19 Vaccine Certificate System.png",
+          "reason": "dup"
+        },
+        {
+          "title": "Screenshot of a website for public peer review - annotated comment.png",
+          "reason": "subject"
+        },
+        {
+          "title": "Open-Xchange Screenshot Einstellungsmenü.png",
+          "reason": "subject"
+        },
+        {
+          "title": "Detail of English Wikipedia Template 2019–20 coronavirus pandemic.png",
+          "reason": "dup"
+        },
+        {
+          "title": "Screenshot, WIKIPEDIA 23.png",
+          "reason": "subject"
+        },
+        {
+          "title": "Screenshot of a website for public peer review - review referencing document passages.png",
+          "reason": "dup"
+        },
+        {
+          "title": "Screenshot, WIKIPEDIA 20.png",
+          "reason": "subject"
+        },
+        {
+          "title": "Screenshot of Sport4ever website.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Screenshot of ilo sona Like.png",
+          "reason": "subject"
+        },
+        {
+          "title": "Screenshot of a website for public peer review - annotated comment for whole document.png",
+          "reason": "dup"
+        },
+        {
+          "title": "Instant Diffs screenshot light en.png",
+          "reason": "subject"
+        },
+        {
+          "title": "Wikipedia Screenshot User Cyberpower678.png",
+          "reason": "subject"
+        },
+        {
+          "title": "Screenshot of a website for public peer review - annotated comments for a text segment.png",
+          "reason": "dup"
+        },
+        {
+          "title": "8K-Screenshot Mandelbulber 20200503.png",
+          "reason": "subject"
+        },
+        {
+          "title": "Russian Wikipedia screenshot (article).jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Screenshot of Startpage website (2025-03).png",
+          "reason": "subject"
+        },
+        {
+          "title": "Screenshot of Belarusian Wikipedia main page.png",
+          "reason": "subject"
+        },
+        {
+          "title": "Screenshot of Wikimedia Foundation website homepage August 2025.png",
+          "reason": "subject"
+        },
+        {
+          "title": "Screenshot Mandelbulber 2.20 20191224.png",
+          "reason": "subject"
+        },
+        {
+          "title": "Russian Wikipedia screenshot (article2).jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Screenshot of the Open Source CMS Strapi.png",
+          "reason": "subject"
+        },
+        {
+          "title": "Wikipedia – Die freie Enzyklopädie.Dank nicht lesbar - iPad.png",
+          "reason": "subject"
+        },
+        {
+          "title": "Wikimedia Foundation website screenshot - 26 January 2004.png",
+          "reason": "subject"
+        },
+        {
+          "title": "Wikipedia Vietnamese Login error locked.png",
+          "reason": "other"
+        }
+      ]
+    },
+    "feathers": {
+      "titles": [
+        "White Feather on ground.jpg",
+        "A single white feather closeup.jpg",
+        "Feather closeup (211934579).jpg",
+        "Daune down feather.jpg",
+        "Peacock feather on ground 02.jpg",
+        "Peafowl-feather-closeup-view.JPG",
+        "Tiny white feather of a chick slightly buried in the sand.jpg",
+        "Brown pelican feather closeup.jpg",
+        "Chicken feathers at Junapani stones.jpg",
+        "SNF TofteRD FC101316 Grouse feathers on ground (30026843400).jpg",
+        "Feather of a bird, Kerala.jpg",
+        "Small feather on a patch of mossy ground.jpg",
+        "Feather on ground, Dreams in the sky.jpg",
+        "Close-up photograph of swan feathers letting sunlight through.jpg"
+      ],
+      "skipped": [
+        {
+          "title": "Chicken feathers laying eggs scarecrow.jpg",
+          "reason": "animal"
+        },
+        {
+          "title": "A Chicken feathers fire.JPG",
+          "reason": "other"
+        },
+        {
+          "title": "Pelecanus onocrotalus cleaning its feathers at sunset.jpg",
+          "reason": "animal"
+        },
+        {
+          "title": "International Down and Feather Testing Laboratory.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "-Chicken Feathers- MET DP167354.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Peacock feather on ground 01.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Mother shelters goslings.jpg",
+          "reason": "animal"
+        },
+        {
+          "title": "White feathers (Dandelion).jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Adidas Helionic Down vest.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Local hand removal of chicken feathers 03.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Peacock feathers in the ground floor room.png",
+          "reason": "art"
+        },
+        {
+          "title": "Caroline Conyers Study of four feathers with white currants.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Closeup of Feather at Whitebird Canyon Battlefield.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Adidas Helionic Down Jacket.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Removing feathers from chicken locally.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Dude in white feathers (2558990900).jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Speculum Feather from Pacific Black Duck.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "The North Face Mountain Light Triclimate Down Jacket.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Picking feathers from chicken locally.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Peafowl-closeup-feather.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "6x The North Face Mountain Light Gore-tex Triclimate Down Jacket.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Local hand removal of chicken feathers 11.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Bird feather on the ground.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "White breasted kingfisher wings.jpg",
+          "reason": "animal"
+        },
+        {
+          "title": "A closeup view of the achenes or feather-like fruit of the alder-leaf mountain-mahogany bush (2026).jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "The North Face Arctic Swirl Down Parka.jpg",
+          "reason": "people"
+        }
+      ]
+    },
+    "everyday_objects": {
+      "titles": [
+        "Mug Wikipedia Malayalam.jpg",
+        "Parked bicycle with graffitied building facade and doors in Amsterdam.jpg",
+        "Santorin (GR), Fira -- 2017 -- 2598.jpg",
+        "Smartphone display screen.jpg",
+        "Coffee mug on table.jpg",
+        "Backlit keyboard.jpg",
+        "Reebok Royal Glide Ripple Clip shoe.jpg",
+        "Shoes in a spanish shoe store.jpg",
+        "Smartphone di varie marche.png",
+        "Coffee Mug on Desk.jpg",
+        "Razer Ornata Chroma keyboard-top PNr°0463.jpg",
+        "Bicycle crankset Shimano 105 R7000 (chainring 50-34, length 172.5mm, 11 speed).jpg",
+        "Coffee mugs.jpg",
+        "Asics Gel-Cumulus 22.jpg"
+      ],
+      "skipped": [
+        {
+          "title": "Camera zoom burst on a Microsoft computer keyboard in Tuntorp 8.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Carina Nebula.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Cobbler repairing shoes in old workshop (Bazaar in Bitola, Macedonia, 2025).jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Bicycle reflections.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Grand bassin octogonal Jardin des Tuileries 003.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Abandoned car in Marine Park (10852p).jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Smartphone ownership in 2013.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Coffee Mug on table with creamer.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "QWERTY keyboard.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Bicycle in the Meuse River Maastricht.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Olympic Stadium Munich - Rows of Seats, April 2019 -04.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "A Brouhot car in Paris, 1910.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Сава центар конгресна соба (Sava Center, convention room).jpg",
+          "reason": "other"
+        },
+        {
+          "title": "ESO - The Carina Nebula (by).jpg",
+          "reason": "other"
+        },
+        {
+          "title": "PalmercarpenterA.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Smartphone Use.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Razer Arctosa keyboard-top-ar 16to9 PNr°0325.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Commuting by bicycle.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Heiligengrabe, Kloster Stift zum Heiligengrabe, Abtei, Appartement im Dormitorium -- 2017 -- 7254-60.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Auto op de Place de l'Étoile, in de koplamp is de weerspiegeling van de Arc de T, Bestanddeelnr 191-0354.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Leaflet at Narita arrival. Requirement to have a smartphone to enter Japan during COVID-19 pandemic.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "IBM merchandising coffee mug with company logo.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Computer keyboard... dusty and black.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "20180929 UCI Road World Championships Innsbruck Women Elite Road Race Charlotte Becker 850 7872.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Heiligengrabe, Kloster Stift zum Heiligengrabe, Heiliggrabkapelle -- 2017 -- 7314-20 -- 2.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Keyhole Nebula - Hubble 1999.jpg",
+          "reason": "other"
+        }
+      ]
+    },
+    "scenes": {
+      "titles": [
+        "Landscape Arnisee-region.JPG",
+        "Eldridge Street Synagogue (42773).jpg",
+        "Beech Forest (AU), Great Otway National Park, Beauchamp Falls -- 2019 -- 1271.jpg",
+        "Mulberry Street NYC c1900 LOC 3g04637u edit.jpg",
+        "Beach of Cape Fiolent, Crimea.jpg",
+        "Spruce forest at Holma.jpg",
+        "Facade of the Conjunto Nacional cropped version.jpg",
+        "Havelock Island, Mangrove tree on the beach, Andaman Islands.jpg",
+        "Wooden staircase steps in the forest of Hallasan Park Eorimok Trail at dusk on Jeju Island in South Korea.jpg",
+        "Parasols, Evening, Beach, Rincon de la Victoria, Andalusia, Spain.jpg",
+        "Québec city downtown.jpg",
+        "Illuminated facade of a 3-storey restaurant with Japanese signs and red paper lanterns, Chiyoda, Tokyo.jpg",
+        "Seal Rocks, Ocean Beach, San Francisco.jpg",
+        "Snowy Sainte-Famille Street in Quebec City.jpg"
+      ],
+      "skipped": [
+        {
+          "title": "Parked bicycle with graffitied building facade and doors in Amsterdam.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Rügen, Beach at Sellin -- 2009 -- 1173.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Landscape during Laugavegur hiking trail 2-CA reduced.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Illuminated white and purple facade of the office building Rohm Semiconductor in Kyoto, Japan.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Icelandic Landscape near Neskaupstaður July 2014.JPG",
+          "reason": "subject"
+        },
+        {
+          "title": "NYC Mulberry Street 3g04637u.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Swedish landscape near Björnlunda (by Pudelek) 01.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Skylight in the abandoned City Hall Station (32155).jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Building facade in Avenida Paulista.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Fanal (Madeira, Portugal), Lorbeerwald -- 2025 -- 1532.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Large cloud over Mexican landscape.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "The sun and the moon in South New Brighton's beach, New Zealand.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Fanal (Madeira, Portugal), Lorbeerwald -- 2025 -- 1546.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Landscape with rainbow and the Old Bridge over the Nam Khan river in Luang Prabang Laos.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Château Frontenac city at night.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Illuminated facade of a restaurant serving traditional food with fresh vegetables in Chiyoda, Tokyo.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Meenikunno maastikukaiteala.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Hendrik Voogd - Italian landscape with Umbrella Pines.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Snow-covered Quebec City skyline in fog.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Colorful illuminated facades of buildings at night, with green, blue and pink lights, Kabukicho, Shinjuku, Tokyo.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Zoutelande (NL), Strand, Blick auf die Nordsee -- 2022 -- 4984.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Dülmen, Göversheide -- 2015 -- 7718-22.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Water reflection of stringy gray and white clouds in a pond on a sand beach of Don Khon at sunrise in Laos.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Exterior view of the illuminated facade of Maison Hermès, Ginza, Tokyo, Japan.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Mystic Beach, Vancouver Island, Canada 10.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Wandelen over de Planken Wambuis vanuit Mossel 069 A.jpg",
+          "reason": "subject"
+        }
+      ]
+    },
+    "other_animals": {
+      "titles": [
+        "Felis catus-cat on snow.jpg",
+        "Biandintz eta zaldiak - modified2.jpg",
+        "Flock of sheep.jpg",
+        "DSC09611a Search and Rescue Dog, Austrian Red Cross Perchtoldsdorf, 2024-10.jpg",
+        "Cow in Field image.jpg",
+        "Horse December 2014-1.jpg",
+        "Cat November 2010-1a.jpg",
+        "Dode merel (Turdus merula). Locatie, Tuinreservaat Jonkervallei 02.jpg",
+        "Cow on a field resting 2025.jpg",
+        "Domestic horse at Suryachaur and the mountains in the back1.jpg",
+        "Swaledale Sheep, Lake District, England - June 2009.jpg",
+        "June odd-eyed-cat cropped.jpg",
+        "Stubai - Tiroler Bergschaf -BT- 01.jpg",
+        "IcelandicHorseInWinter.jpg"
+      ],
+      "skipped": [
+        {
+          "title": "Human–canine friendship - girl hugging her dog tightly at golden hour in Laos.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Water reflection of a boy feeding hay to a cow in a paddy field at golden hour in Laos.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Passeri.png",
+          "reason": "art"
+        },
+        {
+          "title": "Cat playing with a lizard.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Sheep skeleton at MAV-USP.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Songbird preparing for the Distaff.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Portrait of an extraordinary musical dog by Philip Reinagle 1805.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Cow Field near Dromahair.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Horse-drawn sleighs 2012 G1.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "20101020 Sheep shepherd at Vistonida lake Glikoneri Rhodope Prefecture Thrace Greece.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Sleeping cat on her back.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "\"Man with Dog\", 1923 self-portrait by Otis Oldfield.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Songbird, Friedrichshafen (1X7A4168).jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Portrait of an Extraordinary Musical Dog.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Cow in agricultural field.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Horse-racing-4.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Breeding season adult neurogenesis (FINAL)-01.png",
+          "reason": "art"
+        },
+        {
+          "title": "20231125 housecat south meadows PD100306.jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Bartolomeo Passerotti - Portrait of a Man with a Dog - WGA17075.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "The cow pock.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Parco Naturale Tre Cime horses 3.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Ascain - Oveja -BT- 02.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Passeri - Palazzo Ducale -.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Six weeks old cat (aka).jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Gustave Courbet - Self-Portrait with Black Dog - WGA05480.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "A Cow Grazing Nonchalantly in a Field of Wildflowers.jpg",
+          "reason": "subject"
+        }
+      ]
+    },
+    "litter_bedding": {
+      "titles": [
+        "-365 potatoes straw Mar20 (26083248555).jpg",
+        "Hemp Straw.JPG",
+        "Eglu nesting box.jpg",
+        "Wollschwein Rosa.jpg",
+        "Saw dust (Zaagsel).jpg",
+        "Tefft hay closeup (5910291718).jpg",
+        "Stanley jack plane.jpg",
+        "Earthstars on a barn floor, Yarburgh - geograph.org.uk - 4287667.jpg",
+        "Wood Shavings from a Chainsaw.jpg",
+        "Wood shavings, Belfast - geograph.org.uk - 2311313.jpg",
+        "Wood Shavings ET5A7982 (30567130696).jpg",
+        "Sawdust..jpg"
+      ],
+      "skipped": [
+        {
+          "title": "Jersey Cow in straw bedding (cropped).JPG",
+          "reason": "animal"
+        },
+        {
+          "title": "Bedding the Cattle with the Straw blower - geograph.org.uk - 1739464.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Straw to provide bedding during the winter - geograph.org.uk - 553670.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Jersey Cow in straw bedding.JPG",
+          "reason": "animal"
+        },
+        {
+          "title": "Bedding straw waste on Cocking Down - geograph.org.uk - 2428639.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Bedding straw poly-lined by Pitgarvie track near Laurencekirk - geograph.org.uk - 5747572.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Animal Bedding - geograph.org.uk - 378866.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Straw bales - geograph.org.uk - 244299.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "The Christ Child on a Bed of Straw MET DP822140.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Rajecka Girl with a straw hat.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Bed of Straw, Operation Bold Mariner, 1969 (14731708340).jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Lugging straw - geograph.org.uk - 44956.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Straw bales on the moorland - geograph.org.uk - 682177.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "A puppy lying on a straw bed gnawing a bone. Colour line blo Wellcome V0021885.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Straw Processing Plant - geograph.org.uk - 747201.jpg",
+          "reason": "animal"
+        },
+        {
+          "title": "Ziripot.JPG",
+          "reason": "subject"
+        },
+        {
+          "title": "GomphStrawFields.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Camp Bedding-Roll - DPLA - 3e48ec46cdace1bab102978d25a11986 (page 2).jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Deep-litter.JPG",
+          "reason": "animal"
+        },
+        {
+          "title": "Camp Bedding-Roll - DPLA - 3e48ec46cdace1bab102978d25a11986 (page 1).jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Mittagsschlaf Wildschweinfamilie Rheininsel.JPG",
+          "reason": "animal"
+        },
+        {
+          "title": "Mare and colt.JPG",
+          "reason": "animal"
+        },
+        {
+          "title": "Źrebak 1.jpg",
+          "reason": "animal"
+        },
+        {
+          "title": "CharacterFormationwithCows4586.JPG",
+          "reason": "people"
+        },
+        {
+          "title": "Wer ist denn da.JPG",
+          "reason": "animal"
+        },
+        {
+          "title": "Walliser Schwarzhalsziege Bock Erlenbach.JPG",
+          "reason": "animal"
+        },
+        {
+          "title": "Die Gartenlaube (1887) b 044 4.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Ruhende Skuddenlämmer Bergtierpark Erlenbach.JPG",
+          "reason": "animal"
+        },
+        {
+          "title": "Stable management and exercise (Page 279) BHL22793480.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Freerange eggs.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "04.04.78 Inauguration 44ème Concours agricole (1978) - 53Fi742.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Man Sleeping on Litter.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Живописное обозрение 1892, № 01-12 Page 070.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "George Hare - Victory of Faith.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Cromar - geograph.org.uk - 237393.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Virgil translated by Dryden (1709)-volume 1-sheet 333.png",
+          "reason": "art"
+        },
+        {
+          "title": "Germany Plane-with-wood-shavings-01.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Dancing on the Barn Floor.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Vamos a romper el techo de cristal (Brochas Clandestinas, 2021).jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Saw dust pit.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "\"The Navigators\", Hay's Galleria (closeup) - geograph.org.uk - 3296604.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "The Old Barn Floor 1868 by Currier & Ives.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Seattle Women's March 2019 (39842076293).jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Germany Plane-with-wood-shavings-and-carpenters-pencil-01.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Sawdust spreaded all around.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Closeup of donkey eating.jpg",
+          "reason": "animal"
+        },
+        {
+          "title": "Damaged concrete floor – Preview (Rob Tuytel via Poly Haven).png",
+          "reason": "other"
+        },
+        {
+          "title": "Sawdust vendors. Kashgar markets.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Edna O'Brien closeup (cropped).jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Barn close to valley floor of Swaledale - geograph.org.uk - 5885137.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Damaged concrete floor disp 16k (Rob Tuytel via Poly Haven).png",
+          "reason": "subject"
+        },
+        {
+          "title": "Wood and sawdust in a shop under renovation 01.png",
+          "reason": "subject"
+        },
+        {
+          "title": "Romanian hay bales closeup.JPG",
+          "reason": "subject"
+        },
+        {
+          "title": "Barn, Minsk area, Belarus.JPG",
+          "reason": "other"
+        },
+        {
+          "title": "Damaged concrete floor ao 16k (Rob Tuytel via Poly Haven).png",
+          "reason": "subject"
+        },
+        {
+          "title": "Japanese handplane (kanna) with wood shavings.jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Wood and sawdust in a shop under renovation 04.png",
+          "reason": "subject"
+        },
+        {
+          "title": "Ōkuni-Ebisu-jinja, Ōagata-jinja hay bales closeup.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Barn 2nd floor beams - James A Garfield National Historic Site (34263992313).jpg",
+          "reason": "subject"
+        },
+        {
+          "title": "Damaged concrete floor rough 16k (Rob Tuytel via Poly Haven).png",
+          "reason": "subject"
+        },
+        {
+          "title": "Closeup (99545846).jpg",
+          "reason": "art"
+        }
+      ]
+    },
+    "documents": {
+      "titles": [
+        "Act of Independence of Central America (scan).jpg",
+        "ReceiptSwiss.jpg",
+        "1920 Reçu Berliet consignes 16.jpg",
+        "Felicien Rops - l'homme et l'artiste 1908 (144064786).jpg",
+        "Abbott and Holder receipt - 21 August 1969.jpg",
+        "Official document annexure 11 dated 12 March 1997 loniya visthapit rajput.jpg",
+        "Receipt for temporary bonds.jpg",
+        "Front page of Ottoman newspaper Kadin.jpg",
+        "William Shurtless, Letter, title page, printed by Kneeland & Green, 1745.jpg",
+        "US-BEP-Receipt for currency (23 July 1915).jpg",
+        "Front page of newspaper Wilnaer Zeitung with Lithuanian Vytis (Waykimas), published on 12 April 1918.jpg",
+        "Shell-Gas-Station-Receipt-MasterCard.jpg",
+        "Receipt from Josiah Wedgwood 1770.jpg",
+        "Front page of the newspaper \"Busch\". 7 June 1941. La Paz.png"
+      ],
+      "skipped": [
+        {
+          "title": "Letter box printed with UV inkjet printer.JPG",
+          "reason": "other"
+        },
+        {
+          "title": "Old man reading newspaper early in the morning at Basantapur-IMG 6800.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Da Vinci Studies of Embryos Luc Viatour.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "BOH&MOR-10-Protectorate of Bohemia and Moravia-50 Korun (1944).jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Actiniaria.jpg",
+          "reason": "art"
+        },
+        {
+          "title": "Printed nameplate on letter box in Italy 2011.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Washingtonpost.JPG",
+          "reason": "other"
+        },
+        {
+          "title": "Mainz 50 Pfg 1921.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "CT scan gastric CD.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Printed letter at 400X.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Visita à redação The Washington Post, Estados Unidos.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Internal Pages of the Book De tin marín de dos pingüe 01.png",
+          "reason": "other"
+        },
+        {
+          "title": "5000 rupiah bill, 2001 series (2009 date), processed, obverse and reverse.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "A Printed letter at 400X.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Internal Pages of the Book De tin marín de dos pingüe 03.png",
+          "reason": "other"
+        },
+        {
+          "title": "München 1 Milliarde 1923.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Iranian government document about Qazi Mohammad rebellion (23).jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Internal Pages of the Book De tin marín de dos pingüe 05.png",
+          "reason": "other"
+        },
+        {
+          "title": "Bonn 1 Million 1923.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Iranian government document about Qazi Mohammad rebellion (22).jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "Printed form of Sultan Selim's Letter to Sultan Qansuh al-Ghuri.png",
+          "reason": "subject"
+        },
+        {
+          "title": "Land on the Moon 7 21 1969-repair.jpg",
+          "reason": "people"
+        },
+        {
+          "title": "Internal Pages of the Book De tin marín de dos pingüe 04.png",
+          "reason": "other"
+        },
+        {
+          "title": "Kitzingen 50 Pfennig 1921 Schiffbauer.jpg",
+          "reason": "other"
+        },
+        {
+          "title": "Iranian government document about Qazi Mohammad rebellion (40).jpg",
+          "reason": "dup"
+        },
+        {
+          "title": "The Letter MET DP878428.jpg",
+          "reason": "art"
+        }
+      ]
+    }
+  }
+}

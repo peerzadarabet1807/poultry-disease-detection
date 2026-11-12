@@ -1,4 +1,5 @@
 import ood from '../data/ood.json';
+import { INPUT_CHECK_SUMMARY as IC } from '../lib/inputCheckCopy';
 import { EXTERNAL, formatPercent, INTERNAL, RUNS } from '../lib/metrics';
 
 const p1 = (x: number) => formatPercent(x, 1);
@@ -35,7 +36,7 @@ export function Limitations() {
     ],
     [
       'It always picks one of four classes.',
-      `It cannot say "this is not poultry droppings": ${ood.summary.verdict_shown} of ${ood.summary.n} unrelated photos still got a confident verdict.`,
+      `It cannot say "this is not poultry droppings": ${ood.summary.verdict_shown} of ${ood.summary.n} unrelated photos still got a confident verdict. The input check in front of it turns most such photos away, but in testing let ${p1(IC.false_acceptance.near.rate)} of look-alike photos through and turned away ${p1(IC.false_rejection.test_external.rate)} of PCR-confirmed droppings photos.`,
     ],
     [
       'No veterinary or field validation.',
